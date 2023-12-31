@@ -29,8 +29,7 @@ export default function MediaCard({ heading, text }: { heading: string; text: st
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">詳細</Button>
       </CardActions>
     </Card>
   );
