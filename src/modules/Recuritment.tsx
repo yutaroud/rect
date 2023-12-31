@@ -15,6 +15,7 @@ const Recruitment = () => {
         <Typography variant="h4" align="center">
           採用情報
         </Typography>
+        <p>現在、募集しておりません。</p>
       </Container>
     </Box>
   );

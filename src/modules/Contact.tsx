@@ -23,7 +23,7 @@ const Contact = () => {
           }}
         >
           <Typography variant="h4" component="span">
-          <Link href="/">お問い合わせはこちらから</Link>
+            <Link href="/">お問い合わせはこちらから</Link>
           </Typography>
         </Button>
       </Container>
