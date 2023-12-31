@@ -7,18 +7,36 @@ const Kv = () => {
     <Box
       component="section"
       sx={{
-        marginTop: "56px",
-        textAlign: "center",
+        pointerEvents: "none",
+        backgroundRepeat: "no-repeat",
+        backgroundImage: 'url("/rect/background/productCurvyLines.png")',
+        backgroundPosition: "center",
       }}
     >
-      <Container sx={{ mt: 15, mb: 10 }}>
-        <Typography variant="h1">RE:CT</Typography>
-        <Typography variant="h2">RE:Communication Technology</Typography>
+      <Container sx={{ mt: 8 }}>
+        <Typography
+          variant="h1"
+          align="center"
+          color="inherit"
+        >
+          RE:CT
+        </Typography>
+        <Typography
+          variant="h2"
+          align="center"
+          color="inherit"
+          sx={{ fontSize: "2rem", fontWeight: "bold" }}
+        >
+          RE:Communication Technology
+        </Typography>
         <Typography
           color="inherit"
           align="center"
-          variant="h5"
-          sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
+          variant="h4"
+          sx={{
+            mt: { xs: 4, sm: 5 },
+            fontWeight: "bold"
+          }}
         >
           社会のコミュニケーションをITの力でもっと活発に
         </Typography>

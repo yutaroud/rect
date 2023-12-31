@@ -12,7 +12,7 @@ const Contact = () => {
         textAlign: "center",
       }}
     >
-      <Container sx={{ mt: 15, mb: 10 }}>
+      <Container sx={{ mt: 5, mb: 10 }}>
         <Button
           sx={{
             border: "4px solid currentColor",

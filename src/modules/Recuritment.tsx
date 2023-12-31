@@ -8,10 +8,9 @@ const Recruitment = () => {
       component="section"
       sx={{
         textAlign: "center",
-        backgroundColor: "#e9f9fc;",
       }}
     >
-      <Container sx={{ mt: 15, mb: 10 }}>
+      <Container sx={{ mt: 5, mb: 10 }}>
         <Typography variant="h4" align="center">
           採用情報
         </Typography>

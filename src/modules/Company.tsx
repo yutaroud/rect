@@ -26,12 +26,10 @@ const Company = () => {
       component="section"
       sx={{
         textAlign: "center",
-        backgroundColor: "#e9f9fc;",
       }}
       position="relative"
-      minHeight="420px"
     >
-      <Container sx={{ mt: 15, mb: 10 }}>
+      <Container sx={{ mt: 5, mb: 10 }}>
         <Typography variant="h4" align="center">
           会社概要
         </Typography>

@@ -12,7 +12,7 @@ const Business = () => {
         textAlign: "center",
       }}
     >
-      <Container sx={{ mt: 15, mb: 10 }}>
+      <Container sx={{ mt: 5, mb: 10 }}>
         <Typography variant="h4" align="center">
           事業内容
         </Typography>
