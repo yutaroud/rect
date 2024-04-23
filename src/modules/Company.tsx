@@ -14,10 +14,10 @@ const createData = (title: string, description: string) => {
 
 const rows = [
   createData("屋号", "RE:CT"),
-  createData("設立", "xxxx年x月x日"),
-  createData("所在地", "愛知県"),
-  createData("代表", "hoge"),
-  createData("主な事業内容", "hoge"),
+  createData("設立", "2024年6月3日"),
+  createData("所在地", "愛知県豊川市御津町西方日暮1-12"),
+  createData("代表", "渡辺優樹"),
+  createData("主な事業内容", "情報通信サービスの開発・運営"),
 ];
 
 const Company = () => {
