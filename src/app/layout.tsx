@@ -1,6 +1,5 @@
 import Header from "./header";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
-import { createTheme } from "@mui/material/styles";
 import Footer from "./footer";
 
 export const metadata = {
