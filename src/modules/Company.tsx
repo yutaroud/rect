@@ -13,7 +13,7 @@ const createData = (title: string, description: string) => {
 };
 
 const rows = [
-  createData("屋号", "RE:CT"),
+  createData("会社名", "株式会社レクト"),
   createData("設立", "2024年6月3日"),
   createData("所在地", "愛知県豊川市御津町西方日暮1-12"),
   createData("代表", "渡辺優樹"),

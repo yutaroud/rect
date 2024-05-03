@@ -12,7 +12,7 @@ const header = () => {
           sx={{ color: "#444", mr: 2, transform: "translateY(-2px)" }}
         />
         <Typography variant="h6" color="text.primary">
-          <Link href="/">RECT</Link>
+          <Link href="/">RE:CT</Link>
         </Typography>
       </Toolbar>
     </AppBar>
