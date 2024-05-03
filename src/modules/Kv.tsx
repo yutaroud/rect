@@ -9,7 +9,7 @@ const Kv = () => {
       sx={{
         pointerEvents: "none",
         backgroundRepeat: "no-repeat",
-        backgroundImage: 'url("/rect/background/productCurvyLines.png")',
+        backgroundImage: 'url("/background/productCurvyLines.png")',
         backgroundPosition: "center",
       }}
     >

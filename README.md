@@ -1,7 +1,7 @@
 # Initialize
 
 * yarn dev
-* open http://localhost:3000/rect
+* open http://localhost:3000
 
 # Reference
 
