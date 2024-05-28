@@ -18,13 +18,13 @@ const Business = () => {
         </Typography>
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
-            <MediaCard heading="プログラミング" text="募集" />
+            <MediaCard heading="プログラミング教室" text="募集" href="/school" />
           </Grid>
           <Grid item xs={12} md={4}>
-            <MediaCard heading="フリーランス" text="募集" />
+            <MediaCard heading="フリーランス" text="募集" href="#" />
           </Grid>
           <Grid item xs={12} md={4}>
-            <MediaCard heading="サービスA" text="募集" />
+            <MediaCard heading="サービスA" text="募集" href="#" />
           </Grid>
         </Grid>
       </Container>
