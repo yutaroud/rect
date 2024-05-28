@@ -30,6 +30,9 @@ const Footer = () => {
               <Box component="li" sx={{ py: 0.5 }}>
                 <Link href="/">プライバシーポリシー</Link>
               </Box>
+              <Box component="li" sx={{ py: 0.5 }}>
+                <Link href="/announcement">電子公告</Link>
+              </Box>
             </Box>
           </Grid>
         </Grid>
