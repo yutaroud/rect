@@ -1,12 +1,11 @@
-import * as React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function MediaCard({ heading, text }: { heading: string; text: string }) {
+export default function MediaCard({ heading, text, href }: { heading: string; text: string, href: string }) {
   return (
     <Card>
       <Image
@@ -29,7 +28,7 @@ export default function MediaCard({ heading, text }: { heading: string; text: st
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">詳細</Button>
+        <Link href={href}>詳細</Link>
       </CardActions>
     </Card>
   );
