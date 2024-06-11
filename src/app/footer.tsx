@@ -25,10 +25,10 @@ const Footer = () => {
           <Grid item xs={6} sm={4} md={2}>
             <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/">お問い合わせ</Link>
+                <Link href="https://forms.gle/tWbY3pJaxRpEq7Nz8">お問い合わせ</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/">プライバシーポリシー</Link>
+                <Link href="/privacy">プライバシーポリシー</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
                 <Link href="/announcement">電子公告</Link>
