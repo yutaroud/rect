@@ -21,7 +21,7 @@ const Business = () => {
             <MediaCard heading="プログラミング教室" text="小学生向けのスクール" href="/school" />
           </Grid>
           <Grid item xs={12} md={4}>
-            <MediaCard heading="フリーランス" text="どんな案件でもまずはご相談ください！" href="#" />
+            <MediaCard heading="開発等の相談" text="どんな案件でもまずはご相談ください！" href="/demand" />
           </Grid>
         </Grid>
       </Container>
