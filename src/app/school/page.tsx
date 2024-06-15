@@ -6,7 +6,7 @@ import { LocalPhone, KeyboardArrowRight } from '@mui/icons-material';
 
 export const TitleLabel = ({ text }) => {
   return (
-    <Typography variant="h3" sx={{borderRadius: 50, bgcolor: '#333', color: '#fff', fontSize: 16, fontWeight: 'bold', pt: 1, pb: 0.5, px: 5, display: 'inline-block', mt: 4}}>{text}</Typography>
+    <Typography variant="h3" sx={{borderRadius: 50, bgcolor: '#24285B', color: '#fff', fontSize: 16, fontWeight: 'bold', pt: 1, pb: 0.5, px: 5, display: 'inline-block', mt: 4}}>{text}</Typography>
   )
 }
 
@@ -31,8 +31,8 @@ const School = () => {
           <Typography variant="body2" mt={1}><Typography component="span" variant="body2" fontWeight='bold'>少人数での教室</Typography>で</Typography>
           <Typography variant="body2" mt={1}>プログラミングを学びませんか？</Typography>
         </Box>
-        <Box bgcolor='#407BFF' pt={7} pb={7} px={3}>
-          <Box bgcolor='#fff' px={3} py={5} borderTop='solid 8px #263238' sx={{width: '100%', height: '400', backgroundSize: 16, backgroundPosition: '50% 50%', backgroundImage: 'repeating-linear-gradient( 90deg, #F5F5F5 , #F5F5F5 1px, transparent 1px, transparent 16px),repeating-linear-gradient( 0deg, #F5F5F5 , #F5F5F5 1px, #fff 1px, #fff 16px)'}}>
+        <Box bgcolor='#407BFF' py={10} px={3}>
+          <Box bgcolor='#fff' px={3} py={5} borderTop='solid 8px #24285B' sx={{width: '100%', height: '400', backgroundSize: 16, backgroundPosition: '50% 50%', backgroundImage: 'repeating-linear-gradient( 90deg, #F5F5F5 , #F5F5F5 1px, transparent 1px, transparent 16px),repeating-linear-gradient( 0deg, #F5F5F5 , #F5F5F5 1px, #fff 1px, #fff 16px)'}}>
             <Typography variant="h2"><img src="../../image/school/heading_details.png" width="177" /></Typography>
             <TitleLabel text="授業内容"></TitleLabel>
             <Typography variant="body1" mt={2}>マイクラでのプログラミング学習</Typography>
@@ -49,12 +49,14 @@ const School = () => {
             <Typography variant="body1" mt={2}>〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9</Typography>
           </Box>
         </Box>
-        <Box pt={7} pb={7} mx={3}>
+        <Box pt={6} pb={10}>
           <Typography variant="h2"><img src="../../image/school/heading_teacher.png" width="58" /></Typography>
-          <Box mt={6}><img src="../../image/school/icon.png" width="303" /></Box>
-          <Typography variant="h6" fontWeight='bold' align="left">渡辺 優樹</Typography>
-          <Typography variant="body2" mt={2} align="left">5年以上、一部上場企業にてWebエンジニアを経験。次の世代に残る何かを残したいと思い起業しました。</Typography>
-          <Typography variant="body2" mt={2} align="left">とにかくまずはプログラミングを楽しいと思ってもらえるように頑張ります！</Typography>
+          <img src="../../image/school/icon.png" width="420" />
+          <Box mx={3}>
+            <Typography variant="h6" fontWeight='bold' align="left">渡辺 優樹</Typography>
+            <Typography variant="body2" mt={2} align="left">5年以上、一部上場企業にてWebエンジニアを経験。次の世代に残る何かを残したいと思い起業しました。</Typography>
+            <Typography variant="body2" mt={2} align="left">とにかくまずはプログラミングを楽しいと思ってもらえるように頑張ります！</Typography>
+          </Box>
         </Box>
         <Box pt={7} pb={7} px={3} bgcolor='#407BFF'>
           <Typography variant="h2"><img src="../../image/school/heading_cta.png" width="236" /></Typography>
