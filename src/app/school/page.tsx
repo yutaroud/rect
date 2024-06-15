@@ -15,16 +15,17 @@ const School = () => {
   return (
     <main>
       <Box
-        width={420}
         component="section"
         mt={8}
         sx={{
           textAlign: "center",
           mx: 'auto',
-          border: 'solid 1px #EEEEEE'
+          border: 'solid 1px #EEEEEE',
+          maxWidth: '420px',
+          width: '100%'
         }}
       >
-        <img src="../../image/school/fv.png" width="420" style={{verticalAlign: 'bottom'}}/>
+        <img src="../../image/school/fv.png" width="420" style={{verticalAlign: 'bottom', width: '100%'}} />
         <Box pb={6} mx={3}>
           <Typography variant="body2" mt={1}><Typography component="span" variant="body2" fontWeight='bold'>現役エンジニア</Typography>が低価格で教えます！</Typography>
           <Typography variant="body2" mt={1}>個人の学びがより深まる</Typography>
@@ -51,7 +52,7 @@ const School = () => {
         </Box>
         <Box pt={6} pb={10}>
           <Typography variant="h2"><img src="../../image/school/heading_teacher.png" width="58" /></Typography>
-          <img src="../../image/school/icon.png" width="420" />
+          <img src="../../image/school/icon.png" width="420" style={{width: '100%'}}/>
           <Box mx={3}>
             <Typography variant="h6" fontWeight='bold' align="left">渡辺 優樹</Typography>
             <Typography variant="body2" mt={2} align="left">5年以上、一部上場企業にてWebエンジニアを経験。次の世代に残る何かを残したいと思い起業しました。</Typography>
