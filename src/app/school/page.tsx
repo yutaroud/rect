@@ -18,28 +18,30 @@ const School = () => {
         }}
         position="relative"
       >
-        <Typography variant="h1"><img src="../../image/school/fv.png" width="375"/></Typography>
+        <Box><img src="../../image/school/fv.png" width="375" /></Box>
         <Box py={6} mx={3}>
-          <Typography variant="body2" mt={1}>現役エンジニアが低価格で教えます！</Typography>
+          <Typography variant="body2" mt={1}><Typography component="span" variant="body2" fontWeight='bold'>現役エンジニア</Typography>が低価格で教えます！</Typography>
           <Typography variant="body2" mt={1}>個人の学びがより深まる</Typography>
-          <Typography variant="body2" mt={1}>少人数での教室で</Typography>
+          <Typography variant="body2" mt={1}><Typography component="span" variant="body2" fontWeight='bold'>少人数での教室</Typography>で</Typography>
           <Typography variant="body2" mt={1}>プログラミングを学びませんか？</Typography>
         </Box>
-        <Box pt={7} pb={7} mx={3}>
-          <Typography variant="h2"><img src="../../image/school/heading_details.png" width="197" /></Typography>
-          <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>授業内容</Typography>
-          <Typography variant="body1" mt={2}>マイクラでのプログラミング学習</Typography>
-          <Typography variant="body2" mt={1}>マインクラフトを通して、プログラミングに必要な考え方を学び創造力を育みます。</Typography>
-          <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>対象</Typography>
-          <Typography variant="body2" mt={2}>小学1年生〜小学6年生</Typography>
-          <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>時間</Typography>
-          <Typography variant="body2" mt={2}>1回60分 最大6人</Typography>
-          <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>料金</Typography>
-          <Typography variant="body2" mt={2}>6,500円 / 月4回</Typography>
-          <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>日時</Typography>
-          <Typography variant="body2" mt={2}>月〜金18:00〜20:00</Typography>
-          <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>場所</Typography>
-          <Typography variant="body2" mt={2}>〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9</Typography>
+        <Box bgcolor='#407BFF' pt={7} pb={7} px={3}>
+          <Box bgcolor='#fff' px={3} py={5} borderTop='solid 8px #263238'>
+            <Typography variant="h2"><img src="../../image/school/heading_details.png" width="197" /></Typography>
+            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>授業内容</Typography>
+            <Typography variant="body1" mt={2}>マイクラでのプログラミング学習</Typography>
+            <Typography variant="body2" mt={1}>マインクラフトを通して、プログラミングに必要な考え方を学び創造力を育みます。</Typography>
+            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>対象</Typography>
+            <Typography variant="body2" mt={2}>小学1年生〜小学6年生</Typography>
+            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>時間</Typography>
+            <Typography variant="body2" mt={2}>1回60分 最大6人</Typography>
+            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>料金</Typography>
+            <Typography variant="body2" mt={2}>6,500円 / 月4回</Typography>
+            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>日時</Typography>
+            <Typography variant="body2" mt={2}>月〜金18:00〜20:00</Typography>
+            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>場所</Typography>
+            <Typography variant="body2" mt={2}>〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9</Typography>
+          </Box>
         </Box>
         <Box pt={7} pb={7} mx={3}>
           <Typography variant="h2"><img src="../../image/school/heading_teacher.png" width="65" /></Typography>
