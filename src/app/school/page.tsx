@@ -5,13 +5,7 @@ import Button from '@mui/material/Button';
 
 export const TitleLabel = ({ text }) => {
   return (
-    <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5, display: 'inline-block', mt: 4}}>{text}</Typography>
-  )
-}
-
-export const CtaButton = ({ text }) => {
-  return (
-    <Button variant="contained" size='large' sx={{fontSize: 20, fontWeight: 'bold', width: '100%', py: 2, borderRadius: 2, bgcolor: '#EF6C00', color: '#fff'}}>{text}</Button>
+    <Typography variant="h3" sx={{borderRadius: 50, bgcolor: '#333', color: '#fff', fontSize: 16, fontWeight: 'bold', pt: 1, pb: 0.5, px: 5, display: 'inline-block', mt: 4}}>{text}</Typography>
   )
 }
 
@@ -41,7 +35,7 @@ const School = () => {
             <Typography variant="h2"><img src="../../image/school/heading_details.png" width="197" /></Typography>
             <TitleLabel text="授業内容"></TitleLabel>
             <Typography variant="body1" mt={2}>マイクラでのプログラミング学習</Typography>
-            <Typography variant="body2" mt={1}>マインクラフトを通して、<br/>プログラミングに必要な考え方を学び<br/>創造力を育みます。</Typography>
+            <Typography variant="caption" mt={1} component="p">マインクラフトを通して、<br/>プログラミングに必要な考え方を学び<br/>創造力を育みます。</Typography>
             <TitleLabel text="対象"></TitleLabel>
             <Typography variant="body1" mt={2}>小学1年生〜小学6年生</Typography>
             <TitleLabel text="時間"></TitleLabel>
@@ -64,15 +58,11 @@ const School = () => {
         <Box pt={7} pb={7} px={3} bgcolor='#407BFF'>
           <Typography variant="h2"><img src="../../image/school/heading_cta.png" width="263" /></Typography>
           <Box mt={3}>
-            <CtaButton text="無料体験を申し込む"></CtaButton>
-            <Box mt={2}>
-              <CtaButton text="入会する"></CtaButton>
-            </Box>
+            <Button variant="contained" size='large' sx={{fontSize: 20, fontWeight: 'bold', width: '100%', py: 2, borderRadius: 2, bgcolor: '#EF6C00', color: '#fff'}}>無料体験を申し込む</Button>
+            <Button variant="contained" size='large' sx={{fontSize: 20, fontWeight: 'bold', width: '100%', py: 2, borderRadius: 2, bgcolor: '#EF6C00', color: '#fff', marginTop: 2}}>入会する</Button>
           </Box>
           <Typography variant="body2" mt={5} color='#fff' fontWeight='bold'>その他、お問合せやご相談は<br/>お電話ください</Typography>
-          <Box mt={2}>
-            <CtaButton text="080-3945-1221"></CtaButton>
-          </Box>
+          <Button variant="contained" size='large' sx={{fontSize: 20, fontWeight: 'bold', width: '100%', py: 2, borderRadius: 2, bgcolor: '#EF6C00', color: '#fff', marginTop: 2}}>080-3945-1221</Button>
         </Box>
       </Box>
     </main>
