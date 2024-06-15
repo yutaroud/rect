@@ -37,7 +37,7 @@ const School = () => {
           <Typography variant="body2" mt={1}>プログラミングを学びませんか？</Typography>
         </Box>
         <Box bgcolor='#407BFF' pt={7} pb={7} px={3}>
-          <Box bgcolor='#fff' px={3} py={5} borderTop='solid 8px #263238'>
+          <Box bgcolor='#fff' px={3} py={5} borderTop='solid 8px #263238' sx={{width: '100%', height: '400', backgroundSize: 16, backgroundPosition: '50% 50%', backgroundImage: 'repeating-linear-gradient( 90deg, #F5F5F5 , #F5F5F5 1px, transparent 1px, transparent 16px),repeating-linear-gradient( 0deg, #F5F5F5 , #F5F5F5 1px, #fff 1px, #fff 16px)'}}>
             <Typography variant="h2"><img src="../../image/school/heading_details.png" width="197" /></Typography>
             <TitleLabel text="授業内容"></TitleLabel>
             <Typography variant="body1" mt={2}>マイクラでのプログラミング学習</Typography>
