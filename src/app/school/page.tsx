@@ -3,6 +3,18 @@ import Box from "@mui/material/Box";
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+export const TitleLabel = ({ text }) => {
+  return (
+    <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5, display: 'inline-block', mt: 4}}>{text}</Typography>
+  )
+}
+
+export const CtaButton = ({ text }) => {
+  return (
+    <Button variant="contained" size='large' sx={{fontSize: 20, fontWeight: 'bold', width: '100%', py: 2, borderRadius: 2, bgcolor: '#EF6C00', color: '#fff'}}>{text}</Button>
+  )
+}
+
 
 const School = () => {
   return (
@@ -10,15 +22,14 @@ const School = () => {
       <Box
         width={375}
         component="section"
-        mt={7}
+        mt={8}
         sx={{
           textAlign: "center",
           mx: 'auto',
           border: 'solid 1px #EEEEEE'
         }}
-        position="relative"
       >
-        <Box><img src="../../image/school/fv.png" width="375" /></Box>
+        <img src="../../image/school/fv.png" width="375" style={{verticalAlign: 'bottom'}}/>
         <Box py={6} mx={3}>
           <Typography variant="body2" mt={1}><Typography component="span" variant="body2" fontWeight='bold'>現役エンジニア</Typography>が低価格で教えます！</Typography>
           <Typography variant="body2" mt={1}>個人の学びがより深まる</Typography>
@@ -28,34 +39,40 @@ const School = () => {
         <Box bgcolor='#407BFF' pt={7} pb={7} px={3}>
           <Box bgcolor='#fff' px={3} py={5} borderTop='solid 8px #263238'>
             <Typography variant="h2"><img src="../../image/school/heading_details.png" width="197" /></Typography>
-            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>授業内容</Typography>
+            <TitleLabel text="授業内容"></TitleLabel>
             <Typography variant="body1" mt={2}>マイクラでのプログラミング学習</Typography>
-            <Typography variant="body2" mt={1}>マインクラフトを通して、プログラミングに必要な考え方を学び創造力を育みます。</Typography>
-            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>対象</Typography>
-            <Typography variant="body2" mt={2}>小学1年生〜小学6年生</Typography>
-            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>時間</Typography>
-            <Typography variant="body2" mt={2}>1回60分 最大6人</Typography>
-            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>料金</Typography>
-            <Typography variant="body2" mt={2}>6,500円 / 月4回</Typography>
-            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>日時</Typography>
-            <Typography variant="body2" mt={2}>月〜金18:00〜20:00</Typography>
-            <Typography variant="h3" sx={{borderRadius: 50,bgcolor: '#333',color: '#fff',fontSize: 16, fontWeight: 'bold', pt: 0.5,pb: 0.25,px: 5,display: 'inline-block', mt: 4}}>場所</Typography>
-            <Typography variant="body2" mt={2}>〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9</Typography>
+            <Typography variant="body2" mt={1}>マインクラフトを通して、<br/>プログラミングに必要な考え方を学び<br/>創造力を育みます。</Typography>
+            <TitleLabel text="対象"></TitleLabel>
+            <Typography variant="body1" mt={2}>小学1年生〜小学6年生</Typography>
+            <TitleLabel text="時間"></TitleLabel>
+            <Typography variant="body1" mt={2}>1回60分 最大6人</Typography>
+            <TitleLabel text="料金"></TitleLabel>
+            <Typography variant="body1" mt={2}>6,500円 / 月4回</Typography>
+            <TitleLabel text="日時"></TitleLabel>
+            <Typography variant="body1" mt={2}>月〜金<br/>18:00〜20:00</Typography>
+            <TitleLabel text="場所"></TitleLabel>
+            <Typography variant="body1" mt={2}>〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9</Typography>
           </Box>
         </Box>
         <Box pt={7} pb={7} mx={3}>
           <Typography variant="h2"><img src="../../image/school/heading_teacher.png" width="65" /></Typography>
           <Box mt={6}><img src="../../image/school/icon.png" width="303" /></Box>
-          <Typography variant="h6" sx={{fontWeight: 'bold'}} mt={3} align="left">渡辺 優樹</Typography>
+          <Typography variant="h6" fontWeight='bold' mt={3} align="left">渡辺 優樹</Typography>
           <Typography variant="body2" mt={2} align="left">5年以上、一部上場企業にてWebエンジニアを経験。次の世代に残る何かを残したいと思い起業しました。</Typography>
           <Typography variant="body2" mt={2} align="left">とにかくまずはプログラミングを楽しいと思ってもらえるように頑張ります！</Typography>
         </Box>
-        <Box pt={7} pb={7} mx={3}>
+        <Box pt={7} pb={7} px={3} bgcolor='#407BFF'>
           <Typography variant="h2"><img src="../../image/school/heading_cta.png" width="263" /></Typography>
-          <Button variant="contained" size='large' sx={{fontSize: 20, fontWeight: 'bold', width: '100%', marginTop: 3, py: 2, borderRadius: 2}}>無料体験を申し込む</Button>
-          <Button variant="contained" size='large' sx={{fontSize: 20, fontWeight: 'bold', width: '100%', marginTop: 2, py: 2, borderRadius: 2}}>入会する</Button>
-          <Typography variant="body2" mt={3}>その他、お問合せやご相談は<br/>お電話ください</Typography>
-          <Button variant="contained" size='large' sx={{fontSize: 20, fontWeight: 'bold', width: '100%', marginTop: 2, py: 2, borderRadius: 2}}>080-3945-1221</Button>
+          <Box mt={3}>
+            <CtaButton text="無料体験を申し込む"></CtaButton>
+            <Box mt={2}>
+              <CtaButton text="入会する"></CtaButton>
+            </Box>
+          </Box>
+          <Typography variant="body2" mt={5} color='#fff' fontWeight='bold'>その他、お問合せやご相談は<br/>お電話ください</Typography>
+          <Box mt={2}>
+            <CtaButton text="080-3945-1221"></CtaButton>
+          </Box>
         </Box>
       </Box>
     </main>
