@@ -28,9 +28,7 @@ const School = () => {
         <img src="../../image/school/fv.png" width="420" style={{verticalAlign: 'bottom', width: '100%'}} />
         <Box pb={6} mx={3}>
           <Typography variant="body2" mt={1}><Typography component="span" variant="body2" fontWeight='bold'>現役エンジニア</Typography>が低価格で教えます！</Typography>
-          <Typography variant="body2" mt={1}>個人の学びがより深まる</Typography>
-          <Typography variant="body2" mt={1}><Typography component="span" variant="body2" fontWeight='bold'>少人数での教室</Typography>で</Typography>
-          <Typography variant="body2" mt={1}>プログラミングを学びませんか？</Typography>
+          <Typography variant="body2" mt={1} style={{lineHeight: '2'}}>個人の学びがより深まる<br/><Typography component="span" variant="body2" fontWeight='bold'>少人数での教室</Typography>で<br/>プログラミングを学びませんか？</Typography>
         </Box>
         <Box bgcolor='#407BFF' py={10} px={3}>
           <Box bgcolor='#fff' px={3} py={5} borderTop='solid 8px #24285B' sx={{width: '100%', height: '400', backgroundSize: 16, backgroundPosition: '50% 50%', backgroundImage: 'repeating-linear-gradient( 90deg, #F5F5F5 , #F5F5F5 1px, transparent 1px, transparent 16px),repeating-linear-gradient( 0deg, #F5F5F5 , #F5F5F5 1px, #fff 1px, #fff 16px)'}}>
@@ -58,7 +56,7 @@ const School = () => {
           <img src="../../image/school/icon.png" width="420" style={{width: '100%'}}/>
           <Box mx={3}>
             <Typography variant="h6" fontWeight='bold' align="left">渡辺 優樹</Typography>
-            <Typography variant="body2" mt={2} align="left">5年以上、一部上場企業にてWebエンジニアを経験。次の世代に残る何かを残したいと思い起業しました。</Typography>
+            <Typography variant="body2" mt={2} align="left">5年以上、一部上場企業にてWebエンジニアを経験。<br/>次の世代に残る何かを残したいと思い起業しました。</Typography>
             <Typography variant="body2" mt={2} align="left">とにかくまずはプログラミングを楽しいと思ってもらえるように頑張ります！</Typography>
           </Box>
         </Box>
@@ -69,7 +67,7 @@ const School = () => {
             <Button variant="contained" size='large' fullWidth={true} sx={{fontSize: 20, fontWeight: 'bold', py: 2, borderRadius: 4, bgcolor: '#EF6C00', color: '#fff', marginTop: 2}} endIcon={<KeyboardArrowRight/>}>入会する</Button>
           </Box>
           <Typography variant="body2" mt={5} color='#fff' fontWeight='bold'>その他、お問合せやご相談は<br/>お電話ください</Typography>
-          <Button variant="contained" size='large' fullWidth={true} sx={{fontSize: 20, fontWeight: 'bold', py: 2, borderRadius: 4, bgcolor: '#EF6C00', color: '#fff', marginTop: 2}} startIcon={<LocalPhone/>}>080-3945-1221</Button>
+          <Button variant="contained" size='large' fullWidth={true} sx={{fontSize: 20, fontWeight: 'bold', py: 2, borderRadius: 4, bgcolor: '#EF6C00', color: '#fff', marginTop: 2}} startIcon={<LocalPhone/>} href="tel:080-3945-1221">080-3945-1221</Button>
         </Box>
       </Box>
     </main>
