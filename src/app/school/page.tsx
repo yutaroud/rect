@@ -48,6 +48,9 @@ const School = () => {
             <Typography variant="body1" fontWeight='bold' mt={2}>月〜金<br/>18:00〜20:00</Typography>
             <TitleLabel text="場所"></TitleLabel>
             <Typography variant="body1" fontWeight='bold' mt={2}>〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9</Typography>
+            <Box mt={2}>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.605214250749!2d137.31217241168676!3d34.815872876910674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004c8c97bc8f76f%3A0xcd05623c79fb8ea7!2z44CSNDQxLTAzMTIg5oSb55-l55yM6LGK5bed5biC5b6h5rSl55S66KW_5pa55pel5pqu77yV77yQ4oiS77yZ!5e0!3m2!1sja!2sjp!4v1718541764963!5m2!1sja!2sjp" width="600" height="200" style={{width: '100%', border: '0' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </Box>
           </Box>
         </Box>
         <Box pt={6} pb={10}>
