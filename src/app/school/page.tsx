@@ -48,12 +48,13 @@ const School = () => {
             <Typography variant="body1" fontWeight='bold' mt={2}>〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9</Typography>
             <Box mt={2}>
               <iframe
-                width="600"
-                height="200"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                style={{width: '100%', border: '0' }}
-                src={`https://www.google.com/maps/embed/v1/place?key=${hoge}&q=愛知県豊川市御津町西方日暮50-9`}/>
+              width="600"
+              height="200"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{width: '100%', border: '0' }}
+              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_KEY}&q=愛知県豊川市御津町西方日暮50-9`}
+            />
             </Box>
           </Box>
         </Box>
