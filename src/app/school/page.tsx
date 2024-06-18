@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { LocalPhone, KeyboardArrowRight } from "@mui/icons-material";
 
-export const TitleLabel = ({ text }: { text: string }) => {
+const TitleLabel = ({ text }: { text: string }) => {
   return (
     <Typography
       variant="h3"
