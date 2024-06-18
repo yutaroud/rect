@@ -5,12 +5,12 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-export default function MediaCard({ heading, text, href }: { heading: string; text: string, href: string }) {
+export default function MediaCard({ heading, text, href, imgSrc, imgAlt }: { heading: string; text: string, href: string, imgSrc: string, imgAlt: string }) {
   return (
     <Card>
       <Image
-        alt="Random image"
-        src="https://source.unsplash.com/random"
+        alt={imgAlt}
+        src={imgSrc}
         width={640}
         height={480}
         style={{
