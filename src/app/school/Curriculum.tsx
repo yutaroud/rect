@@ -19,8 +19,9 @@ const Curriculum = () => {
         <Typography variant="body1" fontWeight='bold' mt={2}>小学1年生〜小学6年生</Typography>
         <TitleLabel text="時間"></TitleLabel>
         <Typography variant="body1" fontWeight='bold' mt={2}>1回60分 最大6人</Typography>
-        <TitleLabel text="料金"></TitleLabel>
-        <Typography variant="body1" fontWeight='bold' mt={2}>6,500円 / 月4回</Typography>
+        <TitleLabel text="受講料"></TitleLabel>
+        <Typography variant="body1" fontWeight='bold' mt={2}>6,500円 <Typography variant="caption" mt={1} component="span">※</Typography> / 月4回</Typography>
+        <Typography variant="caption" mt={1} component="p">※システム料金が別途かかる場合がございます</Typography>
         <TitleLabel text="日時"></TitleLabel>
         <Typography variant="body1" fontWeight='bold' mt={2}>月〜金<br/>18:00〜20:00</Typography>
         <TitleLabel text="場所"></TitleLabel>
