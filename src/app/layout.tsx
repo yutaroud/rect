@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "./header";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import Footer from "./footer";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata = {
   title: "株式会社レクト",
@@ -16,6 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <GoogleTagManager gtmId="GTM-MRQP5SQ2" />
       <body>
         <ThemeRegistry>
           <Header />
