@@ -13,17 +13,17 @@ const Curriculum = () => {
       <Box bgcolor='#fff' px={3} py={5} borderTop='solid 8px #24285B' sx={{width: '100%', height: '400', backgroundSize: 16, backgroundPosition: '50% 50%', backgroundImage: 'repeating-linear-gradient( 90deg, #F5F5F5 , #F5F5F5 1px, transparent 1px, transparent 16px),repeating-linear-gradient( 0deg, #F5F5F5 , #F5F5F5 1px, #fff 1px, #fff 16px)'}}>
         <Typography variant="h2"><img src="../../image/school/heading_details.png" alt="スクール概要" width="177" /></Typography>
         <TitleLabel text="授業内容"></TitleLabel>
-        <Typography variant="body1" fontWeight='bold' mt={2}>マイクラでのプログラミング学習</Typography>
-        <Typography variant="caption" mt={1} component="p">マインクラフトを通して、<br/>プログラミングに必要な考え方を学び<br/>創造力を育みます。</Typography>
+        <Typography variant="body1" fontWeight='bold' mt={2}>Scratchでのプログラミング学習</Typography>
+        <Typography variant="caption" mt={1} component="p">Scratchを通して、<br/>プログラミングに必要な考え方を学び<br/>創造力を育みます。</Typography>
         <TitleLabel text="対象"></TitleLabel>
-        <Typography variant="body1" fontWeight='bold' mt={2}>小学1年生〜小学6年生</Typography>
+        <Typography variant="body1" fontWeight='bold' mt={2}>小学4年生〜高校3年生</Typography>
         <TitleLabel text="時間"></TitleLabel>
-        <Typography variant="body1" fontWeight='bold' mt={2}>1回60分 最大6人</Typography>
+        <Typography variant="body1" fontWeight='bold' mt={2}>1回120分 最大6人</Typography>
         <TitleLabel text="受講料"></TitleLabel>
-        <Typography variant="body1" fontWeight='bold' mt={2}>6,500円 <Typography variant="caption" mt={1} component="span">※</Typography> / 月4回</Typography>
-        <Typography variant="caption" mt={1} component="p">※システム料金が別途かかる場合がございます</Typography>
+        <Typography variant="body1" fontWeight='bold' mt={2}>6,500〜12000円 <Typography variant="caption" mt={1} component="span">※</Typography> / 月4回</Typography>
+        <Typography variant="caption" mt={1} component="p">※入会時に入会金10000円、受講料とは別に教材費が毎月500円かかります。</Typography>
         <TitleLabel text="日時"></TitleLabel>
-        <Typography variant="body1" fontWeight='bold' mt={2}>月〜金<br/>18:00〜20:00</Typography>
+        <Typography variant="body1" fontWeight='bold' mt={2}>月〜金<br/>16:00〜20:00</Typography>
         <TitleLabel text="場所"></TitleLabel>
         <Typography variant="body1" fontWeight='bold' mt={2}>〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9</Typography>
         <Box mt={2}>
