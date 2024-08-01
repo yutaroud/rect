@@ -20,7 +20,7 @@ const Curriculum = () => {
         <TitleLabel text="時間"></TitleLabel>
         <Typography variant="body1" fontWeight='bold' mt={2}>1回120分 最大6人</Typography>
         <TitleLabel text="受講料"></TitleLabel>
-        <Typography variant="body1" fontWeight='bold' mt={2}>6,500〜12000円 <Typography variant="caption" mt={1} component="span">※</Typography> / 月4回</Typography>
+        <Typography variant="body1" fontWeight='bold' mt={2}>6,500〜12000円 <Typography variant="caption" mt={1} component="span">※</Typography> / 月2回</Typography>
         <Typography variant="caption" mt={1} component="p">※入会時に入会金10000円、受講料とは別に教材費が毎月500円かかります。</Typography>
         <TitleLabel text="日時"></TitleLabel>
         <Typography variant="body1" fontWeight='bold' mt={2}>月〜金<br/>16:00〜20:00</Typography>
