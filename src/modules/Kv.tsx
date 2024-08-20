@@ -14,11 +14,7 @@ const Kv = () => {
       }}
     >
       <Container sx={{ mt: 8 }}>
-        <Typography
-          variant="h1"
-          align="center"
-          color="inherit"
-        >
+        <Typography variant="h1" align="center" color="inherit">
           RE:CT
         </Typography>
         <Typography
@@ -35,7 +31,7 @@ const Kv = () => {
           variant="h4"
           sx={{
             mt: { xs: 4, sm: 5 },
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         >
           社会のコミュニケーションをITの力でもっと活発に

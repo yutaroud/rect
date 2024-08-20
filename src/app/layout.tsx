@@ -2,12 +2,12 @@ import Head from "next/head";
 import Header from "./Header";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import Footer from "./Footer";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
   title: "株式会社レクト",
   description: "社会のコミュニケーションをITの力でもっと活発に",
-  robots: "index,follow"
+  robots: "index,follow",
 };
 
 export default function RootLayout({

@@ -20,10 +20,22 @@ const Business = () => {
         </Typography>
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
-            <MediaCard heading="プログラミング教室" text="小学生向けのスクール" href="/school" imgSrc={computerImg.src} imgAlt="プログラミング教室" />
+            <MediaCard
+              heading="プログラミング教室"
+              text="小学生向けのスクール"
+              href="/school"
+              imgSrc={computerImg.src}
+              imgAlt="プログラミング教室"
+            />
           </Grid>
           <Grid item xs={12} md={4}>
-            <MediaCard heading="開発等の相談" text="どんな案件でもまずはご相談ください！" href="/demand" imgSrc={soudanImg.src} imgAlt="開発の相談" />
+            <MediaCard
+              heading="開発等の相談"
+              text="どんな案件でもまずはご相談ください！"
+              href="/demand"
+              imgSrc={soudanImg.src}
+              imgAlt="開発の相談"
+            />
           </Grid>
         </Grid>
       </Container>

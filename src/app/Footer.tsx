@@ -28,7 +28,13 @@ const Footer = () => {
                 <Link href="/">運営会社について</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="https://forms.gle/tWbY3pJaxRpEq7Nz8" rel="noopener noreferrer" target="_blank">お問い合わせ</Link>
+                <Link
+                  href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  お問い合わせ
+                </Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
                 <Link href="/privacy">プライバシーポリシー</Link>

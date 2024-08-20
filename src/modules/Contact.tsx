@@ -23,7 +23,13 @@ const Contact = () => {
           }}
         >
           <Typography variant="h4" component="span">
-            <Link href="https://forms.gle/tWbY3pJaxRpEq7Nz8" rel="noopener noreferrer" target="_blank">お問い合わせはこちらから</Link>
+            <Link
+              href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              お問い合わせはこちらから
+            </Link>
           </Typography>
         </Button>
       </Container>
