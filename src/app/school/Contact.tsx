@@ -5,7 +5,7 @@ import { LocalPhone, KeyboardArrowRight } from "@mui/icons-material";
 
 const Contact = () => {
   return (
-    <Box pt={7} pb={7} px={3} bgcolor="#407BFF">
+    <Box pt={7} pb={7} px={3} bgcolor="#407BFF" id="contact-form">
       <Typography variant="h2">
         <img
           src="../../image/school/heading_cta.png"
@@ -14,6 +14,15 @@ const Contact = () => {
         />
       </Typography>
       <Box mt={3}>
+        <Typography
+          variant="body2"
+          mb={2}
+          color="#fff"
+          fontWeight="bold"
+        >
+          下記フォームよりメールアドレスをご登録ください。<br />
+          ご登録後、メールにてご連絡いたしますので、必要事項をご記入お願いいたします。<br />
+        </Typography>
         <Button
           variant="contained"
           size="large"
@@ -30,7 +39,7 @@ const Contact = () => {
             { "&:hover": { backgroundColor: "#D46000" } },
           ]}
           endIcon={<KeyboardArrowRight />}
-          href="https://docs.google.com/forms/d/e/1FAIpQLSexsVLTHkqbV6XYvG_5X8PBckIWwYf3mXybYD7PKg0YU9IL5A/viewform"
+          href="https://www.kaihipay.jp/forms?form_code=2290891890827256"
         >
           無料体験を申し込む
         </Button>
@@ -51,7 +60,7 @@ const Contact = () => {
             { "&:hover": { backgroundColor: "#D46000" } },
           ]}
           endIcon={<KeyboardArrowRight />}
-          href="https://docs.google.com/forms/d/e/1FAIpQLSexsVLTHkqbV6XYvG_5X8PBckIWwYf3mXybYD7PKg0YU9IL5A/viewform"
+          href="https://www.kaihipay.jp/forms?form_code=6841800233981658"
         >
           入会する
         </Button>
@@ -78,9 +87,9 @@ const Contact = () => {
           { "&:hover": { backgroundColor: "#D46000" } },
         ]}
         startIcon={<LocalPhone />}
-        href="tel:080-3945-1221"
+        href="tel:090-1831-1182"
       >
-        080-3945-1221
+        090-1831-1182
       </Button>
     </Box>
   );
