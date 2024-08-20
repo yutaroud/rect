@@ -50,13 +50,28 @@ const Curriculum = () => {
         <TitleLabel text="授業内容"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
           Scratchでのプログラミング学習
+          <br />
+          JavaScriptでのWeb開発
+        </Typography>
+        <Typography variant="body1" fontWeight="bold" mt={2}>
+          初級コース
         </Typography>
         <Typography variant="caption" mt={1} component="p">
-          Scratchを通して、
+          ビジュアルプログラミング言語「Scratch」を用いて
           <br />
-          プログラミングに必要な考え方を学び
+          プログラミングの基礎概念を学びます。キーボード入力に
           <br />
-          創造力を育みます。
+          慣れていなくても安心して学習することができます。
+        </Typography>
+        <Typography variant="body1" fontWeight="bold" mt={2}>
+          中級コース
+        </Typography>
+        <Typography variant="caption" mt={1} component="p">
+          テキストプログラミング言語「JavaScript」を用いた
+          <br />
+          Webサイト開発を通してプログラミングを学びます。
+          <br />
+          主に、キーボードを使用する本格的なプログラミングコースです。
         </Typography>
         <TitleLabel text="対象"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
@@ -68,20 +83,21 @@ const Curriculum = () => {
         </Typography>
         <TitleLabel text="受講料"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
-          6,500〜12000円{" "}
+          6,500〜12,000円{" "}
           <Typography variant="caption" mt={1} component="span">
             ※
           </Typography>{" "}
           / 月2回
         </Typography>
         <Typography variant="caption" mt={1} component="p">
-          ※入会時に入会金10000円、受講料とは別に教材費が毎月500円かかります。
+          ※コースに応じて変動。 <br />
+          入会時に入会金10000円、受講料とは別に教材費が毎月500円かかります。
         </Typography>
         <TitleLabel text="日時"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
           月〜金
           <br />
-          16:00〜20:00
+          16:00〜18:00,18:30〜20:30
         </Typography>
         <TitleLabel text="場所"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
