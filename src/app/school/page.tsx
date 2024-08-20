@@ -13,7 +13,7 @@ const School = () => {
       <Header switchLogo={true} />
       <Box
       component="section"
-      mt={8}
+      mt={7}
       sx={{
           textAlign: "center",
           mx: 'auto',

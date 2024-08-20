@@ -14,12 +14,12 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
     <AppBar position="fixed" sx={{ zIndex: 2000 }}>
       <Toolbar sx={{ backgroundColor: "background.paper" }}>
         {switchLogo ? (
-          <Box style={{ maxWidth: "420px" }}>
+          <Box style={{ width: "420px",display: "flex" }}>
             <Image
               alt="Re:ProS"
               src="../../image/school/logo.png"
-              width={140}
-              height={38}
+              width={160}
+              height={44}
             />
           </Box>
         ) : (
