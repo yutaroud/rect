@@ -1,10 +1,22 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import Link from "next/link";
+import Image from "next/image";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
-export default function MediaCard({ heading, text, href, imgSrc, imgAlt }: { heading: string; text: string, href: string, imgSrc: string, imgAlt: string }) {
+export default function MediaCard({
+  heading,
+  text,
+  href,
+  imgSrc,
+  imgAlt,
+}: {
+  heading: string;
+  text: string;
+  href: string;
+  imgSrc: string;
+  imgAlt: string;
+}) {
   return (
     <Link href={href}>
       <Card>
@@ -14,9 +26,9 @@ export default function MediaCard({ heading, text, href, imgSrc, imgAlt }: { hea
           width={640}
           height={480}
           style={{
-            maxWidth: '100%',
-            height: '200px',
-            objectFit: 'cover',
+            maxWidth: "100%",
+            height: "200px",
+            objectFit: "cover",
           }}
         />
         <CardContent>

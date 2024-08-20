@@ -25,7 +25,13 @@ const Footer = () => {
           <Grid item xs={6} sm={4} md={2}>
             <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="https://forms.gle/tWbY3pJaxRpEq7Nz8" rel="noopener noreferrer" target="_blank">お問い合わせ</Link>
+                <Link
+                  href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  お問い合わせ
+                </Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
                 <Link href="/privacy">プライバシーポリシー</Link>
