@@ -18,8 +18,8 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
             <Image
               alt="Re:ProS"
               src="../../image/school/logo.png"
-              width={160}
-              height={44}
+              width={150}
+              height={25}
             />
           </Box>
         ) : (
