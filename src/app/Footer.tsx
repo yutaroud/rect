@@ -25,6 +25,9 @@ const Footer = () => {
           <Grid item xs={6} sm={4} md={2}>
             <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
               <Box component="li" sx={{ py: 0.5 }}>
+                <Link href="/">運営会社について</Link>
+              </Box>
+              <Box component="li" sx={{ py: 0.5 }}>
                 <Link
                   href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
                   rel="noopener noreferrer"

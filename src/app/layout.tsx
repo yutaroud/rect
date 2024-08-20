@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Header from "./header";
+import Header from "./Header";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
-import Footer from "./footer";
+import Footer from "./Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {

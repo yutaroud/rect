@@ -1,4 +1,5 @@
 import "../globals.css";
+import Header from "../Header";
 import Box from "@mui/material/Box";
 import KeyVisual from "./KeyVisual";
 import Curriculum from "./Curriculum";
@@ -8,9 +9,10 @@ import Contact from "./Contact";
 const School = () => {
   return (
     <main>
+      <Header switchLogo={true} />
       <Box
         component="section"
-        mt={8}
+        mt={7}
         sx={{
           textAlign: "center",
           mx: "auto",
