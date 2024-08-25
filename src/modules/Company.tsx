@@ -27,34 +27,38 @@ const Company = () => {
     <Box
       component="section"
       sx={{
-        textAlign: "center",
+        maxWidth: "800px",
+        width: "100%",
+        margin: "0 auto",
+        padding: "150px 16px 0 16px",
       }}
       position="relative"
     >
-      <Container sx={{ mt: 5, mb: 10 }}>
-        <Typography variant="h4" align="center">
-          会社概要
-        </Typography>
-        <TableContainer component={Paper}>
-          <Table size="medium">
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.title}>
-                  <TableCell
-                    align="left"
-                    sx={{ fontSize: "1.5rem", fontWeight: "bold" }}
-                  >
-                    {row.title}
-                  </TableCell>
-                  <TableCell align="center" sx={{ fontSize: "1.5rem" }}>
-                    {row.description}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Container>
+      <Typography variant="h2" sx={{fontWeight: "bold", letterSpacing: "5px", fontSize: "40px"}}>
+        会社概要
+      </Typography>
+      <Typography variant="caption" align="center" component="span" sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2"}}>
+        Company
+      </Typography>
+      <TableContainer style={{ marginTop: 40 }}>
+        <Table size="medium">
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow key={row.title} style={{borderBottom: "1px solid #D9D9D9", verticalAlign: "text-top"}}>
+                <TableCell
+                  align="left"
+                  sx={{ fontSize: "14px", padding: "24px 24px 24px 0"}}
+                >
+                  {row.title}
+                </TableCell>
+                <TableCell align="left" sx={{ fontSize: "14px", padding: "24px 0"}}>
+                  {row.description}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Box>
   );
 };

@@ -11,6 +11,7 @@ const Kv = () => {
         backgroundRepeat: "no-repeat",
         backgroundImage: 'url("/background/productCurvyLines.png")',
         backgroundPosition: "center",
+        height: "490px"
       }}
     >
       <Container sx={{ mt: 8 }}>

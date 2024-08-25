@@ -1,52 +1,46 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
 const Copyright = () => {
   return (
-    <React.Fragment>
-      © RECT
-      {new Date().getFullYear()}
-    </React.Fragment>
+    <Typography variant="caption" sx={{letterSpacing: "2px", fontSize: "14px", color: "#667FB9", marginTop: "50px"}} component="p">
+      <React.Fragment>
+        ©RECT
+        {new Date().getFullYear()}
+      </React.Fragment>
+    </Typography>
   );
 };
 
 const Footer = () => {
   return (
-    <Typography component="footer" sx={{ display: "flex" }}>
-      <Container sx={{ my: 8, display: "flex" }}>
-        <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={2}>
-            <Copyright />
-          </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/">運営会社について</Link>
-              </Box>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link
-                  href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  お問い合わせ
-                </Link>
-              </Box>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/privacy">プライバシーポリシー</Link>
-              </Box>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/announcement">電子公告</Link>
-              </Box>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-    </Typography>
+    <Box component="footer" sx={{ background: "#00298A", marginTop: "100px", padding: "80px 0 50px" }}>
+      <Box sx={{maxWidth: "800px", width: "100%", margin: "0 auto", padding: "0 16px", }}>
+        <Box component="ul" sx={{listStyle: "none",}}>
+          <Box component="li" style={{fontSize: "14px"}}>
+            <Link style={{color: "#fff", textDecoration: "underline"}} href="/">運営会社</Link>
+          </Box>
+          <Box component="li" style={{marginTop: "12px", fontSize: "14px"}}>
+            <Link style={{color: "#fff", textDecoration: "underline"}}
+              href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              お問い合わせ
+            </Link>
+          </Box>
+          <Box component="li" style={{marginTop: "12px", fontSize: "14px"}}>
+            <Link style={{color: "#fff", textDecoration: "underline"}} href="/privacy">プライバシーポリシー</Link>
+          </Box>
+          <Box component="li" style={{marginTop: "12px", fontSize: "14px"}}>
+            <Link style={{color: "#fff", textDecoration: "underline"}} href="/announcement">電子公告</Link>
+          </Box>
+        </Box>
+        <Copyright />
+      </Box>
+    </Box>
   );
 };
 

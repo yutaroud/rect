@@ -1,44 +1,47 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import MediaCard from "../components/MediaCard";
 import Grid from "@mui/material/Grid";
-import computerImg from "../../public/contents/computer.png";
-import soudanImg from "../../public/contents/soudan.png";
+import computerImg from "../../public/image/top/service_programming.png";
+import soudanImg from "../../public/image/top/service_soudan.png";
 
 const Business = () => {
   return (
     <Box
       component="section"
       sx={{
-        textAlign: "center",
+        maxWidth: "800px",
+        width: "100%",
+        margin: "0 auto",
+        padding: "150px 16px 0 16px",
       }}
     >
-      <Container sx={{ mt: 5, mb: 10 }}>
-        <Typography variant="h4" align="center">
-          事業内容
-        </Typography>
-        <Grid container spacing={5}>
-          <Grid item xs={12} md={4}>
-            <MediaCard
-              heading="プログラミング教室"
-              text="小学生向けのスクール"
-              href="/school"
-              imgSrc={computerImg.src}
-              imgAlt="プログラミング教室"
-            />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <MediaCard
-              heading="開発等の相談"
-              text="どんな案件でもまずはご相談ください！"
-              href="/demand"
-              imgSrc={soudanImg.src}
-              imgAlt="開発の相談"
-            />
-          </Grid>
+      <Typography variant="h2" sx={{fontWeight: "bold", letterSpacing: "5px", fontSize: "40px"}}>
+        事業内容
+      </Typography>
+      <Typography variant="caption" align="center" component="span" sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2"}}>
+      Service
+    </Typography>
+      <Grid container style={{ marginTop: 40, gap: "24px" }}>
+        <Grid width="100%" style={{maxWidth: "370px"}}>
+          <MediaCard
+            heading="プログラミング教室"
+            text="小学生向けのスクール"
+            href="/school"
+            imgSrc={computerImg.src}
+            imgAlt="プログラミング教室"
+          />
         </Grid>
-      </Container>
+        <Grid width="100%" style={{maxWidth: "370px"}}>
+          <MediaCard
+            heading="開発等の相談"
+            text="どんな案件でもまずはご相談ください！"
+            href="/demand"
+            imgSrc={soudanImg.src}
+            imgAlt="開発の相談"
+          />
+        </Grid>
+      </Grid>
     </Box>
   );
 };
