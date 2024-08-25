@@ -11,8 +11,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
   return (
-    <AppBar position="fixed" sx={{ zIndex: 2000 }}>
-      <Toolbar sx={{ backgroundColor: "background.paper" }}>
+    <AppBar position="fixed" sx={{ zIndex: 2000, boxShadow: "none", background: "none" }}>
+      <Toolbar sx={{ backgroundColor: "rgba(255,255,255,0.8)" }}>
         {switchLogo ? (
           <Box style={{ width: "420px",display: "flex" }}>
             <Image
