@@ -20,6 +20,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-MRQP5SQ2" />
       <body>
         <ThemeRegistry>
+          <Header />
           {children}
           <Footer />
         </ThemeRegistry>
