@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
+
 const Contact = () => {
   return (
     <Box
@@ -19,7 +20,7 @@ const Contact = () => {
       <Typography variant="caption" align="center" component="span" sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2"}}>
         Contact
       </Typography>
-      <Box mt={4}>
+      <Box mt={4} sx={{width: "100%", borderRadius: "8px", padding: "56px 40px",backgroundImage: 'url(/image/top/img_pc.png)', backgroundSize: '320px', backgroundPosition: 'bottom right',backgroundRepeat: "no-repeat", backgroundColor: "#DFF0FF"}}>
         <Link
           href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
           rel="noopener noreferrer"
@@ -35,7 +36,7 @@ const Contact = () => {
             textDecoration: "none",
             fontWeight: "bold",
             letterSpacing: "1px",
-            display: "inline-block"
+            display: "inline-block",
           }}
         >
           お問い合わせフォームへ

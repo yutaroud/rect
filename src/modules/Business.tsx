@@ -22,7 +22,7 @@ const Business = () => {
       <Typography variant="caption" align="center" component="span" sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2"}}>
       Service
     </Typography>
-      <Grid container style={{ marginTop: 40, gap: "24px" }}>
+      <Grid container style={{ marginTop: 40, gap: "40px 24px" }}>
         <Grid width="100%" style={{maxWidth: "370px"}}>
           <MediaCard
             heading="プログラミング教室"
