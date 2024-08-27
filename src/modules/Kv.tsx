@@ -1,44 +1,26 @@
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
+
 const Kv = () => {
   return (
-    <Box
-      component="section"
-      sx={{
-        pointerEvents: "none",
-        backgroundRepeat: "no-repeat",
-        backgroundImage: 'url("/background/productCurvyLines.png")',
-        backgroundPosition: "center",
-        height: "490px"
-      }}
-    >
-      <Container sx={{ mt: 8 }}>
-        <Typography variant="h1" align="center" color="inherit">
-          RE:CT
-        </Typography>
-        <Typography
-          variant="h2"
-          align="center"
-          color="inherit"
-          sx={{ fontSize: "2rem", fontWeight: "bold" }}
-        >
-          RE:Communication Technology
-        </Typography>
-        <Typography
-          color="inherit"
-          align="center"
-          variant="h4"
-          sx={{
-            mt: { xs: 4, sm: 5 },
-            fontWeight: "bold",
-          }}
-        >
-          社会のコミュニケーションをITの力でもっと活発に
-        </Typography>
-      </Container>
+  <Box mt={8} sx={{height: "500px", display: "flex", flexDirection: "column", justifyContent: "center","@media screen and (max-width:800px)": { padding: "96px 16px", height: "auto"}}}>
+    <Box sx={{margin: "auto", maxWidth: "800px", width: "100%"}}>
+     <Typography
+        variant="h1"
+        sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2","@media screen and (max-width:800px)": { fontSize: "12px"},}}
+      >
+        RE:Communication Technology
+      </Typography>
+      <Typography
+        variant="h1"
+        mt={8}
+        sx={{fontSize: "56px", fontWeight: "bold", letterSpacing: "3px", lineHeight: "1.6","@media screen and (max-width:800px)": { fontSize: "40px"}}}
+      >
+        社会のコミュニケーションを<br/>ITの力でもっと活発に
+      </Typography>
     </Box>
+  </Box>
   );
 };
 
