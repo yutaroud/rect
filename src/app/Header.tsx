@@ -12,22 +12,29 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
   return (
     <AppBar position="fixed" sx={{ zIndex: 2000, boxShadow: "none", background: "none" }}>
-      <Toolbar sx={{ backgroundColor: "rgba(255,255,255,0.8)" }}>
-        {switchLogo ? (
-          <Box style={{ width: "420px",display: "flex" }}>
-            <Image
-              alt="Re:ProS"
-              src="../../image/school/logo.png"
-              width={150}
-              height={25}
-            />
-          </Box>
+      {switchLogo ? (
+        <Toolbar sx={{ backgroundColor: "#fff" }}>
+            <Box style={{ width: "420px",display: "flex" }}>
+              <Image
+                alt="Re:ProS"
+                src="../../image/school/logo.png"
+                width={150}
+                height={25}
+              />
+            </Box>
+          </Toolbar>
         ) : (
-          <Typography variant="h6" color="text.primary">
-            <Link href="/">RE:CT</Link>
-          </Typography>
+          <Toolbar sx={{ backgroundColor: "rgba(255,255,255,0.8)" }}>
+            <Link href="/">
+              <Image
+                alt="RE:CT"
+                src="../../image/top/logo_rect.png"
+                width={120}
+                height={34}
+              />
+            </Link>
+          </Toolbar>
         )}
-      </Toolbar>
     </AppBar>
   );
 };
