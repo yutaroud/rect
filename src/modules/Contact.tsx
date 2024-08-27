@@ -20,7 +20,7 @@ const Contact = () => {
       <Typography variant="caption" align="center" component="span" sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2"}}>
         Contact
       </Typography>
-      <Box mt={4} sx={{width: "100%", borderRadius: "8px", padding: "56px 40px",backgroundImage: 'url(/image/top/img_pc.png)', backgroundSize: '320px', backgroundPosition: 'bottom right',backgroundRepeat: "no-repeat", backgroundColor: "#DFF0FF"}}>
+      <Box mt={4} sx={{width: "100%", borderRadius: "8px", padding: "56px 40px",backgroundImage: 'url(/image/top/img_pc.png)', backgroundSize: '320px', backgroundPosition: 'bottom right',backgroundRepeat: "no-repeat", backgroundColor: "#DFF0FF","@media screen and (max-width:600px)": {padding: "200px 24px 24px",backgroundPosition: "center 42px", backgroundSize: "170px"}}}>
         <Link
           href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
           rel="noopener noreferrer"
@@ -37,6 +37,8 @@ const Contact = () => {
             fontWeight: "bold",
             letterSpacing: "1px",
             display: "inline-block",
+            textAlign: "center",
+            "@media screen and (max-width:800px)": {px: 4,width: "100%"}
           }}
         >
           お問い合わせフォームへ
