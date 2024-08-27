@@ -1,38 +1,49 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
+
 
 const Contact = () => {
   return (
     <Box
       component="section"
       sx={{
-        textAlign: "center",
+        maxWidth: "800px",
+        width: "100%",
+        margin: "0 auto",
+        padding: "150px 16px 0 16px",
       }}
     >
-      <Container sx={{ mt: 5, mb: 10 }}>
-        <Button
+      <Typography variant="h2" sx={{fontWeight: "bold", letterSpacing: "5px", fontSize: "40px"}}>
+        お問い合わせ
+      </Typography>
+      <Typography variant="caption" align="center" component="span" sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2"}}>
+        Contact
+      </Typography>
+      <Box mt={4} sx={{width: "100%", borderRadius: "8px", padding: "56px 40px",backgroundImage: 'url(/image/top/img_pc.png)', backgroundSize: '320px', backgroundPosition: 'bottom right',backgroundRepeat: "no-repeat", backgroundColor: "#DFF0FF","@media screen and (max-width:600px)": {padding: "200px 24px 24px",backgroundPosition: "center 42px", backgroundSize: "170px"}}}>
+        <Link
+          href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
+          rel="noopener noreferrer"
+          target="_blank"
           sx={{
-            border: "4px solid currentColor",
-            borderRadius: 0,
+            borderRadius: "50px",
             height: "auto",
-            py: 2,
-            px: 5,
+            py: 3,
+            px: 8,
+            backgroundColor: "#00298A",
+            color: "#fff",
+            fontSize: "20px",
+            textDecoration: "none",
+            fontWeight: "bold",
+            letterSpacing: "1px",
+            display: "inline-block",
+            textAlign: "center",
+            "@media screen and (max-width:800px)": {px: 4,width: "100%"}
           }}
         >
-          <Typography variant="h4" component="span">
-            <Link
-              href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              お問い合わせはこちらから
-            </Link>
-          </Typography>
-        </Button>
-      </Container>
+          お問い合わせフォームへ
+        </Link>
+      </Box>
     </Box>
   );
 };

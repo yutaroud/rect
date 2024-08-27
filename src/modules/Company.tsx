@@ -16,7 +16,7 @@ const rows = [
   createData("会社名", "株式会社レクト"),
   createData("設立", "2024年6月3日"),
   createData("所在地", "愛知県豊川市御津町西方日暮1-12"),
-  createData("代表", "渡辺優樹"),
+  createData("代表", "渡辺 優樹"),
   createData("生年月日", "1994年12月28日"),
   createData("電話番号", "080-3945-1221"),
   createData("主な事業内容", "情報通信サービスの開発・運営"),
@@ -27,34 +27,38 @@ const Company = () => {
     <Box
       component="section"
       sx={{
-        textAlign: "center",
+        maxWidth: "800px",
+        width: "100%",
+        margin: "0 auto",
+        padding: "150px 16px 0 16px",
       }}
       position="relative"
     >
-      <Container sx={{ mt: 5, mb: 10 }}>
-        <Typography variant="h4" align="center">
-          会社概要
-        </Typography>
-        <TableContainer component={Paper}>
-          <Table size="medium">
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.title}>
-                  <TableCell
-                    align="left"
-                    sx={{ fontSize: "1.5rem", fontWeight: "bold" }}
-                  >
-                    {row.title}
-                  </TableCell>
-                  <TableCell align="center" sx={{ fontSize: "1.5rem" }}>
-                    {row.description}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Container>
+      <Typography variant="h2" sx={{fontWeight: "bold", letterSpacing: "5px", fontSize: "40px"}}>
+        会社概要
+      </Typography>
+      <Typography variant="caption" align="center" component="span" sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2"}}>
+        Company
+      </Typography>
+      <TableContainer style={{ marginTop: 40 }}>
+        <Table size="medium">
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow key={row.title} style={{borderBottom: "1px solid #D9D9D9", verticalAlign: "text-top"}}>
+                <TableCell
+                  align="left"
+                  sx={{ fontSize: "14px", padding: "24px 24px 24px 0"}}
+                >
+                  {row.title}
+                </TableCell>
+                <TableCell align="left" sx={{ fontSize: "14px", padding: "24px 0"}}>
+                  {row.description}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Box>
   );
 };
