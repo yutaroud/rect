@@ -18,7 +18,7 @@ const Copyright = () => {
 
 const Footer = () => {
   return (
-    <Box component="footer" mt={12} sx={{ background: "#00298A", padding: "80px 0 50px" }}>
+    <Box component="footer" sx={{ background: "#00298A", padding: "80px 0 50px" }}>
       <Box sx={{maxWidth: "800px", width: "100%", margin: "0 auto", padding: "0 16px", }}>
         <List>
           <ListItem sx={{padding: "0", marginTop: "12px"}}>

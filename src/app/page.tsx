@@ -7,7 +7,7 @@ import Contact from "@/modules/Contact";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{paddingBottom: "80px"}}>
       <Kv />
       <Company />
       <Business />
