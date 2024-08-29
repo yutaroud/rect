@@ -91,7 +91,7 @@ const Curriculum = () => {
         </Typography>
         <Typography variant="caption" mt={1} component="p">
           ※コースに応じて変動。 <br />
-          入会時に入会金10000円、受講料とは別に教材費が毎月500円かかります。
+          入会時に入会金10,000円、受講料とは別に教材費が毎月500円かかります。
         </Typography>
         <TitleLabel text="日時"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
