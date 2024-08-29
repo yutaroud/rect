@@ -40,6 +40,7 @@ const Contact = () => {
           ]}
           endIcon={<KeyboardArrowRight />}
           href="https://www.kaihipay.jp/forms?form_code=2290891890827256"
+          data-ga="freeTrial"
         >
           無料体験を申し込む
         </Button>
@@ -61,6 +62,7 @@ const Contact = () => {
           ]}
           endIcon={<KeyboardArrowRight />}
           href="https://www.kaihipay.jp/forms?form_code=6841800233981658"
+          data-ga="purchase"
         >
           入会する
         </Button>
