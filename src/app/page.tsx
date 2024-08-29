@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <main style={{paddingBottom: "80px"}}>
       <Kv />
-      <Company />
       <Business />
+      <Company />
       <Recruitment />
       <Contact />
     </main>

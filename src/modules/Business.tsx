@@ -26,7 +26,7 @@ const Business = () => {
         <Grid sx={{width: "calc(50% - 12px)","@media screen and (max-width:500px)": {width: "100%"}}}>
           <MediaCard
             heading="プログラミング教室"
-            text="小学生向けのスクール"
+            text="学生向けのプログラミングスクール"
             href="/school"
             imgSrc={computerImg.src}
             imgAlt="プログラミング教室"
