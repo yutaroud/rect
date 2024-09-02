@@ -39,7 +39,7 @@ const Contact = () => {
             { "&:hover": { backgroundColor: "#D46000" } },
           ]}
           endIcon={<KeyboardArrowRight />}
-          href="https://www.kaihipay.jp/forms?form_code=2290891890827256"
+          href="/school/complete"
           data-ga="freeTrial"
         >
           無料体験を申し込む
