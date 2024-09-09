@@ -1,9 +1,9 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Image from "next/image";
+import Button from "@mui/material/Button";
 
 interface HeaderProps {
   switchLogo?: boolean;

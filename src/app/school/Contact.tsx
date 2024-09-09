@@ -14,14 +14,11 @@ const Contact = () => {
         />
       </Typography>
       <Box mt={3}>
-        <Typography
-          variant="body2"
-          mb={2}
-          color="#fff"
-          fontWeight="bold"
-        >
-          下記フォームよりメールアドレスをご登録ください。<br />
-          ご登録後、メールにてご連絡いたしますので、必要事項をご記入お願いいたします。<br />
+        <Typography variant="body2" mb={2} color="#fff" fontWeight="bold">
+          下記フォームよりメールアドレスをご登録ください。
+          <br />
+          ご登録後、メールにてご連絡いたしますので、必要事項をご記入お願いいたします。
+          <br />
         </Typography>
         <Button
           variant="contained"
@@ -70,7 +67,7 @@ const Contact = () => {
       <Typography variant="body2" mt={5} color="#fff" fontWeight="bold">
         その他、お問合せやご相談は
         <br />
-        お電話ください
+        お電話または公式LINEアカウントへご連絡ください
       </Typography>
       <Button
         variant="contained"
@@ -92,6 +89,21 @@ const Contact = () => {
         href="tel:090-1831-1182"
       >
         090-1831-1182
+      </Button>
+      <Button
+        sx={[
+          {
+            marginTop: 2,
+          },
+        ]}
+        size="medium"
+        href="https://lin.ee/lIcNsMA"
+      >
+        <img
+          src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+          alt="友だち追加"
+          height="36"
+        />
       </Button>
     </Box>
   );
