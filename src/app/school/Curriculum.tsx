@@ -79,7 +79,7 @@ const Curriculum = () => {
         </Typography>
         <TitleLabel text="時間"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
-          1回120分 最大6人
+          1回60分 最大6人
         </Typography>
         <TitleLabel text="受講料"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
@@ -87,7 +87,7 @@ const Curriculum = () => {
           <Typography variant="caption" mt={1} component="span">
             ※
           </Typography>{" "}
-          / 月2回
+          / 月4回
         </Typography>
         <Typography variant="caption" mt={1} component="p">
           ※コースに応じて変動。 <br />
@@ -97,7 +97,7 @@ const Curriculum = () => {
         <Typography variant="body1" fontWeight="bold" mt={2}>
           月〜金
           <br />
-          16:00〜18:00,18:30〜20:30
+          17:00〜18:00,18:30〜19:30,20:00 ~ 21:00
         </Typography>
         <TitleLabel text="場所"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
