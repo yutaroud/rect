@@ -119,8 +119,6 @@ const Policy = () => {
         <ListItem sx={listItemStyle}>
           <ListItemText primary="予め次の事項を告知あるいは公表し、かつ当社が個人情報保護委員会に届出をしたとき" />
         </ListItem>
-      </List>
-      <List component={"ul"} sx={listUlStyle}>
         <ListItem sx={listItemStyle}>
           <ListItemText primary="利用目的に第三者への提供を含むこと" />
         </ListItem>
