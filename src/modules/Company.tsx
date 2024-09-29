@@ -30,7 +30,7 @@ const Company = () => {
         maxWidth: "800px",
         width: "100%",
         margin: "0 auto",
-        padding: "80px 16px",
+        padding: "100px 16px",
       }}
       position="relative"
     >

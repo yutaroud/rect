@@ -12,7 +12,7 @@ const Business = () => {
       sx={{
         width: "100%",
         background: "#00298A",
-        padding: "80px 16px 100px",
+        padding: "80px 16px",
       }}
     >
       <Box
