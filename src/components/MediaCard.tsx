@@ -19,7 +19,14 @@ export default function MediaCard({
 }) {
   return (
     <Link href={href}>
-      <Card style={{boxShadow: "none", display: "flex", flexDirection: "column"}}>
+      <Card
+        style={{
+          boxShadow: "none",
+          display: "flex",
+          flexDirection: "column",
+          background: "none",
+        }}
+      >
         <Image
           alt={imgAlt}
           src={imgSrc}
@@ -33,12 +40,45 @@ export default function MediaCard({
             height: "100%",
           }}
         />
-        <CardContent style={{padding: "0", marginTop: "16px",}}>
-          <Typography gutterBottom variant="h3" component="h3" style={{fontSize: "22px", fontWeight:"bold", letterSpacing: "1px", textAlign: "left"}}>
+        <CardContent style={{ padding: "0", marginTop: "24px" }}>
+          <Typography
+            gutterBottom
+            variant="h3"
+            component="h3"
+            style={{
+              fontSize: "24px",
+              fontWeight: "bold",
+              letterSpacing: "1px",
+              textAlign: "left",
+              color: "#E9EFFF",
+            }}
+          >
             {heading}
           </Typography>
-          <Typography variant="body2" color="text.secondary" style={{fontSize: "14px", letterSpacing: "0.5px", textAlign: "left", marginTop: "8px"}}>
+          <Typography
+            variant="body2"
+            color="#7994D5"
+            style={{
+              fontSize: "14px",
+              letterSpacing: "0.5px",
+              textAlign: "left",
+              marginTop: "12px",
+            }}
+          >
             {text}
+          </Typography>
+          <Typography
+            variant="body2"
+            style={{
+              color: "#fff",
+              marginTop: "20px",
+              display: "inline-block",
+              borderBottom: "1px solid #fff",
+              padding: "0 4px 4px",
+              fontSize: "15px",
+            }}
+          >
+            詳細へ
           </Typography>
         </CardContent>
       </Card>
