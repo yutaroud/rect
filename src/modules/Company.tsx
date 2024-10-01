@@ -30,28 +30,50 @@ const Company = () => {
         maxWidth: "800px",
         width: "100%",
         margin: "0 auto",
-        padding: "150px 16px 0 16px",
+        padding: "100px 16px",
       }}
       position="relative"
     >
-      <Typography variant="h2" sx={{fontWeight: "bold", letterSpacing: "5px", fontSize: "40px"}}>
+      <Typography
+        variant="h2"
+        sx={{ fontWeight: "bold", letterSpacing: "5px", fontSize: "40px" }}
+      >
         会社概要
       </Typography>
-      <Typography variant="caption" align="center" component="span" sx={{fontSize: "17px", fontWeight: "bold", letterSpacing: "3px", color: "#C2C2C2"}}>
+      <Typography
+        variant="caption"
+        align="center"
+        component="span"
+        sx={{
+          fontSize: "17px",
+          fontWeight: "bold",
+          letterSpacing: "3px",
+          color: "#C2C2C2",
+        }}
+      >
         Company
       </Typography>
       <TableContainer style={{ marginTop: 40 }}>
         <Table size="medium">
           <TableBody>
             {rows.map((row) => (
-              <TableRow key={row.title} style={{borderBottom: "1px solid #D9D9D9", verticalAlign: "text-top"}}>
+              <TableRow
+                key={row.title}
+                style={{
+                  borderBottom: "1px solid #D9D9D9",
+                  verticalAlign: "text-top",
+                }}
+              >
                 <TableCell
                   align="left"
-                  sx={{ fontSize: "14px", padding: "24px 24px 24px 0"}}
+                  sx={{ fontSize: "14px", padding: "24px 24px 24px 0" }}
                 >
                   {row.title}
                 </TableCell>
-                <TableCell align="left" sx={{ fontSize: "14px", padding: "24px 0"}}>
+                <TableCell
+                  align="left"
+                  sx={{ fontSize: "14px", padding: "24px 0" }}
+                >
                   {row.description}
                 </TableCell>
               </TableRow>
