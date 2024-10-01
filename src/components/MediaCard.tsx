@@ -3,6 +3,7 @@ import Image from "next/image";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 export default function MediaCard({
   heading,
@@ -25,6 +26,7 @@ export default function MediaCard({
           display: "flex",
           flexDirection: "column",
           background: "none",
+          borderRadius: "12px"
         }}
       >
         <Image
@@ -40,7 +42,16 @@ export default function MediaCard({
             height: "100%",
           }}
         />
-        <CardContent style={{ padding: "0", marginTop: "24px" }}>
+        <CardContent
+          style={{
+            padding: "24px 16px",
+            background: "rgba(255,255,255,0.1)",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
+        >
+        <Box>
           <Typography
             gutterBottom
             variant="h3"
@@ -67,19 +78,17 @@ export default function MediaCard({
           >
             {text}
           </Typography>
-          <Typography
-            variant="body2"
+          </Box>
+          <Image
+            alt={imgAlt}
+            src="../../image/top/icon_arrow_circle.png"
+            width={40}
+            height={40}
             style={{
-              color: "#fff",
-              marginTop: "20px",
-              display: "inline-block",
-              borderBottom: "1px solid #fff",
-              padding: "0 4px 4px",
-              fontSize: "15px",
+              maxWidth: "100%",
+              objectFit: "cover",
             }}
-          >
-            詳細へ
-          </Typography>
+          />
         </CardContent>
       </Card>
     </Link>
