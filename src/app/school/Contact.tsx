@@ -105,6 +105,21 @@ const Contact = () => {
           height="36"
         />
       </Button>
+      <Button
+        sx={[
+          {
+            marginTop: 2,
+          },
+        ]}
+        size="medium"
+        href="https://www.instagram.com/repros_programming/"
+      >
+        <img
+          src="../../image/school/instagram_icon.png"
+          alt="instagramのリンク"
+          height="36"
+        />
+      </Button>
     </Box>
   );
 };
