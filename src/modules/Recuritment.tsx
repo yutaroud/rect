@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import handImg from "../../public/image/top/img_hand.png";
 
 const Recruitment = () => {
   return (
@@ -37,7 +38,7 @@ const Recruitment = () => {
           width: "100%",
           borderRadius: "8px",
           padding: "56px 40px",
-          backgroundImage: "url(/image/top/img_hand.png)",
+          backgroundImage: `url(${handImg.src})`,
           backgroundSize: "320px",
           backgroundPosition: "bottom right",
           backgroundRepeat: "no-repeat",

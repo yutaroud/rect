@@ -1,6 +1,8 @@
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import Fade from '@mui/material/Fade';
+import kvPcImg from "../../public/image/top/kv_pc.png";
+import kvSpImg from "../../public/image/top/kv_sp.png";
 
 const Kv = () => {
   return (
@@ -17,7 +19,7 @@ const Kv = () => {
       <Fade in={true} timeout={1000}>
         <Image
             alt="fv"
-            src="../../image/top/kv_pc.png"
+            src={kvPcImg.src}
             width={1233}
             height={571}
           />
@@ -35,7 +37,7 @@ const Kv = () => {
       <Fade in={true} timeout={1000}>
         <Image
           alt="fv"
-          src="../../image/top/kv_sp.png"
+          src={kvSpImg.src}
           width={750}
           height={796}
           style={{width: "100%",height: "auto",verticalAlign: "bottom"}}

@@ -3,7 +3,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import Button from "@mui/material/Button";
+import logoRectImg from "../../public/image/top/logo_rect.png";
+import logoReprosImg from "../../public/image/school/logo.png";
 
 interface HeaderProps {
   switchLogo?: boolean;
@@ -21,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
             <Link href="/school">
               <Image
                 alt="Re:ProS"
-                src="../../image/school/logo.png"
+                src={logoReprosImg.src}
                 width={150}
                 height={25}
               />
@@ -33,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
           <Link href="/">
             <Image
               alt="RE:CT"
-              src="../../image/top/logo_rect.png"
+              src={logoRectImg.src}
               width={120}
               height={34}
             />
