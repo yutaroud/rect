@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import headingDetailImg from "../../../public/image/school/heading_details.png";
 
 const TitleLabel = ({ text }: { text: string }) => {
   return (
@@ -42,7 +43,7 @@ const Curriculum = () => {
       >
         <Typography variant="h2">
           <img
-            src="../../image/school/heading_details.png"
+            src={headingDetailImg.src}
             alt="スクール概要"
             width="177"
           />

@@ -1,14 +1,24 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { LocalPhone, KeyboardArrowRight } from "@mui/icons-material";
+import headingCtaImg from "../../../public/image/school/heading_cta.png";
+import instagramImg from "../../../public/image/school/instagram_icon.png";
 
 const Contact = () => {
+  const router = useRouter();
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    router.push("/school/complete");
+  };
+
   return (
     <Box pt={7} pb={7} px={3} bgcolor="#407BFF" id="contact-form">
       <Typography variant="h2">
         <img
-          src="../../image/school/heading_cta.png"
+          src={headingCtaImg.src}
           alt="お気軽にお問合せください"
           width="236"
         />
@@ -36,7 +46,7 @@ const Contact = () => {
             { "&:hover": { backgroundColor: "#D46000" } },
           ]}
           endIcon={<KeyboardArrowRight />}
-          href="/school/complete"
+          onClick={handleClick}
           data-ga="freeTrial"
         >
           無料体験を申し込む
@@ -114,11 +124,7 @@ const Contact = () => {
         size="medium"
         href="https://www.instagram.com/repros_programming/"
       >
-        <img
-          src="../../image/school/instagram_icon.png"
-          alt="instagramのリンク"
-          height="36"
-        />
+        <img src={instagramImg.src} alt="instagramのリンク" height="36" />
       </Button>
     </Box>
   );

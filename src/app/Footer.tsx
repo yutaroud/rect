@@ -1,9 +1,8 @@
-import * as React from "react";
+import Link from "next/link";
 import {
   Box,
   List,
   ListItem,
-  Link,
   Typography,
   ListItemText,
 } from "@mui/material";
@@ -16,10 +15,10 @@ const Copyright = () => {
       sx={{ letterSpacing: "2px", fontSize: "14px", color: "#667FB9" }}
       component="p"
     >
-      <React.Fragment>
+      <>
         ©RECT
         {new Date().getFullYear()}
-      </React.Fragment>
+      </>
     </Typography>
   );
 };
@@ -67,7 +66,7 @@ const Footer = () => {
             >
               {link.href ? (
                 <Link
-                  sx={{
+                  style={{
                     color: "#fff",
                     textDecoration: "underline",
                     fontSize: "14px",
@@ -83,7 +82,7 @@ const Footer = () => {
                   primary={link.text}
                   primaryTypographyProps={{
                     color: "#fff",
-                    fontSize: "14px"
+                    fontSize: "14px",
                   }}
                 />
               )}

@@ -1,11 +1,12 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import fvImg from "../../../public/image/school/fv.png";
 
 const KeyVisual = () => {
   return (
     <>
       <img
-        src="../../image/school/fv.png"
+        src={fvImg.src}
         alt="とにかく楽しんで、気づいたらプログラミングができるようになっている教室"
         width="420"
         style={{ verticalAlign: "bottom", width: "100%" }}

@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import pcImg from "../../public/image/top/img_pc.png";
 
 const Contact = () => {
   return (
@@ -38,7 +39,7 @@ const Contact = () => {
           width: "100%",
           borderRadius: "8px",
           padding: "56px 40px",
-          backgroundImage: "url(/image/top/img_pc.png)",
+          backgroundImage: `url(${pcImg.src})`,
           backgroundSize: "320px",
           backgroundPosition: "bottom right",
           backgroundRepeat: "no-repeat",

@@ -1,19 +1,21 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import headingTeacherImg from "../../../public/image/school/heading_teacher.png";
+import iconImg from "../../../public/image/school/icon.png";
 
 const Teacher = () => {
   return (
     <Box pt={6} pb={10} mx={3}>
       <Typography variant="h2">
         <img
-          src="../../image/school/heading_teacher.png"
+          src={headingTeacherImg.src}
           alt="講師"
           width="58"
         />
       </Typography>
       <Box mt={3}>
         <img
-          src="../../image/school/icon.png"
+          src={iconImg.src}
           width="420"
           style={{ width: "100%" }}
         />
