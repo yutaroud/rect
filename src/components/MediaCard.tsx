@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import iconArrowCircleImg from "../../public/image/school/icon_arrow_circle.png";
+import iconArrowCircleImg from "../public/image/school/icon_arrow_circle.png";
 
 export default function MediaCard({
   heading,
