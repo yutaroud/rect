@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
           <Box style={{ width: "420px", display: "flex" }}>
             <Link href="/school">
               <Image
-                alt="Re:ProS"
+                alt="Re:ProS(レプロス)"
                 src={logoReprosImg.src}
                 width={150}
                 height={25}
@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
         <Toolbar sx={{ backgroundColor: "rgba(255,255,255,0.8)" }}>
           <Link href="/">
             <Image
-              alt="RE:CT"
+              alt="RE:CT(レクト)"
               src={logoRectImg.src}
               width={120}
               height={34}
