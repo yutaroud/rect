@@ -28,6 +28,7 @@ const Footer = () => {
     { text: "会社概要", href: "/" },
     { text: "事業内容" },
     { text: "プログラミング教室", href: "/school", nested: true },
+    { text: "プログラミングメディア", href: "/articles/", nested: true }, //別リポジトリのサイトのため、ローカルでは見れない
     { text: "開発等の相談", href: "/demand", nested: true },
     {
       text: "お問い合わせ",
