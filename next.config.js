@@ -18,6 +18,8 @@ const nextConfig = {
    */
   basePath: "",
 
+  trailingSlash: true,
+
   /**
    * Disable server-based image optimization. Next.js does not support
    * dynamic features with static exports.
