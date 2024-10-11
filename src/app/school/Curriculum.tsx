@@ -91,14 +91,18 @@ const Curriculum = () => {
           / 月4回
         </Typography>
         <Typography variant="caption" mt={1} component="p">
-          ※コースに応じて変動。 <br />
-          入会時に入会金10,000円、受講料とは別に教材費が毎月500円かかります。
+          ※コースに応じて変動<br />
+          初級コース6,500円<br />
+          中級コース8,500円<br />
+          上級コース12,000円<br />
+          入会時に入会金10,000円<br />
+          受講料とは別に教材費が毎月500円かかります。
         </Typography>
         <TitleLabel text="日時"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
           月〜金
           <br />
-          17:00〜18:00,18:30〜19:30,20:00 ~ 21:00
+          17:00〜18:00, 18:30〜19:30, 20:00〜21:00
         </Typography>
         <TitleLabel text="場所"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
