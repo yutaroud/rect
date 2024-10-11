@@ -10,6 +10,9 @@ export const metadata = {
   title: "プログラミングを学ぶならRe:ProS(レプロス)",
   description: "小学4年生~高校3年生までを対象とした豊川市のプログラミングスクール。現役エンジニアが低価格で教えます。",
   robots: "index,follow",
+  alternates: {
+    canonical: "https://re-ct.co.jp/school/"
+  }
 };
 
 const School = () => {
