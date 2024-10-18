@@ -126,6 +126,21 @@ const Contact = () => {
       >
         <img src={instagramImg.src} alt="instagramのリンク" height="36" />
       </Button>
+      <Typography variant="body2" mt={2} color="#fff" fontWeight="bold">
+        下記資料から詳細内容についてご確認いただけます。
+      </Typography>
+      <iframe
+        style={{
+          marginTop: "10px"
+        }}
+        src="https://speakerdeck.com/player/0daa6cfb0d2543f6a30d706c68886a76"
+        title="Re:proS_案内資料"
+        allowFullScreen={true}
+        data-ratio="1.7777777777777777"
+        width="100%"
+        height="300px"
+        loading="lazy"
+      ></iframe>
     </Box>
   );
 };
