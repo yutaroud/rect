@@ -24,12 +24,20 @@ const Teacher = () => {
         渡辺 優樹
       </Typography>
       <Typography variant="body2" mt={2} align="left">
-        5年以上、一部上場企業にてWebエンジニアを経験。
-        <br />
-        次の世代に残る何かを残したいと思い起業しました。
+        プライム上場のエイチームグループにて<br />
+        5年間Webエンジニアを経験し、5人のメンバーのマネジメントも経験しました。<br />
+        プログラミングを通して、次の世代に残る何かを残したいと思い起業しました！
       </Typography>
       <Typography variant="body2" mt={2} align="left">
         とにかくまずはプログラミングを楽しいと思ってもらえるように頑張ります！
+      </Typography>
+      <Typography variant="body2" fontWeight={"bold"} mt={2} align="left">
+        経歴・資格について
+      </Typography>
+      <Typography variant="body2" mt={2} align="left">
+        名古屋大学大学院情報学研究科 修了<br/>
+        高等学校教諭一種免許状「情報」 免許保有<br/>
+        基本情報技術者 資格保有
       </Typography>
     </Box>
   );
