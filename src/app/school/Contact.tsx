@@ -141,6 +141,14 @@ const Contact = () => {
         height="300px"
         loading="lazy"
       ></iframe>
+      <Typography variant="body2" fontSize={11} mt={2} color="#fff">
+        ※注意事項<br/>
+        初級「マイクラ」コースは、Minecraftの公式商品ではございません。<br/>
+        また、Mojang社は本コースの内容と関わりはございません。<br/>
+        予めご了承ください。<br/>
+        Our course is not official Minecraft® products. <br/>
+        Our course is not approved by, or associated with Mojang®.
+      </Typography>
     </Box>
   );
 };

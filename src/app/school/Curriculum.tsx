@@ -55,10 +55,20 @@ const Curriculum = () => {
           JavaScriptでのWeb開発
         </Typography>
         <Typography variant="body1" fontWeight="bold" mt={2}>
-          初級コース
+          初級「Scratch」コース
         </Typography>
         <Typography variant="caption" mt={1} component="p">
           ビジュアルプログラミング言語「Scratch」を用いて
+          <br />
+          プログラミングの基礎概念を学びます。キーボード入力に
+          <br />
+          慣れていなくても安心して学習することができます。
+        </Typography>
+        <Typography variant="body1" fontWeight="bold" mt={2}>
+          初級「マイクラ」コース
+        </Typography>
+        <Typography variant="caption" mt={1} component="p">
+          マインクラフトの世界を通して
           <br />
           プログラミングの基礎概念を学びます。キーボード入力に
           <br />
@@ -96,7 +106,8 @@ const Curriculum = () => {
           中級コース8,500円<br />
           上級コース12,000円<br />
           入会時に入会金10,000円<br />
-          受講料とは別に教材費が毎月500円かかります。
+          受講料とは別に教材費が毎月500円かかります。<br />
+          (マイクラコースの方は教材費1,000円/月)
         </Typography>
         <TitleLabel text="日時"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>
