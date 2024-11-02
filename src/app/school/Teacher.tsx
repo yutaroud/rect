@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import headingTeacherImg from "../../../public/image/school/heading_teacher.png";
-import iconImg from "../../../public/image/school/icon.png";
+import iconImg from "../../../public/image/school/icon_teacher.png";
 
 const Teacher = () => {
   return (
