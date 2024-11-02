@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import KeyVisual from "./KeyVisual";
 import Curriculum from "./Curriculum";
 import Teacher from "./Teacher";
+import Faq from "./Faq";
 import Contact from "./Contact";
 
 export const metadata = {
@@ -33,6 +34,7 @@ const School = () => {
         <KeyVisual />
         <Curriculum />
         <Teacher />
+        <Faq />
         <Contact />
       </Box>
     </main>
