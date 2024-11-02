@@ -1,6 +1,9 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import headingTeacherImg from "../../../public/image/school/heading_introduction.png";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import { border, borderRadius, fontWeight, textAlign } from "@mui/system";
 
 const sxStyles = {
   textWrap: {
@@ -22,6 +25,47 @@ const sxStyles = {
     fontWeight: 'bold',
     display: 'inline-block'
   },
+  skillContents: {
+    background: '#F1F5FD',
+    px: 3,
+    py: 3
+  },
+  balloon: {
+    background: '#24285B',
+    color: '#fff',
+    py: 0.5,
+    px: 4,
+    position: 'relative',
+    display: 'inline-block',
+    fontWeight: 'bold',
+    borderRadius: 30,
+    width: 'auto',
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      top: '100%',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      border: '8px solid transparent',
+      borderTop: '8px solid #24285B',
+    }
+  },
+  skillList: {
+    mt: 2,
+    gap: 1,
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr',
+    '& > li': {
+      background: '#fff',
+      borderRadius: 2,
+      color: '#24285B',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      justifyContent: 'center',
+      fontSize: '14px',
+      aspectRatio: 1,
+    },
+  }
 };
 
 
@@ -39,6 +83,7 @@ const Introduction = () => {
               <Typography component="span" variant="subtitle1" sx={[sxStyles.pointText, {color: '#fff'}]}>
                 ビジュアル/テキストプログラミング<Typography component="span" variant="body1" fontWeight={"bold"}>を</Typography>
               </Typography>
+              <br/>
               <Typography component="span" variant="h6"  sx={[sxStyles.pointText, {color: '#FFF652'}]} mt={0.5}>一貫して学べる</Typography>
             </Typography>
             <Typography variant="body2" mt={2}>
@@ -56,6 +101,7 @@ const Introduction = () => {
               <Typography component="span" variant="h6"  sx={[sxStyles.pointText, {color: '#FFF652'}]}>
                 現役エンジニアが講師<Typography component="span" variant="body1" fontWeight={"bold"} color={'#fff'}>だから</Typography>
               </Typography>
+              <br/>
               <Typography component="span" variant="subtitle1"  sx={[sxStyles.pointText, {color: '#fff'}]} mt={0.5}>
                 現場での経験を基にした指導が特徴
               </Typography>
@@ -74,6 +120,7 @@ const Introduction = () => {
               <Typography component="span" variant="h6" sx={[sxStyles.pointText, {color: '#fff'}]}>
                 少人数の教室で<Typography component="span" variant="h6" color={'#FFF652'} fontWeight={'bold'}>低価格</Typography>
               </Typography>
+              <br/>
               <Typography component="span" variant="subtitle1" sx={[sxStyles.pointText, {color: '#fff'}]} mt={0.5}>
                 気軽に受講できる
               </Typography>
@@ -84,6 +131,25 @@ const Introduction = () => {
               提供しています。
             </Typography>
           </Box>
+        </Box>
+      </Box>
+      <Box px={3} pt={5}>
+        <Box sx={sxStyles.skillContents}>
+          <Typography sx={sxStyles.balloon}>さらに</Typography>
+          <Typography mt={2} variant="subtitle2" color={'#24285B'}>
+            プログラミングを学ぶことで<br/>
+            <Typography variant="h6" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが身につきます</Typography>
+          </Typography>
+          <List
+            sx={sxStyles.skillList}
+          >
+            <ListItem>論理的<br/>思考</ListItem>
+            <ListItem>問題解決<br/>能力</ListItem>
+            <ListItem>創造力<br/>（想像力）</ListItem>
+            <ListItem>プレゼン<br/>能力</ListItem>
+            <ListItem>社交性</ListItem>
+            <ListItem>タイピング<br/>能力</ListItem>
+          </List>
         </Box>
       </Box>
     </Box>
