@@ -5,6 +5,8 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import logoRectImg from "../../public/image/top/logo_rect.png";
 import logoReprosImg from "../../public/image/school/logo.png";
+import Button from "@mui/material/Button";
+import { PlayCircle } from "@mui/icons-material";
 
 interface HeaderProps {
   switchLogo?: boolean;
@@ -18,15 +20,45 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
     >
       {switchLogo ? (
         <Toolbar sx={{ backgroundColor: "#fff" }}>
-          <Box style={{ width: "420px", display: "flex" }}>
+          <Box sx={{ width: "420px", display: "flex", justifyContent: "space-between", alignItems: "center", py: 2 }}>
             <Link href="/school">
               <Image
                 alt="Re:ProS(レプロス)"
                 src={logoReprosImg.src}
                 width={150}
                 height={25}
+                style={{verticalAlign: "bottom"}}
               />
             </Link>
+            <Button
+              variant="contained"
+              size="large"
+              sx={[
+                {
+                  fontSize: 14,
+                  fontWeight: "bold",
+                  py: 0.5,
+                  px: 2,
+                  borderRadius: 8,
+                  bgcolor: "#EF6C00",
+                  color: "#fff",
+                  boxShadow: "none",
+                  '& .MuiButton-endIcon': {
+                    marginLeft: '4px',
+                  },
+                },
+                {
+                  "&:hover": {
+                    backgroundColor: "#D46000",
+                    boxShadow: "none",
+                  }
+                },
+              ]}
+              endIcon={<PlayCircle/>}
+              href="#contact-form"
+            >
+              無料体験受付中
+            </Button>
           </Box>
         </Toolbar>
       ) : (
