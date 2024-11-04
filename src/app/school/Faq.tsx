@@ -6,6 +6,37 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+const sxStyles = {
+  accodion: {
+    border: "solid 2px #F0F0F0",
+    boxShadow: "none",
+    marginTop: 2,
+    '&:before': {
+      content: "none"
+    }
+  },
+  accodionSummary: {
+    fontWeight: "bold",
+    textAlign: "left"
+  },
+  accodionSummaryText: {
+    backgroundColor: "#24285B",
+    color: "#fff",
+    borderRadius: "50%",
+    width: "24px",
+    height: "24px",
+    minWidth: "24px",
+    minHeight: "24px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    mr: 2,
+  },
+  accodionDetails: {
+    textAlign: "left"
+  }
+}
+
 const accordionData = [
   {
     id: 'panel1',
@@ -33,17 +64,17 @@ const Faq = () => {
       </Typography>
       <Box mt={6}>
         {accordionData.map((item) => (
-          <Accordion key={item.id} sx={{ border: "solid 2px #F0F0F0", boxShadow: "none", marginTop: 2,'&:before': {content: "none"}}}>
+          <Accordion key={item.id} sx={sxStyles.accodion}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{color: "#24285B"}} />}
               aria-controls={`${item.id}-content`}
               id={`${item.id}-header`}
-              sx={{ fontWeight: "bold", textAlign: "left" }}
+              sx={sxStyles.accodionSummary}
             >
-              <Typography sx={{ backgroundColor: "#24285B", color: "#fff", borderRadius: "50%", width: "24px", height: "24px", minWidth: "24px", minHeight: "24px", display: "flex", alignItems: "center", justifyContent: "center"}} mr={2}>Q</Typography>
+              <Typography sx={sxStyles.accodionSummaryText}>Q</Typography>
               {item.question}
             </AccordionSummary>
-            <AccordionDetails sx={{ textAlign: "left" }}>
+            <AccordionDetails sx={sxStyles.accodionDetails}>
               {item.answer}
             </AccordionDetails>
           </Accordion>
