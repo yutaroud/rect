@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import headingTeacherImg from "../../../public/image/school/heading_introduction.png";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import { border, borderRadius, fontWeight, textAlign } from "@mui/system";
 
 const sxStyles = {
   textWrap: {
@@ -64,6 +63,7 @@ const sxStyles = {
       justifyContent: 'center',
       fontSize: '14px',
       aspectRatio: 1,
+      padding: 0,
     },
   }
 };
@@ -138,7 +138,7 @@ const Introduction = () => {
           <Typography sx={sxStyles.balloon}>さらに</Typography>
           <Typography mt={2} variant="subtitle2" color={'#24285B'}>
             プログラミングを学ぶことで<br/>
-            <Typography variant="h6" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが身につきます</Typography>
+            <Typography variant="h6" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが<br/>身につきます</Typography>
           </Typography>
           <List
             sx={sxStyles.skillList}
