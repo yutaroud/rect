@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Header from "./Header";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import Footer from "./Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -20,7 +18,6 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-MRQP5SQ2" />
       <body>
         <ThemeRegistry>
-          <Header />
           {children}
           <Footer />
         </ThemeRegistry>

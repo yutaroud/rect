@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Header from "./Header";
 import "./globals.css";
 import Kv from "../modules/Kv";
 import Company from "../modules/Company";
@@ -17,6 +19,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main style={{paddingBottom: "80px"}}>
+      <Header />
       <Kv />
       <Business />
       <Company />
