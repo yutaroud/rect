@@ -5,6 +5,18 @@ import iconImg from "../../../public/image/school/icon_teacher.png";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 
+const sxStyles = {
+  list :{
+    listStyleType: 'disc',
+    pl: 2,
+    '& > li': {
+      display: 'list-item',
+      listStyleType: 'disc',
+      pl: '0',
+    },
+  }
+}
+
 const Teacher = () => {
   return (
     <Box pt={6} pb={10} mx={3}>
@@ -31,17 +43,7 @@ const Teacher = () => {
       <Typography variant="subtitle2" fontWeight={"bold"} mt={3} align="left">
         経歴・資格について
       </Typography>
-      <List
-        sx={{
-          listStyleType: 'disc',
-          pl: 2,
-          '& > li': {
-            display: 'list-item',
-            listStyleType: 'disc',
-            pl: '0',
-          },
-        }}
-      >
+      <List sx={sxStyles.list}>
         <ListItem>名古屋大学大学院情報学研究科 修了</ListItem>
         <ListItem>高等学校教諭一種免許状「情報」 免許保有</ListItem>
         <ListItem>基本情報技術者 資格保有</ListItem>
