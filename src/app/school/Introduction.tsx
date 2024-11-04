@@ -136,9 +136,9 @@ const Introduction = () => {
       <Box px={3} pt={5}>
         <Box sx={sxStyles.skillContents}>
           <Typography sx={sxStyles.balloon}>さらに</Typography>
-          <Typography mt={2} variant="subtitle2" color={'#24285B'}>
+          <Typography mt={2} variant="subtitle2" component="p" color={'#24285B'}>
             プログラミングを学ぶことで<br/>
-            <Typography variant="h6" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが<br/>身につきます</Typography>
+            <Typography variant="h6" component="span" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが<br/>身につきます</Typography>
           </Typography>
           <List
             sx={sxStyles.skillList}
