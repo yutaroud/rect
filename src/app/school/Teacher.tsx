@@ -5,7 +5,7 @@ import iconImg from "../../../public/image/school/icon.png";
 
 const Teacher = () => {
   return (
-    <Box pt={6} pb={10} mx={3}>
+    <Box pt={6} pb={10} mx={3} id="school_teacher">
       <Typography variant="h2">
         <img src={headingTeacherImg.src} alt="講師" width="58" />
       </Typography>
