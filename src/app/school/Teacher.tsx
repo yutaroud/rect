@@ -12,7 +12,8 @@ const sxStyles = {
     '& > li': {
       display: 'list-item',
       listStyleType: 'disc',
-      pl: '0',
+      pl: 0,
+      py: 0,
     },
   }
 }
