@@ -13,8 +13,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
   return (
     <AppBar
-      position="fixed"
-      sx={{ zIndex: 2000, boxShadow: "none", background: "none" }}
+      position="sticky"
+      sx={{ top: 0, boxShadow: "none", background: "none" }}
     >
       {switchLogo ? (
         <Toolbar sx={{ backgroundColor: "#fff" }}>
