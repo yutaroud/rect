@@ -16,19 +16,19 @@ const sxStyles = {
 
 const images = [
   {
-    src: '../../../image/school/image_exterior.jpg',
+    src: '../../../image/school/image_exterior.webp',
     alt: '教室の外観',
   },
   {
-    src: '../../../image/school/image_classroom.jpg',
+    src: '../../../image/school/image_classroom.webp',
     alt: '教室の内観',
   },
   {
-    src: '../../../image/school/image_teaching.jpg',
+    src: '../../../image/school/image_teaching.webp',
     alt: '画面を指差しながら教えている様子',
   },
   {
-    src: '../../../image/school/image_howToTeach.jpg',
+    src: '../../../image/school/image_howToTeach.webp',
     alt: 'プログラミングをしている様子',
   },
 ];

@@ -77,7 +77,7 @@ const Introduction = () => {
       </Typography>
       <Box mt={5}>
         <Box sx={sxStyles.pointWrap}>
-          <img src="../../../image/school/image_howToTeach.jpg" alt="PCで作業をしている様子" width="300" />
+          <img src="../../../image/school/image_howToTeach.webp" alt="PCで作業をしている様子" width="300" />
           <Box sx={sxStyles.textWrap}>
             <Typography>
               <Typography component="span" variant="subtitle1" sx={[sxStyles.pointText, {color: '#fff'}]}>
@@ -95,7 +95,7 @@ const Introduction = () => {
           </Box>
         </Box>
         <Box sx={sxStyles.pointWrap}>
-          <img src="../../../image/school/image_workSituation.jpg" alt="プログラミングを教えている様子" width="300" style={{marginLeft: 'auto'}}/>
+          <img src="../../../image/school/image_workSituation.webp" alt="プログラミングを教えている様子" width="300" style={{marginLeft: 'auto'}}/>
           <Box sx={sxStyles.textWrap}>
             <Typography>
               <Typography component="span" variant="h6"  sx={[sxStyles.pointText, {color: '#FFF652'}]}>
@@ -114,7 +114,7 @@ const Introduction = () => {
           </Box>
         </Box>
         <Box sx={sxStyles.pointWrap}>
-          <img src="../../../image/school/image_classroom.jpg" alt="プログラミング教室の様子" width="300" />
+          <img src="../../../image/school/image_classroom.webp" alt="プログラミング教室の様子" width="300" />
           <Box sx={sxStyles.textWrap}>
             <Typography>
               <Typography component="span" variant="h6" sx={[sxStyles.pointText, {color: '#fff'}]}>
