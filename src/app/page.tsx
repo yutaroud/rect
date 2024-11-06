@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Header from "./Header";
 import "./globals.css";
 import Kv from "../modules/Kv";
 import Company from "../modules/Company";
