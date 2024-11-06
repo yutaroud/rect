@@ -5,6 +5,7 @@ import KeyVisual from "./KeyVisual";
 import Curriculum from "./Curriculum";
 import Teacher from "./Teacher";
 import Faq from "./Faq";
+import Access from "./Access";
 import Contact from "./Contact";
 
 export const metadata = {
@@ -34,6 +35,7 @@ const School = () => {
         <KeyVisual />
         <Curriculum />
         <Teacher />
+        <Access />
         <Faq />
         <Contact />
       </Box>
