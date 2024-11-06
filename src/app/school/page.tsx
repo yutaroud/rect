@@ -2,6 +2,7 @@ import "../globals.css";
 import Header from "../Header";
 import Box from "@mui/material/Box";
 import KeyVisual from "./KeyVisual";
+import Introduction from "./Introduction";
 import Curriculum from "./Curriculum";
 import Teacher from "./Teacher";
 import Faq from "./Faq";
@@ -33,6 +34,7 @@ const School = () => {
         }}
       >
         <KeyVisual />
+        <Introduction />
         <Curriculum />
         <Teacher />
         <Access />
