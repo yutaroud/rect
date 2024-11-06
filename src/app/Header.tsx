@@ -10,6 +10,34 @@ import Button from "@mui/material/Button";
 import { PlayCircle } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
 
+const sxStyles = {
+  schoolHeader: {
+    width: '420px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    py: 2,
+    mx: 'auto'
+  },
+  button: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    py: 0.5,
+    px: 2,
+    borderRadius: 8,
+    bgcolor: '#EF6C00',
+    color: '#fff',
+    boxShadow: 'none',
+    '& .MuiButton-endIcon': {
+      marginLeft: '4px',
+    },
+    '&:hover': {
+      backgroundColor: '#D46000',
+      boxShadow: 'none',
+    }
+  }
+}
+
 interface HeaderProps {
   switchLogo?: boolean;
 }
@@ -27,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
     >
       {switchLogo ? (
         <Toolbar sx={{ backgroundColor: "#fff" }}>
-          <Box sx={{ width: "420px", display: "flex", justifyContent: "space-between", alignItems: "center", py: 2 }}>
+          <Box sx={sxStyles.schoolHeader}>
             <Link href="/school">
               <Image
                 alt="Re:ProS(レプロス)"
@@ -39,28 +67,7 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
             </Link>
             <Button
               variant="contained"
-              size="large"
-              sx={[
-                {
-                  fontSize: 14,
-                  fontWeight: "bold",
-                  py: 0.5,
-                  px: 2,
-                  borderRadius: 8,
-                  bgcolor: "#EF6C00",
-                  color: "#fff",
-                  boxShadow: "none",
-                  '& .MuiButton-endIcon': {
-                    marginLeft: '4px',
-                  },
-                },
-                {
-                  "&:hover": {
-                    backgroundColor: "#D46000",
-                    boxShadow: "none",
-                  }
-                },
-              ]}
+              sx={sxStyles.button}
               endIcon={<PlayCircle/>}
               onClick={handleClick}
             >
