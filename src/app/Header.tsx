@@ -1,3 +1,4 @@
+"use client";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Link from "next/link";
@@ -5,18 +6,21 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import logoRectImg from "../../public/image/top/logo_rect.png";
 import logoReprosImg from "../../public/image/school/logo.png";
+import { usePathname } from 'next/navigation';
 
 interface HeaderProps {
-  switchLogo?: boolean;
+  isSchoolPage?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
+const Header: React.FC<HeaderProps> = () => {
+  const pathname = usePathname();
+  const isSchoolPage = pathname.includes('/school');
   return (
     <AppBar
       position="sticky"
       sx={{ top: 0, boxShadow: "none", background: "none" }}
     >
-      {switchLogo ? (
+      {isSchoolPage ? (
         <Toolbar sx={{ backgroundColor: "#fff" }}>
           <Box style={{ width: "420px", display: "flex" }}>
             <Link href="/school">

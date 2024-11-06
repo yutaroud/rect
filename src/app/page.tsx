@@ -19,7 +19,6 @@ export const metadata = {
 export default function Home() {
   return (
     <main style={{paddingBottom: "80px"}}>
-      <Header />
       <Kv />
       <Business />
       <Company />
