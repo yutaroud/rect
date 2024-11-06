@@ -1,3 +1,4 @@
+"use client";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Link from "next/link";
@@ -7,12 +8,18 @@ import logoRectImg from "../../public/image/top/logo_rect.png";
 import logoReprosImg from "../../public/image/school/logo.png";
 import Button from "@mui/material/Button";
 import { PlayCircle } from "@mui/icons-material";
+import { useRouter } from "next/navigation";
 
 interface HeaderProps {
   switchLogo?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
+  const router = useRouter();
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    router.push("/school/complete");
+  };
   return (
     <AppBar
       position="fixed"
@@ -55,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
                 },
               ]}
               endIcon={<PlayCircle/>}
-              href="#contact-form"
+              onClick={handleClick}
             >
               無料体験受付中
             </Button>
