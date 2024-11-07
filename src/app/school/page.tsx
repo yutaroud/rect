@@ -21,10 +21,8 @@ export const metadata = {
 const School = () => {
   return (
     <main>
-      <Header switchLogo={true} />
       <Box
         component="section"
-        mt={7}
         sx={{
           textAlign: "center",
           mx: "auto",

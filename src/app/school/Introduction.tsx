@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import headingTeacherImg from "../../../public/image/school/heading_introduction.png";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import Link from "next/link";
 
 const sxStyles = {
   textWrap: {
@@ -65,6 +66,20 @@ const sxStyles = {
       aspectRatio: 1,
       padding: 0,
     },
+  },
+  textLink: {
+    textDecoration: 'underline',
+    display: 'flex',
+    alignItems: 'center',
+    gap: 0.5,
+    '&:after' : {
+      content : '""',
+      width: 0,
+      height: 0,
+      borderLeft: '6px solid transparent',
+      borderRight: '6px solid transparent',
+      borderTop: '6px solid black',
+    }
   }
 };
 
@@ -110,6 +125,11 @@ const Introduction = () => {
               最新の業界動向や実践的なスキルを<br/>
               直接学ぶことができます。<br/>
               現場での経験を基にした実践的な指導が特徴です。
+            </Typography>
+            <Typography variant="body2" mt={2} sx={sxStyles.textLink}>
+              <Link href="#school_teacher">
+                  講師について詳しく見る
+              </Link>
             </Typography>
           </Box>
         </Box>

@@ -9,6 +9,7 @@ import logoReprosImg from "../../public/image/school/logo.png";
 import Button from "@mui/material/Button";
 import { PlayCircle } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
+import { usePathname } from 'next/navigation';
 
 const sxStyles = {
   schoolHeader: {
@@ -39,21 +40,23 @@ const sxStyles = {
 }
 
 interface HeaderProps {
-  switchLogo?: boolean;
+  isSchoolPage?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ switchLogo }) => {
+const Header: React.FC<HeaderProps> = () => {
   const router = useRouter();
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     router.push("/school/complete");
   };
+  const pathname = usePathname();
+  const isSchoolPage = pathname.includes('/school');
   return (
     <AppBar
-      position="fixed"
-      sx={{ zIndex: 2000, boxShadow: "none", background: "none" }}
+      position="sticky"
+      sx={{ top: 0, boxShadow: "none", background: "none" }}
     >
-      {switchLogo ? (
+      {isSchoolPage ? (
         <Toolbar sx={{ backgroundColor: "#fff" }}>
           <Box sx={sxStyles.schoolHeader}>
             <Link href="/school">

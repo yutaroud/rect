@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Header from "./Header";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import Footer from "./Footer";
