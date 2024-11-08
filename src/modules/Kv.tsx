@@ -8,7 +8,6 @@ const Kv = () => {
   return (
     <>
     <Box
-      mt={8}
       sx={{
         textAlign: "center",
         "@media screen and (max-width:800px)": {
@@ -26,7 +25,6 @@ const Kv = () => {
       </Fade>
     </Box>
     <Box
-      mt={8}
       sx={{
         display: "none",
         "@media screen and (max-width:800px)": {

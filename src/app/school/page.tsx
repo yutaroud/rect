@@ -2,8 +2,11 @@ import "../globals.css";
 import Header from "../Header";
 import Box from "@mui/material/Box";
 import KeyVisual from "./KeyVisual";
+import Introduction from "./Introduction";
 import Curriculum from "./Curriculum";
 import Teacher from "./Teacher";
+import Faq from "./Faq";
+import Access from "./Access";
 import Contact from "./Contact";
 
 export const metadata = {
@@ -18,10 +21,8 @@ export const metadata = {
 const School = () => {
   return (
     <main>
-      <Header switchLogo={true} />
       <Box
         component="section"
-        mt={7}
         sx={{
           textAlign: "center",
           mx: "auto",
@@ -31,8 +32,11 @@ const School = () => {
         }}
       >
         <KeyVisual />
+        <Introduction />
         <Curriculum />
         <Teacher />
+        <Access />
+        <Faq />
         <Contact />
       </Box>
     </main>

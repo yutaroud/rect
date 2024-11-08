@@ -2,6 +2,37 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import fvImg from "../../../public/image/school/fv.png";
 
+const sxStyles = {
+  photos: {
+    display: 'flex',
+    gap: 2,
+    overflow: 'scroll',
+    overflowX: 'auto', 
+    px: 2,
+    justifyContent: 'flex-start',
+    scrollSnapType: 'x mandatory',
+  },
+};
+
+const images = [
+  {
+    src: '../../../image/school/image_exterior.webp',
+    alt: '教室の外観',
+  },
+  {
+    src: '../../../image/school/image_classroom.webp',
+    alt: '教室の内観',
+  },
+  {
+    src: '../../../image/school/image_teaching.webp',
+    alt: '画面を指差しながら教えている様子',
+  },
+  {
+    src: '../../../image/school/image_howToTeach.webp',
+    alt: 'プログラミングをしている様子',
+  },
+];
+
 const KeyVisual = () => {
   return (
     <>
@@ -29,6 +60,17 @@ const KeyVisual = () => {
           とにかく楽しく学ぶをモットーに<br />
           全力でお子様のサポートをいたします！
         </Typography>
+      </Box>
+      <Box sx={sxStyles.photos}>
+        {images.map((image, index) => (
+        <img
+          key={index}
+          src={image.src}
+          alt={image.alt}
+          width="150"
+          height="100"
+        />
+      ))}
       </Box>
     </>
   );
