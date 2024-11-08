@@ -3,6 +3,11 @@ import Typography from "@mui/material/Typography";
 import headingDetailImg from "../../../public/image/school/heading_details.png";
 import Link from "next/link";
 
+const courseItem = [
+  { name: "コース1" },
+  { name: "コース2" },
+]
+
 const TitleLabel = ({ text }: { text: string }) => {
   return (
     <Typography
@@ -50,8 +55,10 @@ const Curriculum = () => {
           />
         </Typography>
         <ul>
-          <li><Link href="/school/course/1/">コース1</Link></li>
-          <li><Link href="/school/course/2/">コース2</Link></li>
+          {courseItem.map((course, id) => (
+            <li><Link href={`/school/course${id}/`}>{course.name}</Link></li>
+          ))
+          }
         </ul>
         <TitleLabel text="授業内容"></TitleLabel>
         <Typography variant="body1" fontWeight="bold" mt={2}>

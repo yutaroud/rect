@@ -1,6 +1,5 @@
 import "../../globals.css";
 import Container from "@mui/material/Container";
-import Header from "../../Header";
 
 export async function generateStaticParams() {
   return [
@@ -16,15 +15,16 @@ interface CoursePageProps {
   };
 }
   
-export default function CoursePage({ params }: CoursePageProps) {
+const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
   const { courseId } = params;
 
   return (
     <main>
-      <Header switchLogo={true} />
       <Container sx={{ mt: 8 }}>
         <h1>{courseId}のページだよ</h1>
       </Container>
     </main>
   );
 }
+
+export default CoursePage;
