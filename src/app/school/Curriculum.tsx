@@ -6,6 +6,25 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { PlayCircle } from "@mui/icons-material";
 
+const courseItem = [
+  {
+    name: {
+      category: "Scratch",
+      level: "初級",
+    },
+    thumbnail: "thumbnail_course_1.png",
+    text: "マサチューセッツ工科大学で開発されたビジュアルプログラミング言語「Scratch」を用いてプログラミングの基礎概念を学びます",
+   },
+  {
+    name: {
+      category: "ソフトウェア開発",
+      level: "中級",
+    },
+    thumbnail: "thumbnail_course_2.png",
+    text: "実際の開発で使用されているテキストプログラミング言語「JavaScript」を用いて決められたテーマに沿ってWebサイト開発を行い、プログラミングを学びます。",
+   },
+]
+
 const sxStyles = {
   wrap: {
     bgcolor: "#407BFF",
@@ -72,26 +91,29 @@ const Curriculum = () => {
         />
       </Typography>
       <List sx={sxStyles.list}>
-        <ListItem  sx={sxStyles.listItem}>
-          <Link
-            href="/school/course1">
-              <Box sx={sxStyles.card}>
-                <Typography sx={sxStyles.title}>
-                  ソフトウェア開発<br/>中級
-                </Typography>
-                <img src="../../../image/school/thumbnail_course_1.png" alt="講師" width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
-                <Typography variant="body1" sx={sxStyles.text}>
-                  マサチューセッツ工科大学で開発されたビジュアルプログラミング言語「Scratch」を用いてプログラミングの基礎概念を学びます
-                </Typography>
-                <Box
-                  sx={sxStyles.button}
-                >
-                  詳細
-                  <PlayCircle/>
-                </Box>
-            </Box>
-          </Link>
-        </ListItem>
+        {courseItem.map((course, id) => (
+          <ListItem  sx={sxStyles.listItem}>
+            <Link
+              href={`/school/course${id}/`}>
+                <Box sx={sxStyles.card}>
+                  <Typography sx={sxStyles.title}>
+                    {course.name.category}<br/>{course.name.level}
+                  </Typography>
+                  <img src={`../../../image/school/${course.thumbnail}`} alt="講師" width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+                  <Typography variant="body1" sx={sxStyles.text}>
+                    {course.text}
+                  </Typography>
+                  <Box
+                    sx={sxStyles.button}
+                  >
+                    詳細
+                    <PlayCircle/>
+                  </Box>
+              </Box>
+            </Link>
+          </ListItem>
+          ))
+        }
       </List>
     </Box>
   );
