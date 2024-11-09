@@ -3,9 +3,9 @@ import Container from "@mui/material/Container";
 
 export async function generateStaticParams() {
   return [
+    { courseId: "course0" },
     { courseId: "course1" },
     { courseId: "course2" },
-    { courseId: "course3" },
   ];
 }
   
