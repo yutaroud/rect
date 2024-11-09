@@ -1,5 +1,7 @@
 import "../../globals.css";
-import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import CourseDetail from "../CourseDetail";
+import Contact from "../Contact";
 
 export async function generateStaticParams() {
   return [
@@ -16,13 +18,22 @@ interface CoursePageProps {
 }
   
 const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
-  const { courseId } = params;
 
   return (
     <main>
-      <Container sx={{ mt: 8 }}>
-        <h1>{courseId}のページだよ</h1>
-      </Container>
+      <Box
+        component="section"
+        sx={{
+          textAlign: "center",
+          mx: "auto",
+          border: "solid 1px #EEEEEE",
+          maxWidth: "420px",
+          width: "100%",
+        }}
+      >
+        <CourseDetail/>
+        <Contact />
+      </Box>
     </main>
   );
 }
