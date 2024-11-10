@@ -6,23 +6,23 @@ import { CheckCircle } from "@mui/icons-material";
 
 interface CourseDetailProps {
   course: {
-  id: number;
-  name: {
-    category: string;
-    level: string;
-  };
-  thumbnail: string;
-  summary: string;
-  details: string;
-  target: string;
-  sessionCount: string;
-  duration: string;
-  price: string;
-  schedule: {
-    dayOfWeeks: string[];
-    times: string[];
-  };
-}
+    id: number;
+    name: {
+      category: string;
+      level: string;
+    };
+    thumbnail: string;
+    summary: string;
+    details: string;
+    target: string;
+    sessionCount: string;
+    duration: string;
+    price: string;
+    schedule: {
+      dayOfWeeks: string[];
+      times: string[];
+    };
+  }
 }
 
 const sxStyles = {
@@ -137,17 +137,17 @@ const sxStyles = {
   },
 }
 
-const allDays = ["日", "月", "火", "水", "木", "金", "土"];
+const allDayOfWeek = ["日", "月", "火", "水", "木", "金", "土"];
 
 const Item = ({ title, children }: { title: string; children: React.ReactNode }) => {
   return (
     <Box sx={sxStyles.item}>
-    <Typography variant="h2" sx={sxStyles.heading2}>
-      {title}
-    </Typography>
-    <Box  sx={sxStyles.itemContent}>
-      {children}
-    </Box>
+      <Typography variant="h2" sx={sxStyles.heading2}>
+        {title}
+      </Typography>
+      <Box sx={sxStyles.itemContent}>
+        {children}
+      </Box>
   </Box>
   )
 }
@@ -159,23 +159,20 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
         <h1>{course.name.category}<br/>{course.name.level}</h1>
       </Box>
       <Box pb={10} mt={2} px={3}>
-        <img src={`../../../image/school/${course.thumbnail}`} alt="講師" width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+        <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
         <Item title="授業内容">
           <Typography variant="body1" sx={sxStyles.description}>
-          {course.summary}
-          </Typography>
-          <Typography variant="body1" sx={sxStyles.description}>
-          {course.details}
+            {course.summary}<br/>{course.details}
           </Typography>
         </Item>
         <Item title="対象">
           <Typography variant="body1" sx={sxStyles.detail}>
-          {course.target}
+            {course.target}
           </Typography>
         </Item>
         <Item title="受講回数">
           <Typography variant="body1" sx={sxStyles.detail}>
-          {course.sessionCount}
+            {course.sessionCount}
           </Typography>
         </Item>
         <Item title="料金">
@@ -183,7 +180,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
             月額費用
           </Typography>
           <Typography variant="subtitle2" sx={sxStyles.price}>
-          {course.price}
+            {course.price}
           </Typography>
           <Typography variant="body2" sx={sxStyles.detail}>
             受講料6,500円＋教材費500円
@@ -200,23 +197,25 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
         </Item>
         <Item title="開催日程">
           <List sx={sxStyles.dayOfWeek}>
-          {allDays.map((day, index) => (
-          <ListItem
-            key={index}
-            sx={course.schedule.dayOfWeeks.includes(day) ? sxStyles.dayOfWeekListOn : sxStyles.dayOfWeekListOff}
-          >
-            {day}
-          </ListItem>
-        ))}
+            {allDayOfWeek.map((day, index) => (
+              <ListItem
+                key={index}
+                sx={course.schedule.dayOfWeeks.includes(day) ? sxStyles.dayOfWeekListOn : sxStyles.dayOfWeekListOff}
+              >
+                {day}
+              </ListItem>
+            ))}
           </List>
           <Box mt={2}>
             {course.schedule.times.map((time, index) => (
               <Typography variant="body1" sx={sxStyles.time} key={index}>
-              ・{time}
+                ・{time}
               </Typography>
             ))}
           </Box>
-          <Typography sx={sxStyles.note} mt={2}><CheckCircle/>日程の調整可能です。お気軽にご相談ください。</Typography>
+          <Typography sx={sxStyles.note} mt={2}>
+            <CheckCircle/>日程の調整可能です。お気軽にご相談ください。
+          </Typography>
         </Item>
       </Box>
     </>

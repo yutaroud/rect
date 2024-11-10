@@ -59,7 +59,7 @@ const sxStyles = {
     display: 'flex',
     alignItems: 'center',
     gap: 1,
-   }
+  }
 }
 
 const Curriculum = () => {
@@ -75,27 +75,22 @@ const Curriculum = () => {
       <List sx={sxStyles.list}>
         {Courses.map((course) => (
           <ListItem  sx={sxStyles.listItem}>
-            <Link
-              href={`/school/course${course.id}/`}>
-                <Box sx={sxStyles.card}>
-                  <Typography sx={sxStyles.title}>
-                    {course.name.category}<br/>{course.name.level}
-                  </Typography>
-                  <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ画像`} width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
-                  <Typography variant="body1" sx={sxStyles.text}>
-                    {course.summary}
-                  </Typography>
-                  <Box
-                    sx={sxStyles.button}
-                  >
-                    詳細
-                    <PlayCircle/>
-                  </Box>
+            <Link href={`/school/course${course.id}/`}>
+              <Box sx={sxStyles.card}>
+                <Typography sx={sxStyles.title}>
+                  {course.name.category}<br/>{course.name.level}
+                </Typography>
+                <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+                <Typography variant="body1" sx={sxStyles.text}>
+                  {course.summary}
+                </Typography>
+                <Box sx={sxStyles.button}>
+                  詳細<PlayCircle/>
+                </Box>
               </Box>
             </Link>
           </ListItem>
-          ))
-        }
+        ))}
       </List>
     </Box>
   );

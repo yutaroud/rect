@@ -80,7 +80,7 @@ const sxStyles = {
     display: 'flex',
     alignItems: 'center',
     gap: 1,
-   }
+  }
 }
 
 const CourseOtherList: React.FC<CourseOtherListProps> = ({ unreleasedCourses }) => {
