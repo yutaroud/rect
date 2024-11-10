@@ -1,6 +1,7 @@
 import "../../globals.css";
 import Box from "@mui/material/Box";
 import CourseDetail from "../CourseDetail";
+import CourseOtherList from "../CourseOtherList";
 import Contact from "../Contact";
 import { Courses } from "../../../lib/const/Courses";
 import Typography from "@mui/material/Typography";
@@ -19,6 +20,7 @@ interface CoursePageProps {
   
 const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
   const course = Courses.find((course) => `course${course.id}` === params.courseId);
+  const unreleasedCourses = Courses.filter((course) => `course${course.id}` !== params.courseId);
 
   if (!course) {
     return (
@@ -52,6 +54,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
         }}
       >
         <CourseDetail course={course}/>
+        <CourseOtherList unreleasedCourses={unreleasedCourses} />
         <Contact />
       </Box>
     </main>
