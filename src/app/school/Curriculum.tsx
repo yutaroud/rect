@@ -5,25 +5,7 @@ import Link from "next/link";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { PlayCircle } from "@mui/icons-material";
-
-const courseItem = [
-  {
-    name: {
-      category: "Scratch",
-      level: "初級",
-    },
-    thumbnail: "thumbnail_course_1.png",
-    text: "マサチューセッツ工科大学で開発されたビジュアルプログラミング言語「Scratch」を用いてプログラミングの基礎概念を学びます",
-   },
-  {
-    name: {
-      category: "ソフトウェア開発",
-      level: "中級",
-    },
-    thumbnail: "thumbnail_course_2.png",
-    text: "実際の開発で使用されているテキストプログラミング言語「JavaScript」を用いて決められたテーマに沿ってWebサイト開発を行い、プログラミングを学びます。",
-   },
-]
+import { Courses } from "../../lib/const/Courses";
 
 const sxStyles = {
   wrap: {
@@ -86,22 +68,22 @@ const Curriculum = () => {
       <Typography variant="h2">
         <img
           src={headingDetailImg.src}
-          alt="スクール概要"
+          alt="コース一覧"
           width="177"
         />
       </Typography>
       <List sx={sxStyles.list}>
-        {courseItem.map((course, id) => (
+        {Courses.map((course) => (
           <ListItem  sx={sxStyles.listItem}>
             <Link
-              href={`/school/course${id}/`}>
+              href={`/school/course${course.id}/`}>
                 <Box sx={sxStyles.card}>
                   <Typography sx={sxStyles.title}>
                     {course.name.category}<br/>{course.name.level}
                   </Typography>
-                  <img src={`../../../image/school/${course.thumbnail}`} alt="講師" width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+                  <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ画像`} width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
                   <Typography variant="body1" sx={sxStyles.text}>
-                    {course.text}
+                    {course.summary}
                   </Typography>
                   <Box
                     sx={sxStyles.button}

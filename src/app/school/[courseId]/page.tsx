@@ -2,13 +2,13 @@ import "../../globals.css";
 import Box from "@mui/material/Box";
 import CourseDetail from "../CourseDetail";
 import Contact from "../Contact";
+import { Courses } from "../../../lib/const/Courses";
+import Typography from "@mui/material/Typography";
 
 export async function generateStaticParams() {
-  return [
-    { courseId: "course0" },
-    { courseId: "course1" },
-    { courseId: "course2" },
-  ];
+  return Courses.map((course) => ({
+    courseId: `course${course.id}`,
+  }));
 }
   
 interface CoursePageProps {
@@ -18,6 +18,26 @@ interface CoursePageProps {
 }
   
 const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
+  const course = Courses.find((course) => `course${course.id}` === params.courseId);
+
+  if (!course) {
+    return (
+      <Box
+        component="section"
+        sx={{
+          textAlign: "center",
+          mx: "auto",
+          border: "solid 1px #EEEEEE",
+          maxWidth: "420px",
+          width: "100%",
+        }}
+      >
+        <Typography variant="body2" mt={2} align="center">
+          コースが存在していません
+        </Typography>
+      </Box>
+    );
+  }
 
   return (
     <main>
@@ -31,7 +51,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
           width: "100%",
         }}
       >
-        <CourseDetail/>
+        <CourseDetail course={course}/>
         <Contact />
       </Box>
     </main>

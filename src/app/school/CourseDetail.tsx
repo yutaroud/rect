@@ -7,6 +7,27 @@ import headingDetailImg from "../../../public/image/school/heading_OtherCourses.
 import Link from "next/link";
 import { PlayCircle } from "@mui/icons-material";
 
+interface CourseDetailProps {
+  course: {
+  id: number;
+  name: {
+    category: string;
+    level: string;
+  };
+  thumbnail: string;
+  summary: string;
+  details: string;
+  target: string;
+  sessionCount: string;
+  duration: string;
+  price: string;
+  schedule: {
+    dayOfWeeks: string[];
+    times: string[];
+  };
+}
+}
+
 const sxStyles = {
   heading1: {
     fontSize: '22px',
@@ -172,6 +193,8 @@ const sxStyles = {
    }
 }
 
+const allDays = ["日", "月", "火", "水", "木", "金", "土"];
+
 const Item = ({ title, children }: { title: string; children: React.ReactNode }) => {
   return (
     <Box sx={sxStyles.item}>
@@ -185,27 +208,30 @@ const Item = ({ title, children }: { title: string; children: React.ReactNode })
   )
 }
 
-const CourseDetail = () => {
+const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
   return (
     <>
       <Box sx={sxStyles.heading1}>
-        <h1>Scratch<br/>初級</h1>
+        <h1>{course.name.category}<br/>{course.name.level}</h1>
       </Box>
       <Box pb={10} mt={2} px={3}>
-        <img src='../../../image/school/thumbnail_course_1.png' alt="講師" width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+        <img src={`../../../image/school/${course.thumbnail}`} alt="講師" width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
         <Item title="授業内容">
           <Typography variant="body1" sx={sxStyles.description}>
-            マサチューセッツ工科大学で開発されたビジュアルプログラミング言語「Scratch」を用いてプログラミングの基礎概念を学びます。
+          {course.summary}
+          </Typography>
+          <Typography variant="body1" sx={sxStyles.description}>
+          {course.details}
           </Typography>
         </Item>
         <Item title="対象">
           <Typography variant="body1" sx={sxStyles.detail}>
-            小学3年生〜小学3年生
+          {course.target}
           </Typography>
         </Item>
         <Item title="受講回数">
           <Typography variant="body1" sx={sxStyles.detail}>
-            月3回
+          {course.sessionCount}
           </Typography>
         </Item>
         <Item title="料金">
@@ -213,7 +239,7 @@ const CourseDetail = () => {
             月額費用
           </Typography>
           <Typography variant="subtitle2" sx={sxStyles.price}>
-            7,000円
+          {course.price}
           </Typography>
           <Typography variant="body2" sx={sxStyles.detail}>
             受講料6,500円＋教材費500円
@@ -230,19 +256,22 @@ const CourseDetail = () => {
         </Item>
         <Item title="開催日程">
           <List sx={sxStyles.dayOfWeek}>
-            <ListItem sx={sxStyles.dayOfWeekListOn}>日</ListItem>
-            <ListItem sx={sxStyles.dayOfWeekListOff}>月</ListItem>
-            <ListItem sx={sxStyles.dayOfWeekListOn}>火</ListItem>
-            <ListItem sx={sxStyles.dayOfWeekListOff}>水</ListItem>
-            <ListItem sx={sxStyles.dayOfWeekListOn}>木</ListItem>
-            <ListItem sx={sxStyles.dayOfWeekListOff}>金</ListItem>
-            <ListItem sx={sxStyles.dayOfWeekListOn}>土</ListItem>
+          {allDays.map((day, index) => (
+          <ListItem
+            key={index}
+            sx={course.schedule.dayOfWeeks.includes(day) ? sxStyles.dayOfWeekListOn : sxStyles.dayOfWeekListOff}
+          >
+            {day}
+          </ListItem>
+        ))}
           </List>
-          <Typography variant="body1" sx={sxStyles.time} mt={2}>
-            ①17:00〜18:00<br/>
-            ①17:00〜18:00<br/>
-            ①17:00〜18:00
-          </Typography>
+          <Box mt={2}>
+            {course.schedule.times.map((time, index) => (
+              <Typography variant="body1" sx={sxStyles.time} key={index}>
+              ・{time}
+              </Typography>
+            ))}
+          </Box>
           <Typography sx={sxStyles.note} mt={2}><CheckCircle/>日程の調整可能です。お気軽にご相談ください。</Typography>
         </Item>
       </Box>
