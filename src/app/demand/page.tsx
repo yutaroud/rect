@@ -17,7 +17,7 @@ const Demand = () => {
           <p>下記より、連絡先を明記の上、ご連絡ください。</p>
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSexsVLTHkqbV6XYvG_5X8PBckIWwYf3mXybYD7PKg0YU9IL5A/viewform"
-            style={{ height: "930px", minWidth: "320px" }}
+            style={{ maxWidth: "90vw", height: "930px", width: "720px" }}
           />
         </Container>
       </Box>
