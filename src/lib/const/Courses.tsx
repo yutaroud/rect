@@ -1,5 +1,6 @@
 type Course = {
   id: number;
+  slug: string;
   name: {
     category: string;
     level: string;
@@ -24,6 +25,7 @@ type Course = {
 export const Courses: Course[] = [
   {
     id: 1,
+    slug: "scratch-beginner",
     name: {
       category: "Scratch",
       level: "初級",
@@ -46,6 +48,7 @@ export const Courses: Course[] = [
   },
   {
     id: 2,
+    slug: "software-intermediate",
     name: {
       category: "ソフトウェア開発",
       level: "中級",

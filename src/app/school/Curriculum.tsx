@@ -75,7 +75,7 @@ const Curriculum = () => {
       <List sx={sxStyles.list}>
         {Courses.map((course) => (
           <ListItem  sx={sxStyles.listItem}>
-            <Link href={`/school/course${course.id}/`}>
+            <Link href={`/school/${course.slug}/`}>
               <Box sx={sxStyles.card}>
                 <Typography sx={sxStyles.title}>
                   {course.name.category}<br/>{course.name.level}

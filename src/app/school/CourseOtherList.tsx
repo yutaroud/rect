@@ -9,6 +9,7 @@ import { PlayCircle } from "@mui/icons-material";
 interface CourseOtherListProps {
   unreleasedCourses: {
     id: number;
+    slug: string;
     name: {
       category: string;
       level: string;
@@ -86,7 +87,7 @@ const CourseOtherList: React.FC<CourseOtherListProps> = ({ unreleasedCourses }) 
       <List sx={sxStyles.list}>
         {unreleasedCourses.map((unreleasedCourse) => (
           <ListItem key={unreleasedCourse.id} sx={sxStyles.listItem}>
-            <Link href={`/school/course${unreleasedCourse.id}`}>
+            <Link href={`/school/${unreleasedCourse.slug}`}>
               <Box sx={sxStyles.card}>
                 <Typography sx={sxStyles.title}>
                   {unreleasedCourse.name.category}<br/>{unreleasedCourse.name.level}

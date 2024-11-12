@@ -4,24 +4,23 @@ import CourseDetail from "../CourseDetail";
 import CourseOtherList from "../CourseOtherList";
 import Contact from "../Contact";
 import { Courses } from "../../../lib/const/Courses";
-import Typography from "@mui/material/Typography";
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
   return Courses.map((course) => ({
-    courseId: `course${course.id}`,
+    courseSlug: `${course.slug}`,
   }));
 }
 
 interface CoursePageProps {
   params: {
-    courseId: string;
+    courseSlug: string;
   };
 }
 
 const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
-  const course = Courses.find((course) => `course${course.id}` === params.courseId);
-  const unreleasedCourses = Courses.filter((course) => `course${course.id}` !== params.courseId);
+  const course = Courses.find((course) => `${course.slug}` === params.courseSlug);
+  const unreleasedCourses = Courses.filter((course) => `${course.slug}` !== params.courseSlug);
 
   if (!course) {
     return notFound();
