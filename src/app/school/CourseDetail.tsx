@@ -83,10 +83,11 @@ const sxStyles = {
   dayOfWeek: {
     mt: 2,
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     px: 3,
     py: 0,
+    gap: 1,
   },
   dayOfWeekListOn: {
     fontSize: '14px',
@@ -95,8 +96,8 @@ const sxStyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '36px',
-    height: '36px',
+    maxWidth: '36px',
+    maxHeight: '36px',
     border: 'solid 1px #24285B',
     color: '#24285B',
     fontWeight: 'bold',
@@ -108,8 +109,8 @@ const sxStyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '36px',
-    height: '36px',
+    maxWidth: '36px',
+    maxHeight: '36px',
     border: 'solid 1px #9CA3AF',
     color: '#9CA3AF',
   },
@@ -182,7 +183,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
           <Typography variant="subtitle2" sx={sxStyles.price}>
             {course.price}
           </Typography>
-          <Typography variant="body2" sx={sxStyles.detail}>
+          <Typography variant="body2" sx={sxStyles.annotation}>
             受講料6,500円＋教材費500円
           </Typography>
           <Typography variant="body1" sx={sxStyles.detail} mt={2}>
