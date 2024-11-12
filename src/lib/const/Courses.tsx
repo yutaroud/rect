@@ -32,7 +32,7 @@ export const Courses: Course[] = [
     summary: "マサチューセッツ工科大学で開発されたビジュアルプログラミング言語「Scratch」を用いてプログラミングの基礎概念を学びます。",
     details: "「Scratch」はマウス操作で行えるので、キーボード入力に慣れていなくても安心して学習することができます。",
     target: "小学3年生〜中学3年生",
-    sessionCount: "月4回",
+    sessionCount: "週1回",
     duration: "1回60分",
     price: {
       tuition: 6500,
@@ -54,7 +54,7 @@ export const Courses: Course[] = [
     summary: "実際の開発で使用されているテキストプログラミング言語「JavaScript」を用いて決められたテーマに沿ってWebサイト開発を行い、プログラミングを学びます。",
     details: "主に、キーボードを使用する本格的なプログラミングを行うコースです。",
     target: "中学1年生〜高校3年生",
-    sessionCount: "月4回",
+    sessionCount: "週1回",
     duration: "1回60分",
     price: {
       tuition: 8500,
