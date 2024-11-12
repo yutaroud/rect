@@ -1,7 +1,7 @@
 import "../../globals.css";
 import Box from "@mui/material/Box";
-import CourseDetail from "../CourseDetail";
-import CourseOtherList from "../CourseOtherList";
+import CourseDetail from "./CourseDetail";
+import CourseOtherList from "./CourseOtherList";
 import Contact from "../Contact";
 import { Courses } from "../../../lib/const/Courses";
 import { notFound } from 'next/navigation';
