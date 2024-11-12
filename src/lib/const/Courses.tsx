@@ -10,7 +10,11 @@ type Course = {
   target: string;
   sessionCount: string;
   duration: string;
-  price: string;
+  price: {
+    tuition: number; // 受講料(月)
+    materials: number; // 教材費(月)
+    admission: number; // 入会金
+  };
   schedule: {
     dayOfWeeks: string[];
     times: string[];
@@ -30,7 +34,11 @@ export const Courses: Course[] = [
     target: "小学3年生〜中学3年生",
     sessionCount: "月4回",
     duration: "1回60分",
-    price: "6,500円",
+    price: {
+      tuition: 6500,
+      materials: 500,
+      admission: 10000
+    },
     schedule: {
       dayOfWeeks: ["月","火","水","木","金"],
       times: ["17:00〜18:00", "18:30〜19:30","20:00〜21:00",],
@@ -48,7 +56,11 @@ export const Courses: Course[] = [
     target: "中学1年生〜高校3年生",
     sessionCount: "月4回",
     duration: "1回60分",
-    price: "8,500円",
+    price: {
+      tuition: 8500,
+      materials: 500,
+      admission: 10000
+    },
     schedule: {
       dayOfWeeks: ["月","火","水","木","金"],
       times: ["17:00〜18:00", "18:30〜19:30","20:00〜21:00",],

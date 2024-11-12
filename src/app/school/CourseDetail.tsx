@@ -17,7 +17,11 @@ interface CourseDetailProps {
     target: string;
     sessionCount: string;
     duration: string;
-    price: string;
+    price: {
+      tuition: number;
+      materials: number;
+      admission: number;
+    };
     schedule: {
       dayOfWeeks: string[];
       times: string[];
@@ -154,6 +158,7 @@ const Item = ({ title, children }: { title: string; children: React.ReactNode })
 }
 
 const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
+  const totalPrice = course.price.tuition + course.price.materials;
   return (
     <>
       <Box sx={sxStyles.heading1}>
@@ -181,16 +186,16 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
             月額費用
           </Typography>
           <Typography variant="subtitle2" sx={sxStyles.price}>
-            {course.price}
+            {totalPrice}円
           </Typography>
           <Typography variant="body2" sx={sxStyles.annotation}>
-            受講料6,500円＋教材費500円
+            受講料{course.price.tuition}円＋教材費{course.price.materials}円
           </Typography>
           <Typography variant="body1" sx={sxStyles.detail} mt={2}>
             入会費
           </Typography>
           <Typography variant="subtitle2" sx={sxStyles.price}>
-            10,000円
+          {course.price.admission}円
           </Typography>
           <Typography variant="body2" sx={sxStyles.annotation} mt={2}>
             ※システム料金が別途かかる場合がございます
