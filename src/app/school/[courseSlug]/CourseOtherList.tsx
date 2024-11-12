@@ -1,16 +1,28 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import headingDetailImg from "../../../public/image/school/heading_curriculum.png";
-import Link from "next/link";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import headingDetailImg from "../../../../public/image/school/heading_OtherCourses.png";
+import Link from "next/link";
 import { PlayCircle } from "@mui/icons-material";
-import { Courses } from "../../lib/const/Courses";
+
+interface CourseOtherListProps {
+  unreleasedCourses: {
+    id: number;
+    slug: string;
+    name: {
+      category: string;
+      level: string;
+    };
+    summary: string;
+  }[];
+}
 
 const sxStyles = {
-  wrap: {
-    bgcolor: "#407BFF",
-    py: 8,
+  otherCourses: {
+    backgroundColor: '#F5F5F5',
+    pt: 7,
+    pb: 7,
     px: 3
   },
   list: {
@@ -62,30 +74,30 @@ const sxStyles = {
   }
 }
 
-const Curriculum = () => {
+const CourseOtherList: React.FC<CourseOtherListProps> = ({ unreleasedCourses }) => {
   return (
-    <Box sx={sxStyles.wrap}>
+    <Box sx={sxStyles.otherCourses}>
       <Typography variant="h2">
         <img
           src={headingDetailImg.src}
-          alt="コース一覧"
-          width="177"
+          alt="他のコース"
+          width="164"
         />
       </Typography>
       <List sx={sxStyles.list}>
-        {Courses.map((course, index) => (
-          <ListItem sx={sxStyles.listItem} key={index}>
-            <Link href={`/school/${course.slug}/`}>
+        {unreleasedCourses.map((unreleasedCourse) => (
+          <ListItem key={unreleasedCourse.id} sx={sxStyles.listItem}>
+            <Link href={`/school/${unreleasedCourse.slug}`}>
               <Box sx={sxStyles.card}>
                 <Typography sx={sxStyles.title}>
-                  {course.name.category}<br/>{course.name.level}
+                  {unreleasedCourse.name.category}<br/>{unreleasedCourse.name.level}
                 </Typography>
-                <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="800" height="500" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
                 <Typography variant="body1" sx={sxStyles.text}>
-                  {course.summary}
+                  {unreleasedCourse.summary}
                 </Typography>
                 <Box sx={sxStyles.button}>
-                  詳細<PlayCircle/>
+                  詳細
+                  <PlayCircle />
                 </Box>
               </Box>
             </Link>
@@ -96,4 +108,4 @@ const Curriculum = () => {
   );
 };
 
-export default Curriculum;
+export default CourseOtherList;
