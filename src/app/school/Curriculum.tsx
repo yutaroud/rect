@@ -73,8 +73,8 @@ const Curriculum = () => {
         />
       </Typography>
       <List sx={sxStyles.list}>
-        {Courses.map((course) => (
-          <ListItem  sx={sxStyles.listItem}>
+        {Courses.map((course, index) => (
+          <ListItem sx={sxStyles.listItem} key={index}>
             <Link href={`/school/${course.slug}/`}>
               <Box sx={sxStyles.card}>
                 <Typography sx={sxStyles.title}>
