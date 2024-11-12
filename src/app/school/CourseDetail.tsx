@@ -158,7 +158,6 @@ const Item = ({ title, children }: { title: string; children: React.ReactNode })
 }
 
 const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
-  const totalPrice = course.price.tuition + course.price.materials;
   return (
     <>
       <Box sx={sxStyles.heading1}>
@@ -183,22 +182,13 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
         </Item>
         <Item title="料金">
           <Typography variant="body1" sx={sxStyles.detail}>
-            月額費用
+            受講料
           </Typography>
           <Typography variant="subtitle2" sx={sxStyles.price}>
-            {totalPrice}円
+            {course.price.tuition}円
           </Typography>
           <Typography variant="body2" sx={sxStyles.annotation}>
-            受講料{course.price.tuition}円＋教材費{course.price.materials}円
-          </Typography>
-          <Typography variant="body1" sx={sxStyles.detail} mt={2}>
-            入会費
-          </Typography>
-          <Typography variant="subtitle2" sx={sxStyles.price}>
-          {course.price.admission}円
-          </Typography>
-          <Typography variant="body2" sx={sxStyles.annotation} mt={2}>
-            ※システム料金が別途かかる場合がございます
+            別途、教材費{course.price.materials}円/月<br/>入会時に、入会費 {course.price.admission}円が発生いたします。
           </Typography>
         </Item>
         <Item title="開催日程">
