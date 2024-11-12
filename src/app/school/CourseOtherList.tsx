@@ -13,17 +13,7 @@ interface CourseOtherListProps {
       category: string;
       level: string;
     };
-    thumbnail: string;
     summary: string;
-    details: string;
-    target: string;
-    sessionCount: string;
-    duration: string;
-    price: string;
-    schedule: {
-      dayOfWeeks: string[];
-      times: string[];
-    };
   }[];
 }
 
