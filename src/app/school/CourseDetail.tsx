@@ -160,7 +160,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
         <h1>{course.name.category}<br/>{course.name.level}</h1>
       </Box>
       <Box pb={10} mt={2} px={3}>
-        <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+        <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="800" height="500" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
         <Item title="授業内容">
           <Typography variant="body1" sx={sxStyles.description}>
             {course.summary}<br/>{course.details}

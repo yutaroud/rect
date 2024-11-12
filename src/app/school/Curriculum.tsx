@@ -80,7 +80,7 @@ const Curriculum = () => {
                 <Typography sx={sxStyles.title}>
                   {course.name.category}<br/>{course.name.level}
                 </Typography>
-                <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="400" height="269" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+                <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="800" height="500" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
                 <Typography variant="body1" sx={sxStyles.text}>
                   {course.summary}
                 </Typography>
