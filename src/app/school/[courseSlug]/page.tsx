@@ -12,9 +12,27 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: CoursePageProps) {
+  const course = Courses.find((course) => course.slug === params.courseSlug);
+
+  if (!course) {
+    return {
+      title: "コースが見つかりません | プログラミングを学ぶならRe:ProS(レプロス)",
+    };
+  }
+
+  return {
+    title: `${course.name.category} ${course.name.level}コース | プログラミングを学ぶならRe:ProS(レプロス)`,
+  };
+}
+
 interface CoursePageProps {
   params: {
     courseSlug: string;
+    name: {
+      category: string;
+      level: string;
+    };
   };
 }
 
