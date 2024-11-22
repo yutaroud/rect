@@ -69,4 +69,27 @@ export const Courses: Course[] = [
       times: ["17:00〜18:00", "18:30〜19:30","20:00〜21:00",],
     },
   },
+  {
+    id: 3,
+    slug: "software-expert",
+    name: {
+      category: "ソフトウェア開発",
+      level: "上級",
+    },
+    thumbnail: "thumbnail_course_3.webp",
+    summary: "プロのWebエンジニアを目指す人向けのコース。副業を考えている方やスキルアップを考えている方向け。初心者でも丁寧に教えます。",
+    details: "「Ruby on Rails」を利用して、Webシステムの制作を行います。忙しい人向けにオンラインの対応もしていますので、お気軽にご相談ください。",
+    target: "大学1年生〜社会人",
+    sessionCount: "週1回",
+    duration: "1回60分",
+    price: {
+      tuition: 12000,
+      materials: 500,
+      admission: 30000
+    },
+    schedule: {
+      dayOfWeeks: ["月","火","水","木","金"],
+      times: ["20:00〜21:00",],
+    },
+  },
 ];
