@@ -1,5 +1,5 @@
 import "../globals.css";
-import Header from "../Header";
+import Breadcrumbs from "./Breadcrumbs";
 import Box from "@mui/material/Box";
 import KeyVisual from "./KeyVisual";
 import Introduction from "./Introduction";
@@ -39,6 +39,7 @@ const School = () => {
         <Faq />
         <Contact />
       </Box>
+      <Breadcrumbs/>
     </main>
   );
 };
