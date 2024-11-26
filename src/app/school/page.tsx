@@ -8,6 +8,7 @@ import Teacher from "./Teacher";
 import Faq from "./Faq";
 import Access from "./Access";
 import Contact from "./Contact";
+import { schoolTopTitle } from "@/lib/const/BreadCrumbTitle";
 
 export const metadata = {
   title: "プログラミングを学ぶならRe:ProS(レプロス)",
@@ -39,7 +40,7 @@ const School = () => {
         <Faq />
         <Contact />
       </Box>
-      <BreadcrumbsNavigation titles={["School"]} />
+      <BreadcrumbsNavigation titles={schoolTopTitle} />
     </main>
   );
 };

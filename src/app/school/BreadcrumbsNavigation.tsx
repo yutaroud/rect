@@ -27,7 +27,7 @@ const BreadcrumbNavigation: React.FC<TBreadCrumbProps> = ({titles}: TBreadCrumbP
     >
       <Breadcrumbs aria-label="breadcrumb" separator="›" sx={{ my: 2, mx: 2 }}>
         <Link key="link-home" underline="hover" color="inherit" href="/">
-          Home
+          株式会社レクト
         </Link>
         ;
         {pathNames.map((link, index) => {

@@ -6,6 +6,7 @@ import Contact from "../Contact";
 import { Courses } from "../../../lib/const/Courses";
 import { notFound } from 'next/navigation';
 import BreadcrumbsNavigation from "../BreadcrumbsNavigation";
+import { schoolTopTitle } from "@/lib/const/BreadCrumbTitle";
 
 
 export async function generateStaticParams() {
@@ -28,6 +29,8 @@ const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
     return notFound();
   }
 
+  schoolTopTitle.push(`${course.name.category} ${course.name.level}コース`)
+
   return (
     <main>
       <Box
@@ -44,7 +47,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
         <CourseOtherList unreleasedCourses={unreleasedCourses} />
         <Contact />
       </Box>
-      <BreadcrumbsNavigation titles={["School", "Course"]}/>
+      <BreadcrumbsNavigation titles={schoolTopTitle}/>
     </main>
   );
 }
