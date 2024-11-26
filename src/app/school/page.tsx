@@ -1,5 +1,5 @@
 import "../globals.css";
-import Breadcrumbs from "./Breadcrumbs";
+import BreadcrumbsNavigation from "./BreadcrumbsNavigation";
 import Box from "@mui/material/Box";
 import KeyVisual from "./KeyVisual";
 import Introduction from "./Introduction";
@@ -39,7 +39,7 @@ const School = () => {
         <Faq />
         <Contact />
       </Box>
-      <Breadcrumbs/>
+      <BreadcrumbsNavigation titles={["School"]} />
     </main>
   );
 };

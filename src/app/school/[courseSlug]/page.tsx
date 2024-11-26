@@ -5,7 +5,7 @@ import CourseOtherList from "./CourseOtherList";
 import Contact from "../Contact";
 import { Courses } from "../../../lib/const/Courses";
 import { notFound } from 'next/navigation';
-import Breadcrumbs from "../Breadcrumbs";
+import BreadcrumbsNavigation from "../BreadcrumbsNavigation";
 
 
 export async function generateStaticParams() {
@@ -44,7 +44,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
         <CourseOtherList unreleasedCourses={unreleasedCourses} />
         <Contact />
       </Box>
-      <Breadcrumbs/>
+      <BreadcrumbsNavigation titles={["School", "Course"]}/>
     </main>
   );
 }
