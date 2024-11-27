@@ -9,6 +9,24 @@ type TBreadCrumbProps = {
   titles?: string[]
 }
 
+const sxStyles = {
+  wrap: {
+    textAlign: "center",
+    mx: "auto",
+    maxWidth: "800px",
+    width: "100%",
+    '& > nav' : {
+      overflowX: 'scroll',
+      margin: 0,
+    },
+    '& > nav > ol' : {
+      flexWrap: 'nowrap',
+      width: 'max-content',
+      padding: '24px',
+    },
+  }
+}
+
 
 const BreadcrumbNavigation: React.FC<TBreadCrumbProps> = ({titles}: TBreadCrumbProps) => {
   const paths = usePathname();
@@ -17,13 +35,7 @@ const BreadcrumbNavigation: React.FC<TBreadCrumbProps> = ({titles}: TBreadCrumbP
   return (
     <Box
       component="section"
-      sx={{
-        textAlign: "center",
-        mx: "auto",
-        border: "solid 1px #EEEEEE",
-        maxWidth: "420px",
-        width: "100%",
-      }}
+      sx={sxStyles.wrap}
     >
       <Breadcrumbs aria-label="breadcrumb" separator="›" sx={{ my: 2, mx: 2 }}>
         <Link key="link-home" underline="hover" color="inherit" href="/">

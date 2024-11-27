@@ -5,7 +5,7 @@ import CourseOtherList from "./CourseOtherList";
 import Contact from "../Contact";
 import { Courses } from "../../../lib/const/Courses";
 import { notFound } from 'next/navigation';
-import BreadcrumbsNavigation from "../BreadcrumbsNavigation";
+import BreadcrumbsNavigation from "../../BreadcrumbsNavigation";
 import { schoolTopTitle } from "@/lib/const/BreadCrumbTitle";
 
 
@@ -46,8 +46,8 @@ const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
         <CourseDetail course={course}/>
         <CourseOtherList unreleasedCourses={unreleasedCourses} />
         <Contact />
+        <BreadcrumbsNavigation titles={schoolTopTitle}/>
       </Box>
-      <BreadcrumbsNavigation titles={schoolTopTitle}/>
     </main>
   );
 }
