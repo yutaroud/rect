@@ -4,6 +4,8 @@ import Company from "../modules/Company";
 import Business from "../modules/Business";
 import Recruitment from "@/modules/Recuritment";
 import Contact from "@/modules/Contact";
+import BreadcrumbsNavigation from "./BreadcrumbsNavigation";
+import { schoolTopTitle } from "@/lib/const/BreadCrumbTitle";
 
 export const metadata = {
   title: "株式会社レクト",
@@ -16,12 +18,13 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main style={{paddingBottom: "80px"}}>
+    <main>
       <Kv />
       <Business />
       <Company />
       <Recruitment />
       <Contact />
+      <BreadcrumbsNavigation titles={schoolTopTitle} />
     </main>
   );
 }

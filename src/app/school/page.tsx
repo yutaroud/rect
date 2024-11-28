@@ -1,5 +1,5 @@
 import "../globals.css";
-import Header from "../Header";
+import BreadcrumbsNavigation from "../BreadcrumbsNavigation"
 import Box from "@mui/material/Box";
 import KeyVisual from "./KeyVisual";
 import Introduction from "./Introduction";
@@ -8,6 +8,7 @@ import Teacher from "./Teacher";
 import Faq from "./Faq";
 import Access from "./Access";
 import Contact from "./Contact";
+import { schoolTopTitle } from "@/lib/const/BreadCrumbTitle";
 
 export const metadata = {
   title: "プログラミングを学ぶならRe:ProS(レプロス)",
@@ -38,6 +39,7 @@ const School = () => {
         <Access />
         <Faq />
         <Contact />
+        <BreadcrumbsNavigation titles={schoolTopTitle} />
       </Box>
     </main>
   );
