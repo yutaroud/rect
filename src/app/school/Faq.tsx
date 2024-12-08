@@ -7,7 +7,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const sxStyles = {
-  accodion: {
+  accordion: {
     border: "solid 2px #F0F0F0",
     boxShadow: "none",
     marginTop: 2,
@@ -15,11 +15,11 @@ const sxStyles = {
       content: "none"
     }
   },
-  accodionSummary: {
+  accordionSummary: {
     fontWeight: "bold",
     textAlign: "left"
   },
-  accodionSummaryText: {
+  accordionSummaryText: {
     backgroundColor: "#24285B",
     color: "#fff",
     borderRadius: "50%",
@@ -32,8 +32,28 @@ const sxStyles = {
     justifyContent: "center",
     mr: 2,
   },
-  accodionDetails: {
+  accordionDetails: {
     textAlign: "left"
+  },
+  heading: {
+    marginInline: "24px",
+    '& > img': {
+      width: "245px",
+      height: "auto",
+    },
+    "@media screen and (max-width:450px)": {
+      '& > img': {
+        width: "177px",
+      }
+    }
+  },
+  wrap: {
+    mt: 6,
+    width: "800px",
+    mx: "auto",
+    "@media screen and (max-width:450px)": {
+      width: "100%",
+    },
   }
 }
 
@@ -59,22 +79,22 @@ const accordionData = [
 const Faq = () => {
   return (
     <Box pt={6} pb={10} mx={3}>
-      <Typography variant="h2">
-        <img src={headingTeacherImg.src} alt="よくある質問" width="197" />
+      <Typography variant="h2" sx={sxStyles.heading}>
+        <img src={headingTeacherImg.src} alt="よくある質問" width="381" height="61" />
       </Typography>
-      <Box mt={6}>
+      <Box sx={sxStyles.wrap}>
         {accordionData.map((item) => (
-          <Accordion key={item.id} sx={sxStyles.accodion}>
+          <Accordion key={item.id} sx={sxStyles.accordion}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{color: "#24285B"}} />}
               aria-controls={`${item.id}-content`}
               id={`${item.id}-header`}
-              sx={sxStyles.accodionSummary}
+              sx={sxStyles.accordionSummary}
             >
-              <Typography sx={sxStyles.accodionSummaryText}>Q</Typography>
+              <Typography sx={sxStyles.accordionSummaryText}>Q</Typography>
               {item.question}
             </AccordionSummary>
-            <AccordionDetails sx={sxStyles.accodionDetails}>
+            <AccordionDetails sx={sxStyles.accordionDetails}>
               {item.answer}
             </AccordionDetails>
           </Accordion>
