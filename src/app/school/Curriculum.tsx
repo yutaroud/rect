@@ -14,12 +14,27 @@ const sxStyles = {
     px: 3
   },
   list: {
-    mt: 4,
+    display: "flex",
+    columnGap: "20px",
+    mt: 12,
+    width: "800px",
+    mx: "auto",
+    p: 0,
+    alignItems: "baseline",
+    "@media screen and (max-width:450px)": {
+      mt: 4,
+      display: "block",
+      width: "100%",
+    },
   },
   listItem: {
     p: 0,
-    '& + &' : {
-      mt: 4,
+    width: "100%",
+    flexGrow: 1,
+    "@media screen and (max-width:450px)": {
+      '& + &' : {
+        mt: 4,
+      }
     }
   },
   card: {
@@ -59,17 +74,30 @@ const sxStyles = {
     display: 'flex',
     alignItems: 'center',
     gap: 1,
+  },
+  heading: {
+    marginInline: "24px",
+    '& > img': {
+      width: "204px",
+      height: "auto",
+    },
+    "@media screen and (max-width:450px)": {
+      '& > img': {
+        width: "177px",
+      }
+    }
   }
 }
 
 const Curriculum = () => {
   return (
     <Box sx={sxStyles.wrap}>
-      <Typography variant="h2">
+      <Typography variant="h2" sx={sxStyles.heading}>
         <img
           src={headingDetailImg.src}
           alt="コース一覧"
-          width="177"
+          width="316"
+          height="62"
         />
       </Typography>
       <List sx={sxStyles.list}>
