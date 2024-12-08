@@ -1,17 +1,70 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import fvImg from "../../../public/image/school/fv.png";
+import fvLarge from "../../../public/image/school/fv_large.png";
+import fvSmall from "../../../public/image/school/fv_small.png";
 
 const sxStyles = {
   photos: {
     display: 'flex',
     gap: 2,
-    overflow: 'scroll',
-    overflowX: 'auto', 
     px: 2,
-    justifyContent: 'flex-start',
-    scrollSnapType: 'x mandatory',
+    justifyContent: 'center',
+    marginTop: "40px",
+    '& > img': {
+      width: "200px",
+      height: "auto",
+      borderRadius: "10px",
+      "&:nth-of-type(odd)": {
+          marginBottom: "20px",
+        },
+      "&:nth-of-type(even)": {
+        marginTop: "20px",
+      },
+    },
+    "@media screen and (max-width:450px)": {
+      justifyContent: 'flex-start',
+      overflow: 'scroll',
+      overflowX: 'auto',
+      scrollSnapType: 'x mandatory',
+      marginTop: 0,
+      '& > img': {
+        width: "150px",
+        borderRadius: 0,
+        "&:nth-of-type(odd)": {
+            marginBottom: 0,
+          },
+        "&:nth-of-type(even)": {
+          marginTop: 0,
+        },
+      }
+    }
   },
+  keyVisualLarge: {
+    background: "#407BFF",
+    "@media screen and (max-width:450px)": {
+      display: "none",
+    }
+  },
+  keyVisualSmall: {
+    display: "none",
+    "@media screen and (max-width:450px)": {
+      verticalAlign: "bottom",
+      width: "100%",
+      display: "inline-block",
+      '& > img': {
+        width: "100%",
+        height: "auto",
+      },
+    }
+  },
+  text: {
+    marginTop: "40px",
+    "@media screen and (max-width:450px)": {
+      paddingBottom: "48px",
+      marginInline: "12px",
+      marginTop: 0,
+    }
+  }
 };
 
 const images = [
@@ -36,13 +89,24 @@ const images = [
 const KeyVisual = () => {
   return (
     <>
-      <img
-        src={fvImg.src}
-        alt="とにかく楽しんで、気づいたらプログラミングができるようになっている教室"
-        width="420"
-        style={{ verticalAlign: "bottom", width: "100%" }}
-      />
-      <Box pb={6} mx={3}>
+      <Box sx={sxStyles.keyVisualLarge}>
+        <img
+          src={fvLarge.src}
+          alt="とにかく楽しんで、気づいたらプログラミングができるようになっている教室"
+          width="800"
+          height="352"
+        />
+      </Box>
+      <Box
+        sx={sxStyles.keyVisualSmall}>
+        <img
+          src={fvSmall.src}
+          alt="とにかく楽しんで、気づいたらプログラミングができるようになっている教室"
+          width="375"
+          height="517"
+        />
+      </Box>
+      <Box sx={sxStyles.text}>
         <Typography variant="body2" mt={1}>
           <Typography component="span" variant="body2" fontWeight="bold">
             現役エンジニア
@@ -67,8 +131,8 @@ const KeyVisual = () => {
           key={index}
           src={image.src}
           alt={image.alt}
-          width="150"
-          height="100"
+          width="300"
+          height="200"
         />
       ))}
       </Box>
