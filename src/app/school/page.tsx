@@ -27,9 +27,6 @@ const School = () => {
         sx={{
           textAlign: "center",
           mx: "auto",
-          border: "solid 1px #EEEEEE",
-          maxWidth: "420px",
-          width: "100%",
         }}
       >
         <KeyVisual />
