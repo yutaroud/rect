@@ -8,15 +8,23 @@ import Link from "next/link";
 const sxStyles = {
   textWrap: {
     textAlign: 'left',
-    px: 3,
-    mt: -3,
+    width: "100%",
+    "@media screen and (max-width:450px)": {
+      px: 3,
+      mt: -3,
+    },
   },
   pointWrap: {
     display: "flex",
-    flexDirection: "column",
-    '& + &': {
-      mt: 5
-    }
+    flexDirection: "row-reverse",
+    marginTop: "60px",
+    alignItems: "center",
+    "@media screen and (max-width:450px)": {
+      flexDirection: "column",
+      '& + &': {
+        mt: 5
+      }
+    },
   },
   pointText: {
     background: '#24285B',
@@ -24,6 +32,12 @@ const sxStyles = {
     py: 0.5,
     fontWeight: 'bold',
     display: 'inline-block'
+  },
+  skill: {
+    marginTop: "70px",
+    "@media screen and (max-width:450px)": {
+      padding: "40px 24px",
+    },
   },
   skillContents: {
     background: '#F1F5FD',
@@ -54,7 +68,7 @@ const sxStyles = {
     mt: 2,
     gap: 1,
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr',
     '& > li': {
       background: '#fff',
       borderRadius: 2,
@@ -66,6 +80,9 @@ const sxStyles = {
       aspectRatio: 1,
       padding: 0,
     },
+    "@media screen and (max-width:450px)": {
+      gridTemplateColumns: '1fr 1fr 1fr',
+    }
   },
   textLink: {
     textDecoration: 'underline',
@@ -80,15 +97,38 @@ const sxStyles = {
       borderRight: '6px solid transparent',
       borderTop: '6px solid black',
     }
+  },
+  wrap: {
+    paddingTop: "100px",
+    paddingBottom: "100px",
+    width: "800px",
+    margin: "0 auto",
+    "@media screen and (max-width:450px)": {
+      width: "100%",
+      paddingTop: "48px",
+      paddingBottom: "80px"
+    }
+  },
+  heading: {
+    marginInline: "24px",
+    '& > img': {
+      width: "382px",
+      height: "auto",
+    },
+    "@media screen and (max-width:450px)": {
+      '& > img': {
+        width: "300px",
+      }
+    }
   }
 };
 
 
 const Introduction = () => {
   return (
-    <Box pt={6} pb={10}>
-      <Typography variant="h2" mx={3}>
-        <img src={headingTeacherImg.src} alt="Re:ProSの特徴" width="300" />
+    <Box sx={sxStyles.wrap}>
+      <Typography variant="h2" sx={sxStyles.heading}>
+        <img src={headingTeacherImg.src} alt="Re:ProSの特徴" width="602" height="86" />
       </Typography>
       <Box mt={5}>
         <Box sx={sxStyles.pointWrap}>
@@ -153,7 +193,7 @@ const Introduction = () => {
           </Box>
         </Box>
       </Box>
-      <Box px={3} pt={5}>
+      <Box sx={sxStyles.skill}>
         <Box sx={sxStyles.skillContents}>
           <Typography sx={sxStyles.balloon}>さらに</Typography>
           <Typography mt={2} variant="subtitle2" component="p" color={'#24285B'}>
