@@ -1,8 +1,11 @@
+"use client";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { CheckCircle } from "@mui/icons-material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 
 interface CourseDetailProps {
   course: {
@@ -140,6 +143,14 @@ const sxStyles = {
       width: '18px',
     },
   },
+  wrap: {
+    pb: 10,
+    mt: 2,
+    px: 3,
+    mx: "auto",
+    width: "100%",
+    maxWidth: "800px",
+  }
 }
 
 const allDayOfWeek = ["日", "月", "火", "水", "木", "金", "土"];
@@ -158,13 +169,14 @@ const Item = ({ title, children }: { title: string; children: React.ReactNode })
 }
 
 const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
+  const isSmallScreen = useMediaQuery("(max-width:450px)");
   return (
     <>
       <Box sx={sxStyles.heading1}>
-        <h1>{course.name.category}<br/>{course.name.level}</h1>
+        <h1>{course.name.category}{isSmallScreen && <br />}{course.name.level}</h1>
       </Box>
-      <Box pb={10} mt={2} px={3}>
-        <img src={`../../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="800" height="500" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+      <Box sx={sxStyles.wrap}>
+        <img src={`../../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="800" height="500" style={{marginTop: 32,width: '100%',height: 'auto',maxWidth:"500px"}}/>
         <Item title="授業内容">
           <Typography variant="body1" sx={sxStyles.description}>
             {course.summary}<br/>{course.details}

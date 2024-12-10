@@ -1,22 +1,32 @@
+"use client";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import headingTeacherImg from "../../../public/image/school/heading_introduction.png";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Link from "next/link";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const sxStyles = {
   textWrap: {
     textAlign: 'left',
-    px: 3,
-    mt: -3,
+    width: "100%",
+    "@media screen and (max-width:450px)": {
+      px: 3,
+      mt: -3,
+    },
   },
   pointWrap: {
     display: "flex",
-    flexDirection: "column",
-    '& + &': {
-      mt: 5
-    }
+    flexDirection: "row-reverse",
+    marginTop: "60px",
+    alignItems: "center",
+    "@media screen and (max-width:450px)": {
+      flexDirection: "column",
+      '& + &': {
+        mt: 5
+      }
+    },
   },
   pointText: {
     background: '#24285B',
@@ -24,6 +34,12 @@ const sxStyles = {
     py: 0.5,
     fontWeight: 'bold',
     display: 'inline-block'
+  },
+  skill: {
+    marginTop: "70px",
+    "@media screen and (max-width:450px)": {
+      padding: "40px 24px",
+    },
   },
   skillContents: {
     background: '#F1F5FD',
@@ -54,7 +70,7 @@ const sxStyles = {
     mt: 2,
     gap: 1,
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr',
     '& > li': {
       background: '#fff',
       borderRadius: 2,
@@ -66,6 +82,9 @@ const sxStyles = {
       aspectRatio: 1,
       padding: 0,
     },
+    "@media screen and (max-width:450px)": {
+      gridTemplateColumns: '1fr 1fr 1fr',
+    }
   },
   textLink: {
     textDecoration: 'underline',
@@ -80,15 +99,40 @@ const sxStyles = {
       borderRight: '6px solid transparent',
       borderTop: '6px solid black',
     }
+  },
+  wrap: {
+    paddingTop: "100px",
+    paddingBottom: "100px",
+    width: "800px",
+    maxWidth: "100%",
+    margin: "0 auto",
+    "@media screen and (max-width:450px)": {
+      width: "100%",
+      paddingTop: "48px",
+      paddingBottom: "80px"
+    }
+  },
+  heading: {
+    marginInline: "24px",
+    '& > img': {
+      width: "382px",
+      height: "auto",
+    },
+    "@media screen and (max-width:450px)": {
+      '& > img': {
+        width: "300px",
+      }
+    }
   }
 };
 
 
 const Introduction = () => {
+  const isSmallScreen = useMediaQuery("(max-width:450px)");
   return (
-    <Box pt={6} pb={10}>
-      <Typography variant="h2" mx={3}>
-        <img src={headingTeacherImg.src} alt="Re:ProSの特徴" width="300" />
+    <Box sx={sxStyles.wrap}>
+      <Typography variant="h2" sx={sxStyles.heading}>
+        <img src={headingTeacherImg.src} alt="Re:ProSの特徴" width="602" height="86" />
       </Typography>
       <Box mt={5}>
         <Box sx={sxStyles.pointWrap}>
@@ -102,7 +146,7 @@ const Introduction = () => {
               <Typography component="span" variant="h6"  sx={[sxStyles.pointText, {color: '#FFF652'}]} mt={0.5}>一貫して学べる</Typography>
             </Typography>
             <Typography variant="body2" mt={2}>
-              視覚的にプログラミングを学べる<br/>
+              視覚的にプログラミングを学べる{isSmallScreen && <br />}
               ビジュアルプログラミングから、<br/>
               実際のコードを書くテキストプログラミングまで<br/>
               一貫して学ぶことができる数少ないスクールです。<br/>
@@ -122,7 +166,7 @@ const Introduction = () => {
               </Typography>
             </Typography>
             <Typography variant="body2" mt={2}>
-              最新の業界動向や実践的なスキルを<br/>
+              最新の業界動向や実践的なスキルを{isSmallScreen && <br />}
               直接学ぶことができます。<br/>
               現場での経験を基にした実践的な指導が特徴です。
             </Typography>
@@ -147,18 +191,18 @@ const Introduction = () => {
             </Typography>
             <Typography variant="body2" mt={2}>
               受講料は業界最安値レベルを維持。<br/>
-              多くの方に手軽にプログラミングを学ぶ機会を<br/>
+              多くの方に手軽にプログラミングを学ぶ機会を{isSmallScreen && <br />}
               提供しています。
             </Typography>
           </Box>
         </Box>
       </Box>
-      <Box px={3} pt={5}>
+      <Box sx={sxStyles.skill}>
         <Box sx={sxStyles.skillContents}>
           <Typography sx={sxStyles.balloon}>さらに</Typography>
           <Typography mt={2} variant="subtitle2" component="p" color={'#24285B'}>
             プログラミングを学ぶことで<br/>
-            <Typography variant="h6" component="span" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが<br/>身につきます</Typography>
+            <Typography variant="h6" component="span" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが{isSmallScreen && <br />}身につきます</Typography>
           </Typography>
           <List
             sx={sxStyles.skillList}
