@@ -1,7 +1,9 @@
+"use client";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import fvLarge from "../../../public/image/school/fv_large.png";
 import fvSmall from "../../../public/image/school/fv_small.png";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const sxStyles = {
   photos: {
@@ -41,6 +43,9 @@ const sxStyles = {
   },
   keyVisualLarge: {
     background: "#407BFF",
+    '& > img': {
+      verticalAlign: "bottom",
+    },
     "@media screen and (max-width:450px)": {
       display: "none",
     }
@@ -87,23 +92,15 @@ const images = [
 ];
 
 const KeyVisual = () => {
+  const isSmallScreen = useMediaQuery("(max-width:450px)");
   return (
     <>
-      <Box sx={sxStyles.keyVisualLarge}>
+      <Box sx={isSmallScreen ? sxStyles.keyVisualSmall : sxStyles.keyVisualLarge}>
         <img
-          src={fvLarge.src}
+          src={isSmallScreen ? fvSmall.src : fvLarge.src}
           alt="とにかく楽しんで、気づいたらプログラミングができるようになっている教室"
-          width="800"
-          height="352"
-        />
-      </Box>
-      <Box
-        sx={sxStyles.keyVisualSmall}>
-        <img
-          src={fvSmall.src}
-          alt="とにかく楽しんで、気づいたらプログラミングができるようになっている教室"
-          width="375"
-          height="517"
+          width={isSmallScreen ? "375": "800"}
+          height={isSmallScreen ? "517": "352"}
         />
       </Box>
       <Box sx={sxStyles.text}>
@@ -115,13 +112,13 @@ const KeyVisual = () => {
         </Typography>
         <Typography variant="body2" mt={1} style={{ lineHeight: "2" }}>
           個人の学びがより深まる
-          <br />
+          {isSmallScreen && <br />}
           <Typography component="span" variant="body2" fontWeight="bold">
             少人数での教室
           </Typography>
-          で<br />
-          プログラミングを学びませんか？<br />
-          とにかく楽しく学ぶをモットーに<br />
+          で{isSmallScreen && <br />}
+          プログラミングを学びませんか？<br/>
+          とにかく楽しく学ぶをモットーに{isSmallScreen && <br />}
           全力でお子様のサポートをいたします！
         </Typography>
       </Box>

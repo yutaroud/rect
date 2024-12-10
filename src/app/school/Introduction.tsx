@@ -1,9 +1,11 @@
+"use client";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import headingTeacherImg from "../../../public/image/school/heading_introduction.png";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Link from "next/link";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const sxStyles = {
   textWrap: {
@@ -125,6 +127,7 @@ const sxStyles = {
 
 
 const Introduction = () => {
+  const isSmallScreen = useMediaQuery("(max-width:450px)");
   return (
     <Box sx={sxStyles.wrap}>
       <Typography variant="h2" sx={sxStyles.heading}>
@@ -142,7 +145,7 @@ const Introduction = () => {
               <Typography component="span" variant="h6"  sx={[sxStyles.pointText, {color: '#FFF652'}]} mt={0.5}>一貫して学べる</Typography>
             </Typography>
             <Typography variant="body2" mt={2}>
-              視覚的にプログラミングを学べる<br/>
+              視覚的にプログラミングを学べる{isSmallScreen && <br />}
               ビジュアルプログラミングから、<br/>
               実際のコードを書くテキストプログラミングまで<br/>
               一貫して学ぶことができる数少ないスクールです。<br/>
@@ -162,7 +165,7 @@ const Introduction = () => {
               </Typography>
             </Typography>
             <Typography variant="body2" mt={2}>
-              最新の業界動向や実践的なスキルを<br/>
+              最新の業界動向や実践的なスキルを{isSmallScreen && <br />}
               直接学ぶことができます。<br/>
               現場での経験を基にした実践的な指導が特徴です。
             </Typography>
@@ -187,7 +190,7 @@ const Introduction = () => {
             </Typography>
             <Typography variant="body2" mt={2}>
               受講料は業界最安値レベルを維持。<br/>
-              多くの方に手軽にプログラミングを学ぶ機会を<br/>
+              多くの方に手軽にプログラミングを学ぶ機会を{isSmallScreen && <br />}
               提供しています。
             </Typography>
           </Box>
@@ -198,7 +201,7 @@ const Introduction = () => {
           <Typography sx={sxStyles.balloon}>さらに</Typography>
           <Typography mt={2} variant="subtitle2" component="p" color={'#24285B'}>
             プログラミングを学ぶことで<br/>
-            <Typography variant="h6" component="span" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが<br/>身につきます</Typography>
+            <Typography variant="h6" component="span" color={'#24285B'} fontWeight={'bold'}>さまざまなスキルが{isSmallScreen && <br />}身につきます</Typography>
           </Typography>
           <List
             sx={sxStyles.skillList}

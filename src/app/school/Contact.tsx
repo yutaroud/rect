@@ -32,7 +32,7 @@ const sxStyles = {
     },
     "@media screen and (max-width:450px)": {
       '& > img': {
-        width: "98px",
+        width: "131px",
       }
     }
   },
@@ -105,6 +105,7 @@ const sxStyles = {
     border: "solid 1px #333",
     width: "400px",
     mt: 4,
+    background: "#fff",
     "&:hover": {
       bgcolor: "rgba(0,0,0,0.1)",
     },
@@ -129,7 +130,7 @@ const Contact = () => {
     e.preventDefault();
     router.push("/school/complete");
   };
-  const matches = useMediaQuery('(min-width:600px)');
+  const isSmallScreen = useMediaQuery("(max-width:450px)");
   return (
     <>
       <Box pt={7} pb={7} px={3} bgcolor="#407BFF" id="contact-form">
@@ -143,10 +144,10 @@ const Contact = () => {
         </Typography>
         <Box mt={3}>
           <Typography variant="body2" color="#fff" fontWeight="bold">
-            下記フォームよりメールアドレスをご登録ください。
-            <br />
-            ご登録後、メールにてご連絡いたしますので、必要事項をご記入お願いいたします。
-            <br />
+            下記フォームより{isSmallScreen && <br />}メールアドレスをご登録ください。
+          </Typography>
+          <Typography variant="body2" color="#fff" fontWeight="bold" mt={1}>
+            ご登録後、メールにてご連絡いたしますので{isSmallScreen && <br />}必要事項をご記入お願いいたします。
           </Typography>
           <Box sx={sxStyles.buttons}>
             <Button
@@ -176,7 +177,7 @@ const Contact = () => {
         <Typography variant="body2" mt={5} color="#fff" fontWeight="bold">
           その他、お問合せやご相談は
           <br />
-          お電話または公式LINEアカウントへご連絡ください
+          お電話または公式LINEアカウントへ{isSmallScreen && <br />}ご連絡ください。
         </Typography>
         <Box sx={sxStyles.buttons}>
           <Button
@@ -190,8 +191,10 @@ const Contact = () => {
             090-1831-1182
           </Button>
           <Button
+            variant="contained"
+            size="large"
+            fullWidth={true}
             sx={sxStyles.defaultButton}
-            size="medium"
             href="https://lin.ee/lIcNsMA"
           >
             <img
@@ -215,7 +218,7 @@ const Contact = () => {
           />
         </Typography>
         <Typography variant="body2" mt={2} color="#333" fontWeight="bold">
-          下記資料から詳細内容について<br/>1ご確認いただけます。
+          下記資料から詳細内容について{isSmallScreen && <br />}ご確認いただけます。
         </Typography>
         <iframe
           style={{
@@ -241,7 +244,9 @@ const Contact = () => {
         </Typography>
         <Button
           sx={sxStyles.subButton}
-          size="medium"
+          variant="contained"
+          size="large"
+          fullWidth={true}
           href="https://www.instagram.com/repros_programming/"
         >
           <img

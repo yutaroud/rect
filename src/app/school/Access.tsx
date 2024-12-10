@@ -26,8 +26,12 @@ const sxStyles = {
        border: "none",
     },
     "@media screen and (max-width:450px)": {
-      display: "block",
+      flexDirection: "column",
       width: "100%",
+      '& > iframe': {
+        flex: 1,
+        maxWidth: "100%"
+     },
     }
   },
   details: {
@@ -79,9 +83,6 @@ const Access = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_KEY}&q=愛知県豊川市御津町西方日暮50-9`}
-          style={{
-            width: "100%",
-          }}
         />
         <dl>
           <Box bgcolor="#fff" borderRadius={3} sx={sxStyles.details}>
