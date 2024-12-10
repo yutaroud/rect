@@ -104,6 +104,7 @@ const sxStyles = {
     paddingTop: "100px",
     paddingBottom: "100px",
     width: "800px",
+    maxWidth: "100%",
     margin: "0 auto",
     "@media screen and (max-width:450px)": {
       width: "100%",

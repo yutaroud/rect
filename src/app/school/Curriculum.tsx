@@ -18,9 +18,11 @@ const sxStyles = {
     columnGap: "20px",
     mt: 12,
     width: "800px",
+    maxWidth: "100%",
     mx: "auto",
     p: 0,
     alignItems: "baseline",
+    flexWrap: "wrap",
     "@media screen and (max-width:450px)": {
       mt: 4,
       display: "block",
@@ -30,7 +32,7 @@ const sxStyles = {
   listItem: {
     p: 0,
     width: "100%",
-    flexGrow: 1,
+    flex: 1,
     "@media screen and (max-width:450px)": {
       '& + &' : {
         mt: 4,

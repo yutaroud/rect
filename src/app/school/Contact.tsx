@@ -51,7 +51,8 @@ const sxStyles = {
   },
   buttons: {
     display: "flex",
-    width: "800px",
+    width: "100%",
+    maxWidth: "800px",
     mx: "auto",
     alignItems: "center",
     gap: 2,
@@ -116,7 +117,8 @@ const sxStyles = {
   information: {
     mx: "auto",
     my: 9,
-    width: "800px",
+    width: "100%",
+    maxWidth: "800px",
     "@media screen and (max-width:450px)": {
       width: "100%",
       px: 3,
@@ -217,7 +219,7 @@ const Contact = () => {
             height="78"
           />
         </Typography>
-        <Typography variant="body2" mt={2} color="#333" fontWeight="bold">
+        <Typography variant="body2" mt={2} color="#333" fontWeight="bold" mt={3}>
           下記資料から詳細内容について{isSmallScreen && <br />}ご確認いただけます。
         </Typography>
         <iframe

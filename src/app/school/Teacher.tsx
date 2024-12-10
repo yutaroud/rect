@@ -32,6 +32,10 @@ const sxStyles = {
     mt: 9,
     display: "flex",
     width: "800px",
+    maxWidth: "100%",
+    flexWrap: "wrap",
+    textAlign: "center",
+    justifyContent: "center",
     mx: "auto",
     alignItems: "flex-start",
     columnGap: "32px",
@@ -47,7 +51,8 @@ const sxStyles = {
     }
   },
   text: {
-    width: "100%"
+    width: "calc(800px - 360px)",
+    maxWidth: "100%",
   }
 }
 

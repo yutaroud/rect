@@ -49,7 +49,8 @@ const sxStyles = {
   },
   wrap: {
     mt: 6,
-    width: "800px",
+    width: "100%",
+    maxWidth: "800px",
     mx: "auto",
     "@media screen and (max-width:450px)": {
       width: "100%",

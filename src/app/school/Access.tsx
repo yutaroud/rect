@@ -18,21 +18,21 @@ const sxStyles = {
   info: {
     mt: 6,
     display: "flex",
-    width: "800px",
+    flexDirection: "column",
+    width: "100%",
+    maxWidth: "800px",
     mx: "auto",
     gap: "32px",
+    flexWrap: "wrap",
+    alignItems: "center",
     '& > iframe': {
        width: "400px",
        border: "none",
+       maxWidth: "100%",
     },
-    "@media screen and (max-width:450px)": {
-      flexDirection: "column",
+    '& > dl': {
       width: "100%",
-      '& > iframe': {
-        flex: 1,
-        maxWidth: "100%"
-     },
-    }
+    },
   },
   details: {
     "@media screen and (max-width:450px)": {

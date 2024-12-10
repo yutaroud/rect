@@ -10,8 +10,14 @@ const sxStyles = {
     display: 'flex',
     gap: 2,
     px: 2,
-    justifyContent: 'center',
     marginTop: "40px",
+    justifyContent: 'flex-start',
+    overflow: 'scroll',
+    overflowX: 'auto',
+    scrollSnapType: 'x mandatory',
+    maxWidth: "100%",
+    width: "max-content",
+    mx: "auto",
     '& > img': {
       width: "200px",
       height: "auto",
@@ -24,11 +30,8 @@ const sxStyles = {
       },
     },
     "@media screen and (max-width:450px)": {
-      justifyContent: 'flex-start',
-      overflow: 'scroll',
-      overflowX: 'auto',
-      scrollSnapType: 'x mandatory',
       marginTop: 0,
+      width: "100%",
       '& > img': {
         width: "150px",
         borderRadius: 0,
@@ -45,6 +48,8 @@ const sxStyles = {
     background: "#407BFF",
     '& > img': {
       verticalAlign: "bottom",
+      maxWidth: "100%",
+      height: "auto",
     },
     "@media screen and (max-width:450px)": {
       display: "none",
