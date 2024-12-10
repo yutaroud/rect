@@ -71,39 +71,46 @@ const sxStyles = {
     display: 'flex',
     alignItems: 'center',
     gap: 1,
+  },
+  wrap: {
+    width: "100%",
+    maxWidth: "800px",
+    mx: "auto",
   }
 }
 
 const CourseOtherList: React.FC<CourseOtherListProps> = ({ unreleasedCourses }) => {
   return (
     <Box sx={sxStyles.otherCourses}>
-      <Typography variant="h2">
-        <img
-          src={headingDetailImg.src}
-          alt="他のコース"
-          width="164"
-        />
-      </Typography>
-      <List sx={sxStyles.list}>
-        {unreleasedCourses.map((unreleasedCourse) => (
-          <ListItem key={unreleasedCourse.id} sx={sxStyles.listItem}>
-            <Link href={`/school/${unreleasedCourse.slug}`}>
-              <Box sx={sxStyles.card}>
-                <Typography sx={sxStyles.title}>
-                  {unreleasedCourse.name.category}<br/>{unreleasedCourse.name.level}
-                </Typography>
-                <Typography variant="body1" sx={sxStyles.text}>
-                  {unreleasedCourse.summary}
-                </Typography>
-                <Box sx={sxStyles.button}>
-                  詳細
-                  <PlayCircle />
+      <Box sx={sxStyles.wrap}>
+        <Typography variant="h2">
+          <img
+            src={headingDetailImg.src}
+            alt="他のコース"
+            width="164"
+          />
+        </Typography>
+        <List sx={sxStyles.list}>
+          {unreleasedCourses.map((unreleasedCourse) => (
+            <ListItem key={unreleasedCourse.id} sx={sxStyles.listItem}>
+              <Link href={`/school/${unreleasedCourse.slug}`}>
+                <Box sx={sxStyles.card}>
+                  <Typography sx={sxStyles.title}>
+                    {unreleasedCourse.name.category}<br/>{unreleasedCourse.name.level}
+                  </Typography>
+                  <Typography variant="body1" sx={sxStyles.text}>
+                    {unreleasedCourse.summary}
+                  </Typography>
+                  <Box sx={sxStyles.button}>
+                    詳細
+                    <PlayCircle />
+                  </Box>
                 </Box>
-              </Box>
-            </Link>
-          </ListItem>
-        ))}
-      </List>
+              </Link>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
     </Box>
   );
 };
