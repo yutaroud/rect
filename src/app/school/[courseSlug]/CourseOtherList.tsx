@@ -27,11 +27,31 @@ const sxStyles = {
   },
   list: {
     mt: 4,
+    display: "flex",
+    columnGap: "20px",
+    alignItems: "stretch",
+    mt: 8,
+    width: "800px",
+    maxWidth: "100%",
+    mx: "auto",
+    p: 0,
+    flexWrap: "wrap",
+    "@media screen and (max-width:450px)": {
+      display: "block",
+      width: "100%",
+    },
   },
   listItem: {
     p: 0,
-    '& + &' : {
-      mt: 4,
+    width: "100%",
+    flex: 1,
+    '& > a': {
+      height: "100%",
+    },
+    "@media screen and (max-width:450px)": {
+      '& + &' : {
+        mt: 4,
+      }
     }
   },
   card: {

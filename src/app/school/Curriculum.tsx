@@ -16,12 +16,12 @@ const sxStyles = {
   list: {
     display: "flex",
     columnGap: "20px",
-    mt: 12,
+    alignItems: "stretch",
+    mt: 8,
     width: "800px",
     maxWidth: "100%",
     mx: "auto",
     p: 0,
-    alignItems: "baseline",
     flexWrap: "wrap",
     "@media screen and (max-width:450px)": {
       mt: 4,
@@ -33,6 +33,9 @@ const sxStyles = {
     p: 0,
     width: "100%",
     flex: 1,
+    '& > a': {
+      height: "100%",
+    },
     "@media screen and (max-width:450px)": {
       '& + &' : {
         mt: 4,
@@ -45,14 +48,14 @@ const sxStyles = {
     borderTop: "solid 8px #24285B",
     backgroundColor: "#fff",
     width: "100%",
-    height: "400",
+    height: "100%",
     backgroundSize: 16,
     backgroundPosition: "50% 50%",
     backgroundImage: "repeating-linear-gradient( 90deg, #F5F5F5 , #F5F5F5 1px, transparent 1px, transparent 16px),repeating-linear-gradient( 0deg, #F5F5F5 , #F5F5F5 1px, #fff 1px, #fff 16px)",
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    boxShadow: '0 2px 2px rgba(0, 0, 0, 0.1)'
+    boxShadow: '0 2px 2px rgba(0, 0, 0, 0.1)',
   },
   title: {
     fontSize: 24,
@@ -76,6 +79,9 @@ const sxStyles = {
     display: 'flex',
     alignItems: 'center',
     gap: 1,
+    "&:hover": {
+      bgcolor: "#171938",
+    },
   },
   heading: {
     marginInline: "24px",

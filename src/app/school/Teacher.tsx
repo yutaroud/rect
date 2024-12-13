@@ -14,6 +14,7 @@ const sxStyles = {
       listStyleType: 'disc',
       pl: 0,
       py: 0,
+      fontSize: "14px",
     },
   },
   heading: {

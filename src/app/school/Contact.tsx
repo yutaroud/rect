@@ -107,6 +107,7 @@ const sxStyles = {
     width: "400px",
     mt: 4,
     background: "#fff",
+    textTransform: "none",
     "&:hover": {
       bgcolor: "rgba(0,0,0,0.1)",
     },
@@ -206,7 +207,7 @@ const Contact = () => {
               height="24"
               style={{marginRight: "16px"}}
             />
-            LINEアカウント
+            LINE公式アカウント
           </Button>
         </Box>
       </Box>
