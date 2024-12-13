@@ -56,7 +56,7 @@ const List = ({ title, children }: { title: string; children: React.ReactNode })
       }
       }}>
       <dt>
-        <Typography width={70} textAlign={"left"}>{title}</Typography>
+        <Typography width={70} textAlign={"left"} sx={{fontSize: "14px"}}>{title}</Typography>
       </dt>
       <dd>
         {children}
