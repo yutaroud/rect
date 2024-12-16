@@ -1,7 +1,7 @@
-import "../globals.css";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import Post from "./Post";
+import '../globals.css';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Post from './Post';
 
 const Announcement = () => {
   return (
@@ -9,7 +9,7 @@ const Announcement = () => {
       <Box
         component="section"
         sx={{
-          textAlign: "center",
+          textAlign: 'center',
         }}
         position="relative"
       >

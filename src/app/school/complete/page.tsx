@@ -1,14 +1,15 @@
-"use client";
-import "../../globals.css";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import { useEffect } from "react";
-import Link from "next/link";
+'use client';
+import '../../globals.css';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import { useEffect } from 'react';
+import Link from 'next/link';
 
 const Complete = () => {
   useEffect(() => {
     setTimeout(function () {
-      window.location.href = "https://www.kaihipay.jp/forms?form_code=2290891890827256";
+      window.location.href =
+        'https://www.kaihipay.jp/forms?form_code=2290891890827256';
     }, 3 * 1000);
   }, []);
   return (
@@ -16,7 +17,7 @@ const Complete = () => {
       <Box
         component="section"
         sx={{
-          textAlign: "center",
+          textAlign: 'center',
         }}
         position="relative"
       >
@@ -26,10 +27,10 @@ const Complete = () => {
             申し込みを行うための外部サイトへ遷移しますので、少々お待ちください。
           </p>
           <p>
-            3秒後に遷移します。 <br/>
+            3秒後に遷移します。 <br />
             自動的に遷移しない場合は
             <Link
-              style={{ color: "#0000ff" }}
+              style={{ color: '#0000ff' }}
               href="https://www.kaihipay.jp/forms?form_code=2290891890827256"
             >
               こちら

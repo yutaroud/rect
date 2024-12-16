@@ -1,23 +1,23 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableRow from "@mui/material/TableRow";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableRow from '@mui/material/TableRow';
 
 const createData = (title: string, description: string) => {
   return { title, description };
 };
 
 const rows = [
-  createData("会社名", "株式会社レクト"),
-  createData("設立", "2024年6月3日"),
-  createData("所在地", "愛知県豊川市御津町西方日暮1-12"),
-  createData("代表", "渡辺 優樹"),
-  createData("生年月日", "1994年12月28日"),
-  createData("電話番号", "080-3945-1221"),
-  createData("主な事業内容", "情報通信サービスの開発・運営"),
+  createData('会社名', '株式会社レクト'),
+  createData('設立', '2024年6月3日'),
+  createData('所在地', '愛知県豊川市御津町西方日暮1-12'),
+  createData('代表', '渡辺 優樹'),
+  createData('生年月日', '1994年12月28日'),
+  createData('電話番号', '080-3945-1221'),
+  createData('主な事業内容', '情報通信サービスの開発・運営'),
 ];
 
 const Company = () => {
@@ -25,16 +25,16 @@ const Company = () => {
     <Box
       component="section"
       sx={{
-        maxWidth: "800px",
-        width: "100%",
-        margin: "0 auto",
-        padding: "100px 16px",
+        maxWidth: '800px',
+        width: '100%',
+        margin: '0 auto',
+        padding: '100px 16px',
       }}
       position="relative"
     >
       <Typography
         variant="h2"
-        sx={{ fontWeight: "bold", letterSpacing: "5px", fontSize: "40px" }}
+        sx={{ fontWeight: 'bold', letterSpacing: '5px', fontSize: '40px' }}
       >
         会社概要
       </Typography>
@@ -43,10 +43,10 @@ const Company = () => {
         align="center"
         component="span"
         sx={{
-          fontSize: "17px",
-          fontWeight: "bold",
-          letterSpacing: "3px",
-          color: "#C2C2C2",
+          fontSize: '17px',
+          fontWeight: 'bold',
+          letterSpacing: '3px',
+          color: '#C2C2C2',
         }}
       >
         Company
@@ -58,19 +58,19 @@ const Company = () => {
               <TableRow
                 key={row.title}
                 style={{
-                  borderBottom: "1px solid #D9D9D9",
-                  verticalAlign: "text-top",
+                  borderBottom: '1px solid #D9D9D9',
+                  verticalAlign: 'text-top',
                 }}
               >
                 <TableCell
                   align="left"
-                  sx={{ fontSize: "14px", padding: "24px 24px 24px 0" }}
+                  sx={{ fontSize: '14px', padding: '24px 24px 24px 0' }}
                 >
                   {row.title}
                 </TableCell>
                 <TableCell
                   align="left"
-                  sx={{ fontSize: "14px", padding: "24px 0" }}
+                  sx={{ fontSize: '14px', padding: '24px 0' }}
                 >
                   {row.description}
                 </TableCell>

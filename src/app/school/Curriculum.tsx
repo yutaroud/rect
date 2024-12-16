@@ -1,57 +1,58 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import headingDetailImg from "../../../public/image/school/heading_curriculum.png";
-import Link from "next/link";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import headingDetailImg from '../../../public/image/school/heading_curriculum.png';
+import Link from 'next/link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import { PlayCircle } from "@mui/icons-material";
-import { Courses } from "../../lib/const/Courses";
+import { PlayCircle } from '@mui/icons-material';
+import { Courses } from '../../lib/const/Courses';
 
 const sxStyles = {
   wrap: {
-    bgcolor: "#407BFF",
+    bgcolor: '#407BFF',
     py: 8,
-    px: 3
+    px: 3,
   },
   list: {
-    display: "flex",
-    columnGap: "20px",
-    alignItems: "stretch",
+    display: 'flex',
+    columnGap: '20px',
+    alignItems: 'stretch',
     mt: 8,
-    width: "800px",
-    maxWidth: "100%",
-    mx: "auto",
+    width: '800px',
+    maxWidth: '100%',
+    mx: 'auto',
     p: 0,
-    flexWrap: "wrap",
-    "@media screen and (max-width:450px)": {
+    flexWrap: 'wrap',
+    '@media screen and (max-width:450px)': {
       mt: 4,
-      display: "block",
-      width: "100%",
+      display: 'block',
+      width: '100%',
     },
   },
   listItem: {
     p: 0,
-    width: "100%",
+    width: '100%',
     flex: 1,
     '& > a': {
-      height: "100%",
+      height: '100%',
     },
-    "@media screen and (max-width:450px)": {
-      '& + &' : {
+    '@media screen and (max-width:450px)': {
+      '& + &': {
         mt: 4,
-      }
-    }
+      },
+    },
   },
   card: {
     px: 3,
     py: 5,
-    borderTop: "solid 8px #24285B",
-    backgroundColor: "#fff",
-    width: "100%",
-    height: "100%",
+    borderTop: 'solid 8px #24285B',
+    backgroundColor: '#fff',
+    width: '100%',
+    height: '100%',
     backgroundSize: 16,
-    backgroundPosition: "50% 50%",
-    backgroundImage: "repeating-linear-gradient( 90deg, #F5F5F5 , #F5F5F5 1px, transparent 1px, transparent 16px),repeating-linear-gradient( 0deg, #F5F5F5 , #F5F5F5 1px, #fff 1px, #fff 16px)",
+    backgroundPosition: '50% 50%',
+    backgroundImage:
+      'repeating-linear-gradient( 90deg, #F5F5F5 , #F5F5F5 1px, transparent 1px, transparent 16px),repeating-linear-gradient( 0deg, #F5F5F5 , #F5F5F5 1px, #fff 1px, #fff 16px)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -61,20 +62,20 @@ const sxStyles = {
     fontSize: 24,
     color: '#24285B',
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   text: {
     fontSize: 14,
     mt: 4,
-    display: "-webkit-box",
-    WebkitBoxOrient: "vertical",
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
     WebkitLineClamp: 4,
-    overflow: "hidden",
-    height: "84px",
-    "@media screen and (max-width:450px)": {
-      display: "block",
-      height: "auto",
-    }
+    overflow: 'hidden',
+    height: '84px',
+    '@media screen and (max-width:450px)': {
+      display: 'block',
+      height: 'auto',
+    },
   },
   button: {
     fontSize: 16,
@@ -88,23 +89,23 @@ const sxStyles = {
     display: 'flex',
     alignItems: 'center',
     gap: 1,
-    "&:hover": {
-      bgcolor: "#171938",
+    '&:hover': {
+      bgcolor: '#171938',
     },
   },
   heading: {
-    marginInline: "24px",
+    marginInline: '24px',
     '& > img': {
-      width: "204px",
-      height: "auto",
+      width: '204px',
+      height: 'auto',
     },
-    "@media screen and (max-width:450px)": {
+    '@media screen and (max-width:450px)': {
       '& > img': {
-        width: "177px",
-      }
-    }
-  }
-}
+        width: '177px',
+      },
+    },
+  },
+};
 
 const Curriculum = () => {
   return (
@@ -123,14 +124,23 @@ const Curriculum = () => {
             <Link href={`/school/${course.slug}/`}>
               <Box sx={sxStyles.card}>
                 <Typography sx={sxStyles.title}>
-                  {course.name.category}<br/>{course.name.level}
+                  {course.name.category}
+                  <br />
+                  {course.name.level}
                 </Typography>
-                <img src={`../../../image/school/${course.thumbnail}`} alt={`${course.name.category}${course.name.level}のイメージ`} width="800" height="500" style={{marginTop: 32,width: '100%',height: 'auto'}}/>
+                <img
+                  src={`../../../image/school/${course.thumbnail}`}
+                  alt={`${course.name.category}${course.name.level}のイメージ`}
+                  width="800"
+                  height="500"
+                  style={{ marginTop: 32, width: '100%', height: 'auto' }}
+                />
                 <Typography variant="body1" sx={sxStyles.text}>
                   {course.summary}
                 </Typography>
                 <Box sx={sxStyles.button}>
-                  詳細<PlayCircle/>
+                  詳細
+                  <PlayCircle />
                 </Box>
               </Box>
             </Link>

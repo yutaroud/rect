@@ -1,80 +1,83 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import headingCtaImg from "../../../public/image/school/heading_access.png";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import headingCtaImg from '../../../public/image/school/heading_access.png';
 
 const sxStyles = {
   heading: {
-    marginInline: "24px",
+    marginInline: '24px',
     '& > img': {
-      width: "163px",
-      height: "auto",
+      width: '163px',
+      height: 'auto',
     },
-    "@media screen and (max-width:450px)": {
+    '@media screen and (max-width:450px)': {
       '& > img': {
-        width: "123px",
-      }
-    }
+        width: '123px',
+      },
+    },
   },
   info: {
     mt: 6,
-    display: "flex",
-    flexDirection: "column",
-    width: "100%",
-    maxWidth: "800px",
-    mx: "auto",
-    gap: "32px",
-    flexWrap: "wrap",
-    alignItems: "center",
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+    maxWidth: '800px',
+    mx: 'auto',
+    gap: '32px',
+    flexWrap: 'wrap',
+    alignItems: 'center',
     '& > iframe': {
-       width: "400px",
-       border: "none",
-       maxWidth: "100%",
+      width: '400px',
+      border: 'none',
+      maxWidth: '100%',
     },
     '& > dl': {
-      width: "100%",
+      width: '100%',
     },
   },
   details: {
-    "@media screen and (max-width:450px)": {
+    '@media screen and (max-width:450px)': {
       mt: 4,
-    }
+    },
   },
 };
 
-const List = ({ title, children }: { title: string; children: React.ReactNode }) => {
+const List = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => {
   return (
-    <Box sx={{
-      display: "flex",
-      alignItems: "center",
-      py: 3,
-      px: 2,
-      gap: 2,
-      mx: 1,
-      borderBottom: "1px solid #E0E0E0",
-      '&:last-child': {
-        borderBottom: "none"
-      }
-      }}>
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        py: 3,
+        px: 2,
+        gap: 2,
+        mx: 1,
+        borderBottom: '1px solid #E0E0E0',
+        '&:last-child': {
+          borderBottom: 'none',
+        },
+      }}
+    >
       <dt>
-        <Typography width={70} textAlign={"left"} sx={{fontSize: "14px"}}>{title}</Typography>
+        <Typography width={70} textAlign={'left'} sx={{ fontSize: '14px' }}>
+          {title}
+        </Typography>
       </dt>
-      <dd>
-        {children}
-      </dd>
+      <dd>{children}</dd>
     </Box>
-  )
-}
+  );
+};
 
 const Access = () => {
   return (
     <Box pt={7} pb={7} px={3} bgcolor="#F5F5F5">
       <Typography variant="h2" sx={sxStyles.heading}>
-        <img
-          src={headingCtaImg.src}
-          alt="アクセス"
-          width="246"
-          height="51"
-        />
+        <img src={headingCtaImg.src} alt="アクセス" width="246" height="51" />
       </Typography>
       <Box sx={sxStyles.info}>
         <iframe
@@ -87,20 +90,24 @@ const Access = () => {
         <dl>
           <Box bgcolor="#fff" borderRadius={3} sx={sxStyles.details}>
             <List title="住所">
-              <Typography variant="body2" textAlign={"left"}>
-                〒441-0312<br/>愛知県豊川市御津町西方日暮50番地9
+              <Typography variant="body2" textAlign={'left'}>
+                〒441-0312
+                <br />
+                愛知県豊川市御津町西方日暮50番地9
               </Typography>
             </List>
             <List title="駐車場">
-              <Typography variant="body2" textAlign={"left"}>
+              <Typography variant="body2" textAlign={'left'}>
                 6台 スペースあり
               </Typography>
             </List>
             <List title="周辺施設">
-              <Typography variant="body2" textAlign={"left"}>
-              御津中学校 徒歩1分<br/>愛知御津駅 徒歩5分
+              <Typography variant="body2" textAlign={'left'}>
+                御津中学校 徒歩1分
+                <br />
+                愛知御津駅 徒歩5分
               </Typography>
-              <Typography variant="body2" textAlign={"left"} mt={1}>
+              <Typography variant="body2" textAlign={'left'} mt={1}>
                 スーパー/コンビニ/ドラッグストアあり
               </Typography>
             </List>

@@ -1,7 +1,7 @@
-import "../globals.css";
-import Container from "@mui/material/Container";
-import { Typography, Box } from "@mui/material";
-import Policy from "./Policy";
+import '../globals.css';
+import Container from '@mui/material/Container';
+import { Typography, Box } from '@mui/material';
+import Policy from './Policy';
 
 const Privacy = () => {
   return (

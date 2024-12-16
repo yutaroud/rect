@@ -1,35 +1,35 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import MediaCard from "../components/MediaCard";
-import Grid from "@mui/material/Grid";
-import computerImg from "../../public/image/top/service_programming.png";
-import soudanImg from "../../public/image/top/service_soudan.png";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import MediaCard from '../components/MediaCard';
+import Grid from '@mui/material/Grid';
+import computerImg from '../../public/image/top/service_programming.png';
+import soudanImg from '../../public/image/top/service_soudan.png';
 
 const Business = () => {
   return (
     <Box
       component="section"
       sx={{
-        width: "100%",
-        background: "#00298A",
-        padding: "80px 16px",
+        width: '100%',
+        background: '#00298A',
+        padding: '80px 16px',
       }}
     >
       <Box
         component="section"
         sx={{
-          maxWidth: "800px",
-          width: "100%",
-          margin: "0 auto",
+          maxWidth: '800px',
+          width: '100%',
+          margin: '0 auto',
         }}
       >
         <Typography
           variant="h2"
           sx={{
-            fontWeight: "bold",
-            letterSpacing: "5px",
-            fontSize: "40px",
-            color: "#E9EFFF",
+            fontWeight: 'bold',
+            letterSpacing: '5px',
+            fontSize: '40px',
+            color: '#E9EFFF',
           }}
         >
           事業内容
@@ -39,19 +39,19 @@ const Business = () => {
           align="center"
           component="span"
           sx={{
-            fontSize: "17px",
-            fontWeight: "bold",
-            letterSpacing: "3px",
-            color: "#7994D5",
+            fontSize: '17px',
+            fontWeight: 'bold',
+            letterSpacing: '3px',
+            color: '#7994D5',
           }}
         >
           Service
         </Typography>
-        <Grid container style={{ marginTop: 40, gap: "52px 24px" }}>
+        <Grid container style={{ marginTop: 40, gap: '52px 24px' }}>
           <Grid
             sx={{
-              width: "calc(50% - 12px)",
-              "@media screen and (max-width:500px)": { width: "100%" },
+              width: 'calc(50% - 12px)',
+              '@media screen and (max-width:500px)': { width: '100%' },
             }}
           >
             <MediaCard
@@ -64,8 +64,8 @@ const Business = () => {
           </Grid>
           <Grid
             sx={{
-              width: "calc(50% - 12px)",
-              "@media screen and (max-width:500px)": { width: "100%" },
+              width: 'calc(50% - 12px)',
+              '@media screen and (max-width:500px)': { width: '100%' },
             }}
           >
             <MediaCard

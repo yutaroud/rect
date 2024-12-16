@@ -1,13 +1,12 @@
-import "../../globals.css";
-import Box from "@mui/material/Box";
-import CourseDetail from "./CourseDetail";
-import CourseOtherList from "./CourseOtherList";
-import Contact from "../Contact";
-import { Courses } from "../../../lib/const/Courses";
+import '../../globals.css';
+import Box from '@mui/material/Box';
+import CourseDetail from './CourseDetail';
+import CourseOtherList from './CourseOtherList';
+import Contact from '../Contact';
+import { Courses } from '../../../lib/const/Courses';
 import { notFound } from 'next/navigation';
-import BreadcrumbsNavigation from "../../BreadcrumbsNavigation";
-import { schoolTopTitle } from "@/lib/const/BreadCrumbTitle";
-
+import BreadcrumbsNavigation from '../../BreadcrumbsNavigation';
+import { schoolTopTitle } from '@/lib/const/BreadCrumbTitle';
 
 export async function generateStaticParams() {
   return Courses.map((course) => ({
@@ -20,7 +19,8 @@ export async function generateMetadata({ params }: CoursePageProps) {
 
   if (!course) {
     return {
-      title: "コースが見つかりません | プログラミングを学ぶならRe:ProS(レプロス)",
+      title:
+        'コースが見つかりません | プログラミングを学ぶならRe:ProS(レプロス)',
     };
   }
 
@@ -40,31 +40,35 @@ interface CoursePageProps {
 }
 
 const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
-  const course = Courses.find((course) => `${course.slug}` === params.courseSlug);
-  const unreleasedCourses = Courses.filter((course) => `${course.slug}` !== params.courseSlug);
+  const course = Courses.find(
+    (course) => `${course.slug}` === params.courseSlug,
+  );
+  const unreleasedCourses = Courses.filter(
+    (course) => `${course.slug}` !== params.courseSlug,
+  );
 
   if (!course) {
     return notFound();
   }
 
-  schoolTopTitle.push(`${course.name.category} ${course.name.level}コース`)
+  schoolTopTitle.push(`${course.name.category} ${course.name.level}コース`);
 
   return (
     <main>
       <Box
         component="section"
         sx={{
-          textAlign: "center",
-          mx: "auto",
+          textAlign: 'center',
+          mx: 'auto',
         }}
       >
-        <CourseDetail course={course}/>
+        <CourseDetail course={course} />
         <CourseOtherList unreleasedCourses={unreleasedCourses} />
         <Contact />
-        <BreadcrumbsNavigation titles={schoolTopTitle}/>
+        <BreadcrumbsNavigation titles={schoolTopTitle} />
       </Box>
     </main>
   );
-}
+};
 
 export default CoursePage;
