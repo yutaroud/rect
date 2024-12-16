@@ -26,7 +26,6 @@ const sxStyles = {
     px: 3
   },
   list: {
-    mt: 4,
     display: "flex",
     columnGap: "20px",
     alignItems: "stretch",
