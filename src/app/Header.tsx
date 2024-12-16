@@ -13,7 +13,7 @@ import { usePathname } from 'next/navigation';
 
 const sxStyles = {
   schoolHeader: {
-    width: '420px',
+    width: '980px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
