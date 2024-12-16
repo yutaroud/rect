@@ -66,6 +66,15 @@ const sxStyles = {
   text: {
     fontSize: 14,
     mt: 4,
+    display: "-webkit-box",
+    WebkitBoxOrient: "vertical",
+    WebkitLineClamp: 4,
+    overflow: "hidden",
+    height: "84px",
+    "@media screen and (max-width:450px)": {
+      display: "block",
+      height: "auto",
+    }
   },
   button: {
     fontSize: 16,
