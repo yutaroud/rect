@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { Announcement } from "../../lib/const/Announcement";
-import Divider from "@mui/material/Divider";
+import Link from 'next/link';
+import { Announcement } from '../../lib/const/Announcement';
+import Divider from '@mui/material/Divider';
 
 const list = Announcement.map((post) => (
   <>
@@ -21,7 +21,7 @@ const list = Announcement.map((post) => (
 const Post = () => {
   return (
     <>
-      <ul style={{ listStyle: "none" }}>{list}</ul>
+      <ul style={{ listStyle: 'none' }}>{list}</ul>
     </>
   );
 };

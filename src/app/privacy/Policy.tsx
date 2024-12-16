@@ -1,8 +1,8 @@
-import { Box, Typography, List, ListItem, ListItemText } from "@mui/material";
+import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
 
-const listUlStyle = { listStyle: "disc", pl: "1.5rem" };
+const listUlStyle = { listStyle: 'disc', pl: '1.5rem' };
 const h2TypographyStyle = { mt: 5 };
-const listItemStyle = { paddingBottom: 0, paddingTop: 0, display: "list-item" };
+const listItemStyle = { paddingBottom: 0, paddingTop: 0, display: 'list-item' };
 
 const Policy = () => {
   return (
@@ -45,7 +45,7 @@ const Policy = () => {
       <Typography variant="body1" paragraph>
         当社が個人情報を収集・利用する目的は以下のとおりです。
       </Typography>
-      <List component={"ul"} sx={listUlStyle}>
+      <List component={'ul'} sx={listUlStyle}>
         <ListItem component="li" sx={listItemStyle}>
           <ListItemText primary="当社サービスの提供・運営のため" />
         </ListItem>
@@ -106,7 +106,7 @@ const Policy = () => {
       <Typography variant="body1" paragraph>
         当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます。
       </Typography>
-      <List component={"ul"} sx={listUlStyle}>
+      <List component={'ul'} sx={listUlStyle}>
         <ListItem sx={listItemStyle}>
           <ListItemText primary="人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき" />
         </ListItem>
@@ -148,16 +148,16 @@ const Policy = () => {
       <Typography variant="body1" paragraph>
         当社では、当社及び当社グループに関する情報提供の利便性向上、統計データ分析等の目的でCookie及びウェブ・ビーコン等の統計的なサイト利用情報を取得しています。
       </Typography>
-      <List component={"ul"} sx={listUlStyle}>
+      <List component={'ul'} sx={listUlStyle}>
         <ListItem sx={listItemStyle}>
           <Typography>
-            <strong>Cookie（クッキー）:</strong>{" "}
+            <strong>Cookie（クッキー）:</strong>{' '}
             Webサーバがお客様のブラウザに送信する情報です。Cookieの受け取りを拒否する設定も可能ですが、当社Webサイトの一部が利用できなくなる場合があります。
           </Typography>
         </ListItem>
         <ListItem sx={listItemStyle}>
           <Typography>
-            <strong>ウェブ・ビーコン:</strong>{" "}
+            <strong>ウェブ・ビーコン:</strong>{' '}
             小さな画像ファイルで、訪問の有無や回数等の統計データを把握します。個人を特定する情報は含まれていません。
           </Typography>
         </ListItem>
@@ -175,7 +175,7 @@ const Policy = () => {
       <Typography variant="body1" paragraph>
         当社は、本人から個人情報の開示を求められたときは、本人に対し、遅滞なくこれを開示します。ただし、開示することにより次のいずれかに該当する場合は、全部または一部を開示しないこともあります。
       </Typography>
-      <List component={"ul"} sx={listUlStyle}>
+      <List component={'ul'} sx={listUlStyle}>
         <ListItem sx={listItemStyle}>
           <ListItemText primary="本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合" />
         </ListItem>
@@ -241,12 +241,12 @@ const Policy = () => {
         Eメールアドレス：privacyinfo@re-ct.co.jp
       </Typography>
 
-      <Box mt={4} sx={{ textAlign: "right" }}>
+      <Box mt={4} sx={{ textAlign: 'right' }}>
         <Typography variant="body1" paragraph>
           制定日：2024年10月1日
           <br />
           株式会社レクト <br />
-          代表取締役社長　渡辺 優樹
+          代表取締役社長 渡辺 優樹
         </Typography>
       </Box>
     </>

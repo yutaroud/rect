@@ -1,12 +1,12 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import headingTeacherImg from "../../../public/image/school/heading_teacher.png";
-import iconImg from "../../../public/image/school/icon_teacher.png";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import headingTeacherImg from '../../../public/image/school/heading_teacher.png';
+import iconImg from '../../../public/image/school/icon_teacher.png';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 
 const sxStyles = {
-  list :{
+  list: {
     listStyleType: 'disc',
     pl: 2,
     '& > li': {
@@ -14,48 +14,48 @@ const sxStyles = {
       listStyleType: 'disc',
       pl: 0,
       py: 0,
-      fontSize: "14px",
+      fontSize: '14px',
     },
   },
   heading: {
-    marginInline: "24px",
+    marginInline: '24px',
     '& > img': {
-      width: "81px",
-      height: "auto",
+      width: '81px',
+      height: 'auto',
     },
-    "@media screen and (max-width:450px)": {
+    '@media screen and (max-width:450px)': {
       '& > img': {
-        width: "58px",
-      }
-    }
+        width: '58px',
+      },
+    },
   },
   wrap: {
     mt: 9,
-    display: "flex",
-    width: "800px",
-    maxWidth: "100%",
-    flexWrap: "wrap",
-    textAlign: "center",
-    justifyContent: "center",
-    mx: "auto",
-    alignItems: "flex-start",
-    columnGap: "32px",
-    flexDirection: "row-reverse",
-    "@media screen and (max-width:450px)": {
-      width: "100%",
+    display: 'flex',
+    width: '800px',
+    maxWidth: '100%',
+    flexWrap: 'wrap',
+    textAlign: 'center',
+    justifyContent: 'center',
+    mx: 'auto',
+    alignItems: 'flex-start',
+    columnGap: '32px',
+    flexDirection: 'row-reverse',
+    '@media screen and (max-width:450px)': {
+      width: '100%',
       mt: 3,
-      flexDirection: "column",
+      flexDirection: 'column',
     },
     '& > img': {
-      width: "327px",
-      height: "auto",
-    }
+      width: '327px',
+      height: 'auto',
+    },
   },
   text: {
-    width: "calc(800px - 360px)",
-    maxWidth: "100%",
-  }
-}
+    width: 'calc(800px - 360px)',
+    maxWidth: '100%',
+  },
+};
 
 const Teacher = () => {
   return (
@@ -80,7 +80,12 @@ const Teacher = () => {
           <Typography variant="body2" mt={2} align="left">
             とにかくまずはプログラミングを楽しいと思ってもらえるように頑張ります！
           </Typography>
-          <Typography variant="subtitle2" fontWeight={"bold"} mt={3} align="left">
+          <Typography
+            variant="subtitle2"
+            fontWeight={'bold'}
+            mt={3}
+            align="left"
+          >
             経歴・資格について
           </Typography>
           <List sx={sxStyles.list}>

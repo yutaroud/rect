@@ -14,3 +14,6 @@
 * Google Mapをローカルで表示したい場合
   * .env.localのGOOGLE_MAPS_KEYの値にKeyを入れてください。
   * Keyは知っている人に聞いてください。
+
+## lintの適用
+* `npx prettier --write './{bin,lib,src,tests}/**/*.{ts,tsx}'`

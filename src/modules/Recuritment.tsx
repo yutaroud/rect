@@ -1,21 +1,21 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import handImg from "../../public/image/top/img_hand.png";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import handImg from '../../public/image/top/img_hand.png';
 
 const Recruitment = () => {
   return (
     <Box
       component="section"
       sx={{
-        maxWidth: "800px",
-        width: "100%",
-        margin: "0 auto",
-        padding: "80px 16px",
+        maxWidth: '800px',
+        width: '100%',
+        margin: '0 auto',
+        padding: '80px 16px',
       }}
     >
       <Typography
         variant="h2"
-        sx={{ fontWeight: "bold", letterSpacing: "5px", fontSize: "40px" }}
+        sx={{ fontWeight: 'bold', letterSpacing: '5px', fontSize: '40px' }}
       >
         採用情報
       </Typography>
@@ -24,10 +24,10 @@ const Recruitment = () => {
         align="center"
         component="span"
         sx={{
-          fontSize: "17px",
-          fontWeight: "bold",
-          letterSpacing: "3px",
-          color: "#C2C2C2",
+          fontSize: '17px',
+          fontWeight: 'bold',
+          letterSpacing: '3px',
+          color: '#C2C2C2',
         }}
       >
         Recruit
@@ -35,19 +35,19 @@ const Recruitment = () => {
       <Box
         mt={4}
         sx={{
-          width: "100%",
-          borderRadius: "8px",
-          padding: "56px 40px",
+          width: '100%',
+          borderRadius: '8px',
+          padding: '56px 40px',
           backgroundImage: `url(${handImg.src})`,
-          backgroundSize: "320px",
-          backgroundPosition: "bottom right",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "#DFF0FF",
-          "@media screen and (max-width:600px)": {
-            padding: "72px 24px 120px",
-            backgroundPosition: "center bottom",
-            backgroundSize: "220px",
-            textAlign: "center",
+          backgroundSize: '320px',
+          backgroundPosition: 'bottom right',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#DFF0FF',
+          '@media screen and (max-width:600px)': {
+            padding: '72px 24px 120px',
+            backgroundPosition: 'center bottom',
+            backgroundSize: '220px',
+            textAlign: 'center',
           },
         }}
       >
@@ -55,18 +55,18 @@ const Recruitment = () => {
           variant="caption"
           component="p"
           sx={{
-            borderRadius: "50px",
-            height: "auto",
+            borderRadius: '50px',
+            height: 'auto',
             py: 3,
             px: 8,
-            color: "#333",
-            fontSize: "20px",
-            textDecoration: "none",
-            letterSpacing: "1px",
-            display: "inline-block",
-            "@media screen and (max-width:800px)": {
-              padding: "0",
-              height: "auto",
+            color: '#333',
+            fontSize: '20px',
+            textDecoration: 'none',
+            letterSpacing: '1px',
+            display: 'inline-block',
+            '@media screen and (max-width:800px)': {
+              padding: '0',
+              height: 'auto',
             },
           }}
         >
