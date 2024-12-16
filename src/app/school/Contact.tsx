@@ -220,7 +220,7 @@ const Contact = () => {
             height="78"
           />
         </Typography>
-        <Typography variant="body2" mt={2} color="#333" fontWeight="bold" mt={3}>
+        <Typography variant="body2" color="#333" fontWeight="bold" mt={3}>
           下記資料から詳細内容について{isSmallScreen && <br />}ご確認いただけます。
         </Typography>
         <iframe
