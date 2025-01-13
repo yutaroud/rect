@@ -31,13 +31,13 @@ export async function generateMetadata({ params }: CoursePageProps) {
 }
 
 interface CoursePageProps {
-  params: {
+  params: Promise<{
     courseSlug: string;
     name: {
       category: string;
       level: string;
     };
-  };
+  }>;
 }
 
 const CoursePage: React.FC<CoursePageProps> = async ({
