@@ -19,7 +19,7 @@ const Demand = () => {
           </Typography>
           <p>下記より、連絡先を明記の上、ご連絡ください。</p>
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSexsVLTHkqbV6XYvG_5X8PBckIWwYf3mXybYD7PKg0YU9IL5A/viewform"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSexsVLTHkqbV6XYvG_5X8PBckIWwYf3mXybYD7PKg0YU9IL5A/viewform?embedded=true"
             style={{ maxWidth: '90vw', height: '930px', width: '720px' }}
           />
         </Container>
