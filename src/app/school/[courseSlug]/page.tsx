@@ -15,7 +15,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CoursePageProps) {
-  const course = Courses.find((course) => course.slug === params.courseSlug);
+  const { courseSlug } = await params;
+  const course = Courses.find((course) => course.slug === courseSlug);
 
   if (!course) {
     return {
@@ -39,12 +40,13 @@ interface CoursePageProps {
   };
 }
 
-const CoursePage: React.FC<CoursePageProps> = ({ params }: CoursePageProps) => {
-  const course = Courses.find(
-    (course) => `${course.slug}` === params.courseSlug,
-  );
+const CoursePage: React.FC<CoursePageProps> = async ({
+  params,
+}: CoursePageProps) => {
+  const { courseSlug } = await params;
+  const course = Courses.find((course) => `${course.slug}` === courseSlug);
   const unreleasedCourses = Courses.filter(
-    (course) => `${course.slug}` !== params.courseSlug,
+    (course) => `${course.slug}` !== courseSlug,
   );
 
   if (!course) {
