@@ -7,9 +7,9 @@ import NextAppDirEmotionCacheProvider from './EmotionCache';
 import theme from './theme';
 
 const resetStyles = {
-  'h1': {
+  h1: {
     fontSize: '100%',
-  }
+  },
 };
 
 export default function ThemeRegistry({

@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --check './{bin,lib,src,tests}/**/*.{ts,tsx}'",
+    "format:auto": "prettier --write './{bin,lib,src,tests}/**/*.{ts,tsx}'",
     "lint": "eslint './{bin,lib,src,tests}/**/*.{ts,tsx}' --max-warnings=0"
   },
   "dependencies": {
