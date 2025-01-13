@@ -34,6 +34,7 @@ const Kv = () => {
             width={750}
             height={796}
             style={{ width: '100%', height: 'auto', verticalAlign: 'bottom' }}
+            priority={true}
           />
         </Fade>
       </Box>
