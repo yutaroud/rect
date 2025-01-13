@@ -65,6 +65,7 @@ const Header: React.FC<HeaderProps> = () => {
                 src={logoReprosImg.src}
                 width={150}
                 height={25}
+                priority={true}
                 style={{ verticalAlign: 'bottom' }}
               />
             </Link>
@@ -89,6 +90,7 @@ const Header: React.FC<HeaderProps> = () => {
               src={logoRectImg.src}
               width={120}
               height={34}
+              priority={true}
             />
           </Link>
         </Toolbar>

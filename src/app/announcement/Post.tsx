@@ -4,7 +4,7 @@ import Divider from '@mui/material/Divider';
 
 const list = Announcement.map((post) => (
   <>
-    <li>
+    <li key={post.link}>
       <div>
         <div>
           <time dateTime={`${post.year}-${post.month}-${post.day}`}>
