@@ -1,7 +1,7 @@
 'use client';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Link from 'next/link';
+import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
 import logoRectImg from '../../public/image/top/logo_rect.png';
@@ -58,10 +58,10 @@ const Header: React.FC<HeaderProps> = () => {
     >
       {isSchoolPage ? (
         <Toolbar sx={{ backgroundColor: '#fff' }}>
-          <Box sx={sxStyles.schoolHeader}>
+          <Box sx={sxStyles.schoolHeader} component="h1">
             <Link href="/school">
               <Image
-                alt="Re:ProS(レプロス)"
+                alt="豊川市でプログラミングを学ぶならRe:ProS(レプロス)"
                 src={logoReprosImg.src}
                 width={150}
                 height={25}
@@ -79,7 +79,10 @@ const Header: React.FC<HeaderProps> = () => {
           </Box>
         </Toolbar>
       ) : (
-        <Toolbar sx={{ backgroundColor: 'rgba(255,255,255,0.8)' }}>
+        <Toolbar
+          sx={{ backgroundColor: 'rgba(255,255,255,0.8)' }}
+          component="h1"
+        >
           <Link href="/">
             <Image
               alt="RE:CT(レクト)"

@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import { Typography } from '@mui/material';
 
 const Complete = () => {
   useEffect(() => {
@@ -22,7 +23,9 @@ const Complete = () => {
         position="relative"
       >
         <Container sx={{ mt: 8 }}>
-          <h1>体験授業のご興味をお持ちいただきありがとうございます！</h1>
+          <Typography variant="h1" fontSize={22} fontWeight={700} gutterBottom>
+            体験授業のご興味をお持ちいただきありがとうございます！
+          </Typography>
           <p>
             申し込みを行うための外部サイトへ遷移しますので、少々お待ちください。
           </p>

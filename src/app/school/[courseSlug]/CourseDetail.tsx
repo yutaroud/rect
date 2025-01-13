@@ -177,11 +177,11 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ course }) => {
   return (
     <>
       <Box sx={sxStyles.heading1}>
-        <h1>
+        <Typography variant="h1" fontSize={'2rem'} lineHeight={1.5} fontWeight={700}>
           {course.name.category}
-          {isSmallScreen && <br />}
+          {isSmallScreen ? <br /> : <Box component="span" marginLeft={1}/>}
           {course.name.level}
-        </h1>
+        </Typography>
       </Box>
       <Box sx={sxStyles.wrap}>
         <img

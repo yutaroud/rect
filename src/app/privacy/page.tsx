@@ -7,7 +7,7 @@ const Privacy = () => {
   return (
     <main>
       <Box component="section" position="relative">
-        <Container sx={{ mt: 8 }}>
+        <Container sx={{ mt: 4 }}>
           <Typography variant="h1" fontSize={24} fontWeight={700} gutterBottom>
             プライバシーポリシー
           </Typography>
