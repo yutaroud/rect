@@ -35,7 +35,7 @@ export const Courses: Course[] = [
       'マサチューセッツ工科大学で開発されたビジュアルプログラミング言語「Scratch」を用いてプログラミングの基礎概念を学びます。',
     details:
       '「Scratch」はマウス操作で行えるので、キーボード入力に慣れていなくても安心して学習することができます。',
-    target: '小学3年生〜中学3年生',
+    target: '小学2年生〜中学3年生',
     sessionCount: '週1回',
     duration: '1回60分',
     price: {
