@@ -11,9 +11,9 @@ import Contact from './Contact';
 import { schoolTopTitle } from '@/lib/const/BreadCrumbTitle';
 
 export const metadata = {
-  title: '豊川市でプログラミングを学ぶならRe:ProS(レプロス)',
+  title: '豊川市でプログラミングを学ぶならRe:ProS(レプロス repros)',
   description:
-    '小学4年生~高校3年生までを対象とした豊川市のプログラミングスクール。現役エンジニアが低価格で教えます。',
+    '小学2年生~高校3年生までを対象とした豊川市のプログラミングスクール。現役エンジニアが低価格で教えます。',
   robots: 'index,follow',
   alternates: {
     canonical: 'https://re-ct.co.jp/school/',
