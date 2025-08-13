@@ -18,7 +18,7 @@ const sxStyles = {
     background: `url(${fvLarge.src})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    backgroundSize: 'cover', 
     maxWidth: '900px',
     height: '352px',
     marginInline: 'auto',
