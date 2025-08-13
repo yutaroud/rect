@@ -144,6 +144,7 @@ const Introduction = () => {
             src="../../../image/school/image_howToTeach.webp"
             alt="PCで作業をしている様子"
             width="300"
+            style={{ marginRight: 'auto' }}
           />
           <Box sx={sxStyles.textWrap}>
             <Typography>
@@ -232,6 +233,7 @@ const Introduction = () => {
             src="../../../image/school/image_classroom.webp"
             alt="プログラミング教室の様子"
             width="300"
+            style={{ marginRight: 'auto' }}
           />
           <Box sx={sxStyles.textWrap}>
             <Typography>
