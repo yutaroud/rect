@@ -87,9 +87,8 @@ const AchievementList = () => {
       </Typography>
       <Box sx={sxStyles.photos}>
         {members.map((image, index) => (
-          <Box sx={sxStyles.list}>
+          <Box sx={sxStyles.list} key={index}>
             <img
-              key={index}
               src={image.src}
               alt=""
               width="300"
