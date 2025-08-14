@@ -88,16 +88,17 @@ const AchievementList = () => {
       <Box sx={sxStyles.photos}>
         {members.map((image, index) => (
           <Box sx={sxStyles.list} key={index}>
-            <img
-              src={image.src}
-              alt=""
-              width="300"
-              height="200"
-            />
+            <img src={image.src} alt="" width="300" height="200" />
             <Box sx={sxStyles.wrap}>
-              <Typography variant="body2" sx={sxStyles.date}>{image.date}</Typography>
-              <Typography variant="body2" sx={sxStyles.grade}>{image.grade}</Typography>
-              <Typography variant="body2" sx={sxStyles.member}>{image.member}</Typography>
+              <Typography variant="body2" sx={sxStyles.date}>
+                {image.date}
+              </Typography>
+              <Typography variant="body2" sx={sxStyles.grade}>
+                {image.grade}
+              </Typography>
+              <Typography variant="body2" sx={sxStyles.member}>
+                {image.member}
+              </Typography>
             </Box>
           </Box>
         ))}

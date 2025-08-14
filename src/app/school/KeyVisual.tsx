@@ -12,13 +12,13 @@ const sxStyles = {
     '@media screen and (max-width:450px)': {
       position: 'static',
       background: '#01329F',
-    }
+    },
   },
   keyVisualLarge: {
     background: `url(${fvLarge.src})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    backgroundSize: 'cover', 
+    backgroundSize: 'cover',
     maxWidth: '900px',
     height: '352px',
     marginInline: 'auto',
@@ -69,7 +69,7 @@ const sxStyles = {
       marginTop: 0,
       marginLeft: '16px',
       fontSize: '15px',
-    }
+    },
   },
   heading: {
     lineHeight: 1.8,
@@ -96,7 +96,7 @@ const sxStyles = {
       },
       '& + span': {
         marginTop: '8px',
-      }
+      },
     },
   },
   text: {
@@ -125,7 +125,9 @@ const KeyVisual = () => {
   return (
     <>
       <Box sx={sxStyles.wrap}>
-        <Box sx={isSmallScreen ? sxStyles.keyVisualSmall : sxStyles.keyVisualLarge}>
+        <Box
+          sx={isSmallScreen ? sxStyles.keyVisualSmall : sxStyles.keyVisualLarge}
+        >
           <Box sx={sxStyles.headingWrap}>
             <img
               src="../../../image/school/fv_balloon.png"
@@ -133,10 +135,20 @@ const KeyVisual = () => {
               width="145"
               height="101"
             />
-            <Typography variant="body2" fontWeight="900" sx={sxStyles.subHeading}>とにかく楽しんで！気づいたら</Typography>
+            <Typography
+              variant="body2"
+              fontWeight="900"
+              sx={sxStyles.subHeading}
+            >
+              とにかく楽しんで！気づいたら
+            </Typography>
             <Typography variant="body2" sx={sxStyles.heading}>
-              <Typography component="span" variant="body2" fontWeight="900">プログラミングが</Typography>
-              <Typography component="span" variant="body2" fontWeight="900">できるようになっている教室</Typography>
+              <Typography component="span" variant="body2" fontWeight="900">
+                プログラミングが
+              </Typography>
+              <Typography component="span" variant="body2" fontWeight="900">
+                できるようになっている教室
+              </Typography>
             </Typography>
           </Box>
         </Box>
@@ -155,7 +167,10 @@ const KeyVisual = () => {
             で{isSmallScreen && <br />}
             プログラミングを学びませんか？
           </Typography>
-          <Typography variant="body2" style={{ lineHeight: '1.8',marginTop: '6px' }}>
+          <Typography
+            variant="body2"
+            style={{ lineHeight: '1.8', marginTop: '6px' }}
+          >
             とにかく楽しく学ぶをモットーに{isSmallScreen && <br />}
             全力でお子様のサポートをいたします！
           </Typography>
