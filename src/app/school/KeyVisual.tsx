@@ -78,7 +78,7 @@ const sxStyles = {
     '@media screen and (max-width:450px)': {
       marginTop: '4px',
       marginLeft: '16px',
-      width: '100%',
+      width: 'calc(100% - 16px)',
     },
     '& span': {
       background: '#fff',
@@ -91,7 +91,8 @@ const sxStyles = {
       fontWeight: 'bold',
       display: 'inline-block',
       '@media screen and (max-width:450px)': {
-        fontSize: '25px',
+        fontSize: '6.5vw',
+        fontWeight: '900',
       },
       '& + span': {
         marginTop: '8px',

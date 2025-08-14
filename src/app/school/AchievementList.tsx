@@ -27,6 +27,7 @@ const sxStyles = {
     maxWidth: '100%',
     width: 'max-content',
     mx: 'auto',
+    overflowY: 'hidden',
   },
   list: {
     borderRadius: '8px',
@@ -41,10 +42,12 @@ const sxStyles = {
     '& > img': {
       width: '100%',
       height: 'auto',
+      verticalAlign: 'bottom',
     },
   },
   wrap: {
-    marginBlock: '12px',
+    marginTop: '12px',
+    marginBlock: '16px',
     paddingInline: '12px',
     textAlign: 'left',
   },
@@ -63,13 +66,13 @@ const sxStyles = {
 
 const members = [
   {
-    src: '../../../image/school/image_exterior.webp',
+    src: '../../../image/school/image_achievementList1.webp',
     date: '2025年5月',
     grade: 'ジュニアプログラミング検定 ブロンズ級',
     member: '御油小学校 5年生',
   },
   {
-    src: '../../../image/school/image_classroom.webp',
+    src: '../../../image/school/image_achievementList2.webp',
     date: '2025年5月',
     grade: 'ジュニアプログラミング検定 エントリー級',
     member: '前芝小学校 6年生',
@@ -93,9 +96,9 @@ const AchievementList = () => {
               height="200"
             />
             <Box sx={sxStyles.wrap}>
-              <Typography variant="h2" sx={sxStyles.date}>{image.date}</Typography>
-              <Typography variant="h2" sx={sxStyles.grade}>{image.grade}</Typography>
-              <Typography variant="h2" sx={sxStyles.member}>{image.member}</Typography>
+              <Typography variant="body2" sx={sxStyles.date}>{image.date}</Typography>
+              <Typography variant="body2" sx={sxStyles.grade}>{image.grade}</Typography>
+              <Typography variant="body2" sx={sxStyles.member}>{image.member}</Typography>
             </Box>
           </Box>
         ))}
