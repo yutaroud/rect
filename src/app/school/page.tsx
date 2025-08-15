@@ -2,6 +2,7 @@ import '../globals.css';
 import BreadcrumbsNavigation from '../BreadcrumbsNavigation';
 import Box from '@mui/material/Box';
 import KeyVisual from './KeyVisual';
+import AchievementList from './AchievementList';
 import Introduction from './Introduction';
 import Curriculum from './Curriculum';
 import Teacher from './Teacher';
@@ -31,6 +32,7 @@ const School = () => {
         }}
       >
         <KeyVisual />
+        <AchievementList />
         <Introduction />
         <Curriculum />
         <Teacher />
