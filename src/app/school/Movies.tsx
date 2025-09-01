@@ -101,7 +101,15 @@ const sxStyles = {
   },
 };
 
-const movieList = [
+type Movie = {
+  id: string;
+  title: string;
+  summary: string;
+  href: string;
+  img: string;
+};
+
+const movieList: Movie[] = [
   {
     id: 'movie1',
     title:
@@ -134,7 +142,7 @@ const Movies = () => {
           <List sx={sxStyles.list}>
             {movieList.map((item) => (
               <ListItem key={item.id} sx={sxStyles.listWrap}>
-                <Link href={item.href || ''} target="_blank" rel="noopener">
+                <Link href={item.href} target="_blank" rel="noopener">
                   <Box sx={sxStyles.listItemBox}>
                     <img
                       width="536"
