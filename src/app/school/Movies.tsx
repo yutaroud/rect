@@ -1,273 +1,177 @@
 'use client';
-import { useRouter } from 'next/navigation';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { LocalPhone, KeyboardArrowRight } from '@mui/icons-material';
-import headingCtaImg from '../../../public/image/school/heading_cta.png';
-import headingInformationImg from '../../../public/image/school/heading_information.png';
-import headingInstagramImg from '../../../public/image/school/heading_instagram.png';
-import instagramImg from '../../../public/image/school/instagram_icon.png';
-import line from '../../../public/image/school/icon_line.png';
+import headingMoviesImg from '../../../public/image/school/heading_movies.png';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Link from 'next/link';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import { Box,Typography,Container,Button } from '@mui/material';
+import { PlayCircle } from '@mui/icons-material';
 
 const sxStyles = {
   heading: {
     marginInline: '24px',
     '& > img': {
-      width: '327px',
+      width: '375px',
       height: 'auto',
     },
     '@media screen and (max-width:450px)': {
       '& > img': {
-        width: '236px',
+        width: '294px',
       },
     },
   },
-  headingInformation: {
-    marginInline: '24px',
-    '& > img': {
-      width: '163px',
-      height: 'auto',
-    },
-    '@media screen and (max-width:450px)': {
-      '& > img': {
-        width: '131px',
-      },
-    },
-  },
-  headingInstagram: {
-    marginInline: '24px',
-    mt: 8,
-    '& > img': {
-      width: '267px',
-      height: 'auto',
-    },
-    '@media screen and (max-width:450px)': {
-      '& > img': {
-        width: '215px',
-      },
-    },
-  },
-  buttons: {
+  list: {
     display: 'flex',
-    width: '100%',
-    maxWidth: '800px',
-    mx: 'auto',
-    alignItems: 'center',
-    gap: 2,
-    mt: 3,
+    flexWrap: 'nowrap',
+    gap: 3,
+    justifyContent: 'center',
+    px: 3,
     '@media screen and (max-width:450px)': {
-      display: 'block',
-      width: '100%',
-    },
+      justifyContent: 'flex-start',
+    }
   },
-  accentButton: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    py: 2,
-    borderRadius: 60,
-    bgcolor: '#EF6C00',
-    color: '#fff',
-    width: '100%',
+  listWrap: {
+    boxShadow: 'none',
+    minWidth: '300px',
+    maxWidth: '300px',
+    p: 0,
+  },
+  listItemBox: {
+    width: '300px',
+    pt: 2,
+    pb: 3,
+    px: 2,
+    height: '400px',
+    backgroundColor: '#fff',
+    borderRadius: 3,
     '&:hover': {
-      backgroundColor: '#D46000',
+      opacity: 0.8,
+      backgroundColor: '#fff'
     },
-    '@media screen and (max-width:450px)': {
-      '& + &': {
-        mt: 2,
-      },
-    },
+    '&:last-child': {
+      marginRight: 3,
+    }
   },
-  defaultButton: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    py: 2,
-    borderRadius: 60,
-    bgcolor: 'rgba(0,0,0,0.04)',
-    color: '#fff',
-    border: 'solid 1px #fff',
-    width: '100%',
-    '@media screen and (max-width:450px)': {
-      '& + &': {
-        mt: 2,
-      },
-    },
-    '&:hover': {
-      bgcolor: 'rgba(0,0,0,0.1)',
-    },
+  textContent: {
+    p: 0,
+    mt: 2,
+    textAlign: 'left',
   },
-  subButton: {
-    fontSize: 18,
+  title: {
     fontWeight: 'bold',
-    py: 2,
-    borderRadius: 60,
+    mt: 2,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
+    WebkitLineClamp: 2,
+    letterSpacing: '0.5px',
+    lineHeight: '1.5',
+    color: '#333'
+  },
+  text: {
+    mt: 1,
+    letterSpacing: '0.1px',
+    lineHeight: '1.5',
+    color: '#333'
+  },
+  textLink: {
+    fontSize: '14px',
+    fontWeight: 'bold',
     color: '#333',
-    border: 'solid 1px #333',
-    width: '400px',
-    mt: 4,
-    background: '#fff',
-    textTransform: 'none',
+    marginTop: '40px',
+    display: 'inline-flex',
     '&:hover': {
-      bgcolor: 'rgba(0,0,0,0.1)',
-    },
-    '@media screen and (max-width:450px)': {
-      width: '100%',
+      opacity: 0.8,
+      backgroundColor: 'transparent'
     },
   },
-  information: {
-    mx: 'auto',
-    my: 9,
-    width: '100%',
-    maxWidth: '800px',
-    '@media screen and (max-width:450px)': {
-      width: '100%',
-      px: 3,
+  listBox: {
+    mt: 4,
+    p: 0,
+    maxWidth: '100%',
+    overflowX: 'auto',
+    '&::-webkit-scrollbar': {
+      display: 'none',
     },
-  },
+    '@media screen and (min-width: 1200px)': {
+      p: 0,
+      maxWidth: '100%',
+    }
+  }
 };
 
-const Contact = () => {
-  const router = useRouter();
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push('/school/complete');
-  };
+const movieList = [
+  {
+    id: 'movie1',
+    title: 'Scratch(スクラッチ)でシューティングゲームを作ろう！【超入門】初心者でもバッチリ！',
+    summary:
+      'プログラミング初心者でもわかりやすく丁寧に解説！Scratch(スクラッチ)を通してプログラミングの基礎的な技術を身につけましょう！',
+      href: 'https://www.udemy.com/course/scratch-shooting/',
+    img: 'thumbnail_movie_scratchShooting.png',
+  },
+];
+
+
+const Movies = () => {
   const isSmallScreen = useMediaQuery('(max-width:450px)');
   return (
     <>
-      <Box pt={7} pb={7} px={3} bgcolor="#407BFF" id="contact-form">
+      <Box pt={7} pb={7} bgcolor="#F5F5F5">
         <Typography variant="h2" sx={sxStyles.heading}>
           <img
-            src={headingCtaImg.src}
-            alt="お気軽にお問合せください"
-            width="511"
-            height="146"
+            src={headingMoviesImg.src}
+            alt="オリジナル動画教材"
+            width="721"
+            height="75"
           />
         </Typography>
-        <Box mt={3}>
-          <Typography variant="body2" color="#fff" fontWeight="bold">
-            下記フォームより{isSmallScreen && <br />}
-            メールアドレスをご登録ください。
-          </Typography>
-          <Typography variant="body2" color="#fff" fontWeight="bold" mt={1}>
-            ご登録後、メールにてご連絡いたしますので{isSmallScreen && <br />}
-            必要事項をご記入お願いいたします。
-          </Typography>
-          <Box sx={sxStyles.buttons}>
-            <Button
-              variant="contained"
-              size="large"
-              fullWidth={true}
-              sx={sxStyles.accentButton}
-              endIcon={<KeyboardArrowRight />}
-              onClick={handleClick}
-              data-ga="freeTrial"
-            >
-              無料体験を申し込む
-            </Button>
-            <Button
-              variant="contained"
-              size="large"
-              fullWidth={true}
-              sx={sxStyles.accentButton}
-              endIcon={<KeyboardArrowRight />}
-              href="https://www.kaihipay.jp/forms?form_code=6841800233981658"
-              data-ga="purchase"
-            >
-              入会する
-            </Button>
-          </Box>
-        </Box>
-        <Typography variant="body2" mt={5} color="#fff" fontWeight="bold">
-          その他、お問合せやご相談は
-          <br />
-          お電話または公式LINEアカウントへ{isSmallScreen && <br />}
-          ご連絡ください。
+        <Typography variant="body2" color="#333" fontWeight="bold" mt={2}>
+          オンラインでも、楽しいゲームを題材に{isSmallScreen && <br />}
+          独自の教材をお届けしています。
         </Typography>
-        <Box sx={sxStyles.buttons}>
-          <Button
-            variant="contained"
-            size="large"
-            fullWidth={true}
-            sx={sxStyles.defaultButton}
-            startIcon={<LocalPhone />}
-            href="tel:090-1831-1182"
+        <Container sx={sxStyles.listBox}>
+          <List
+            sx={sxStyles.list}
           >
-            090-1831-1182
-          </Button>
-          <Button
-            variant="contained"
-            size="large"
-            fullWidth={true}
-            sx={sxStyles.defaultButton}
-            href="https://lin.ee/lIcNsMA"
-          >
-            <img
-              src={line.src}
-              alt="LINE"
-              width="24"
-              height="24"
-              style={{ marginRight: '16px' }}
-            />
-            LINE公式アカウント
-          </Button>
-        </Box>
-      </Box>
-      <Box sx={sxStyles.information}>
-        <Typography variant="h2" sx={sxStyles.headingInformation}>
-          <img
-            src={headingInformationImg.src}
-            alt="案内資料"
-            width="32"
-            height="78"
-          />
-        </Typography>
-        <Typography variant="body2" color="#333" fontWeight="bold" mt={3}>
-          下記資料から詳細内容について{isSmallScreen && <br />}
-          ご確認いただけます。
-        </Typography>
-        <iframe
-          style={{
-            marginTop: '20px',
-            maxWidth: '100%',
-            height: 'auto',
-            aspectRatio: '1.7777777',
-          }}
-          src="https://speakerdeck.com/player/0daa6cfb0d2543f6a30d706c68886a76"
-          title="Re:proS_案内資料"
-          allowFullScreen={true}
-          data-ratio="1.7777777777777777"
-          width="650px"
-          loading="lazy"
-        ></iframe>
-        <Typography variant="h2" sx={sxStyles.headingInstagram}>
-          <img
-            src={headingInstagramImg.src}
-            alt="公式Instagram"
-            width="528"
-            height="84"
-          />
-        </Typography>
+            {movieList.map((item) => (
+              <ListItem key={item.id} sx={sxStyles.listWrap}>
+                <Link href={item.href || ''} target="_blank" rel="noopener">
+                  <Box sx={sxStyles.listItemBox}>
+                    <img
+                      width="536"
+                      height="302"
+                      src={`../../../image/school/${item.img}`}
+                      alt={item.title}
+                      style={{maxWidth: '100%', height: 'auto', borderRadius: 12}}
+                    />
+                    <Box sx={sxStyles.textContent}>
+                      <Typography variant="body1" sx={sxStyles.title}>
+                        {item.title}
+                      </Typography>
+                      <Typography variant="body2" sx={sxStyles.text}>
+                        {item.summary}
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+        </Container>
         <Button
-          sx={sxStyles.subButton}
-          variant="contained"
-          size="large"
-          fullWidth={true}
-          href="https://www.instagram.com/repros_programming/"
+          variant="text"
+          href="https://www.udemy.com/user/ling-mu-you-ji-28/"
+          target="_blank"
+          rel="noopener noreferrer"
+          endIcon={<PlayCircle />}
+          sx={sxStyles.textLink}
         >
-          <img
-            src={instagramImg.src}
-            alt="instagramのリンク"
-            width="24"
-            height="24"
-            style={{ marginRight: '8px' }}
-          />
-          @repros_programming
+          動画教材をすべて見る
         </Button>
       </Box>
     </>
   );
 };
 
-export default Contact;
+export default Movies;

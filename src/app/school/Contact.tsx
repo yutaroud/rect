@@ -85,6 +85,7 @@ const sxStyles = {
   information: {
     mx: 'auto',
     mt: 9,
+    mb: 10,
     width: '100%',
     maxWidth: '800px',
     '@media screen and (max-width:450px)': {

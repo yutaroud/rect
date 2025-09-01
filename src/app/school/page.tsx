@@ -9,6 +9,7 @@ import Teacher from './Teacher';
 import Faq from './Faq';
 import Access from './Access';
 import Contact from './Contact';
+import Movies from './Movies';
 import Instagram from './Instagram';
 import { schoolTopTitle } from '@/lib/const/BreadCrumbTitle';
 
@@ -40,6 +41,7 @@ const School = () => {
         <Access />
         <Faq />
         <Contact />
+        <Movies />
         <Instagram />
         <BreadcrumbsNavigation titles={schoolTopTitle} />
       </Box>
