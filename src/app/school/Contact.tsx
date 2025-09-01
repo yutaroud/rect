@@ -6,8 +6,6 @@ import Button from '@mui/material/Button';
 import { LocalPhone, KeyboardArrowRight } from '@mui/icons-material';
 import headingCtaImg from '../../../public/image/school/heading_cta.png';
 import headingInformationImg from '../../../public/image/school/heading_information.png';
-import headingInstagramImg from '../../../public/image/school/heading_instagram.png';
-import instagramImg from '../../../public/image/school/instagram_icon.png';
 import line from '../../../public/image/school/icon_line.png';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -33,19 +31,6 @@ const sxStyles = {
     '@media screen and (max-width:450px)': {
       '& > img': {
         width: '131px',
-      },
-    },
-  },
-  headingInstagram: {
-    marginInline: '24px',
-    mt: 8,
-    '& > img': {
-      width: '267px',
-      height: 'auto',
-    },
-    '@media screen and (max-width:450px)': {
-      '& > img': {
-        width: '215px',
       },
     },
   },
@@ -97,27 +82,10 @@ const sxStyles = {
       bgcolor: 'rgba(0,0,0,0.1)',
     },
   },
-  subButton: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    py: 2,
-    borderRadius: 60,
-    color: '#333',
-    border: 'solid 1px #333',
-    width: '400px',
-    mt: 4,
-    background: '#fff',
-    textTransform: 'none',
-    '&:hover': {
-      bgcolor: 'rgba(0,0,0,0.1)',
-    },
-    '@media screen and (max-width:450px)': {
-      width: '100%',
-    },
-  },
   information: {
     mx: 'auto',
-    my: 9,
+    mt: 9,
+    mb: 10,
     width: '100%',
     maxWidth: '800px',
     '@media screen and (max-width:450px)': {
@@ -241,30 +209,6 @@ const Contact = () => {
           width="650px"
           loading="lazy"
         ></iframe>
-        <Typography variant="h2" sx={sxStyles.headingInstagram}>
-          <img
-            src={headingInstagramImg.src}
-            alt="公式Instagram"
-            width="528"
-            height="84"
-          />
-        </Typography>
-        <Button
-          sx={sxStyles.subButton}
-          variant="contained"
-          size="large"
-          fullWidth={true}
-          href="https://www.instagram.com/repros_programming/"
-        >
-          <img
-            src={instagramImg.src}
-            alt="instagramのリンク"
-            width="24"
-            height="24"
-            style={{ marginRight: '8px' }}
-          />
-          @repros_programming
-        </Button>
       </Box>
     </>
   );
