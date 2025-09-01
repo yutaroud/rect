@@ -4,7 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from 'next/link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import { Box,Typography,Container,Button } from '@mui/material';
+import { Box, Typography, Container, Button } from '@mui/material';
 import { PlayCircle } from '@mui/icons-material';
 
 const sxStyles = {
@@ -28,7 +28,7 @@ const sxStyles = {
     px: 3,
     '@media screen and (max-width:450px)': {
       justifyContent: 'flex-start',
-    }
+    },
   },
   listWrap: {
     boxShadow: 'none',
@@ -46,11 +46,11 @@ const sxStyles = {
     borderRadius: 3,
     '&:hover': {
       opacity: 0.8,
-      backgroundColor: '#fff'
+      backgroundColor: '#fff',
     },
     '&:last-child': {
       marginRight: 3,
-    }
+    },
   },
   textContent: {
     p: 0,
@@ -67,13 +67,13 @@ const sxStyles = {
     WebkitLineClamp: 2,
     letterSpacing: '0.5px',
     lineHeight: '1.5',
-    color: '#333'
+    color: '#333',
   },
   text: {
     mt: 1,
     letterSpacing: '0.1px',
     lineHeight: '1.5',
-    color: '#333'
+    color: '#333',
   },
   textLink: {
     fontSize: '14px',
@@ -83,7 +83,7 @@ const sxStyles = {
     display: 'inline-flex',
     '&:hover': {
       opacity: 0.8,
-      backgroundColor: 'transparent'
+      backgroundColor: 'transparent',
     },
   },
   listBox: {
@@ -97,21 +97,21 @@ const sxStyles = {
     '@media screen and (min-width: 1200px)': {
       p: 0,
       maxWidth: '100%',
-    }
-  }
+    },
+  },
 };
 
 const movieList = [
   {
     id: 'movie1',
-    title: 'Scratch(スクラッチ)でシューティングゲームを作ろう！【超入門】初心者でもバッチリ！',
+    title:
+      'Scratch(スクラッチ)でシューティングゲームを作ろう！【超入門】初心者でもバッチリ！',
     summary:
       'プログラミング初心者でもわかりやすく丁寧に解説！Scratch(スクラッチ)を通してプログラミングの基礎的な技術を身につけましょう！',
-      href: 'https://www.udemy.com/course/scratch-shooting/',
+    href: 'https://www.udemy.com/course/scratch-shooting/',
     img: 'thumbnail_movie_scratchShooting.png',
   },
 ];
-
 
 const Movies = () => {
   const isSmallScreen = useMediaQuery('(max-width:450px)');
@@ -131,9 +131,7 @@ const Movies = () => {
           独自の教材をお届けしています。
         </Typography>
         <Container sx={sxStyles.listBox}>
-          <List
-            sx={sxStyles.list}
-          >
+          <List sx={sxStyles.list}>
             {movieList.map((item) => (
               <ListItem key={item.id} sx={sxStyles.listWrap}>
                 <Link href={item.href || ''} target="_blank" rel="noopener">
@@ -143,7 +141,11 @@ const Movies = () => {
                       height="302"
                       src={`../../../image/school/${item.img}`}
                       alt={item.title}
-                      style={{maxWidth: '100%', height: 'auto', borderRadius: 12}}
+                      style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                        borderRadius: 12,
+                      }}
                     />
                     <Box sx={sxStyles.textContent}>
                       <Typography variant="body1" sx={sxStyles.title}>
