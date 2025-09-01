@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import headingInstagramImg from '../../../public/image/school/heading_instagram.png';
 import instagramImg from '../../../public/image/school/instagram_icon.png';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const sxStyles = {
   headingInstagram: {
@@ -50,6 +51,7 @@ const sxStyles = {
 };
 
 const Instagram = () => {
+  const isSmallScreen = useMediaQuery('(max-width:450px)');
   return (
     <Box sx={sxStyles.information}>
       <Typography variant="h2" sx={sxStyles.headingInstagram}>
@@ -59,6 +61,10 @@ const Instagram = () => {
           width="528"
           height="84"
         />
+      </Typography>
+      <Typography variant="body2" color="#333" fontWeight="bold" mt={2}>
+        教室のお知らせや、{isSmallScreen && <br />}
+        プログラミングに関する情報をお届けしています。
       </Typography>
       <Button
         sx={sxStyles.subButton}
