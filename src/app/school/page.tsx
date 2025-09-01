@@ -9,6 +9,7 @@ import Teacher from './Teacher';
 import Faq from './Faq';
 import Access from './Access';
 import Contact from './Contact';
+import Instagram from './Instagram';
 import { schoolTopTitle } from '@/lib/const/BreadCrumbTitle';
 
 export const metadata = {
@@ -39,6 +40,7 @@ const School = () => {
         <Access />
         <Faq />
         <Contact />
+        <Instagram />
         <BreadcrumbsNavigation titles={schoolTopTitle} />
       </Box>
     </main>
