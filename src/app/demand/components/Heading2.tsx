@@ -4,9 +4,15 @@ interface Heading2Props {
   subText: string;
   mainText: string;
   position?: 'center' | 'right';
+  backGroundWhite?: boolean;
 }
 
-export const Heading2: React.FC<Heading2Props> = ({ subText, mainText, position="center" }) => {
+export const Heading2: React.FC<Heading2Props> = ({
+  subText,
+  mainText,
+  position="center",
+  backGroundWhite = true,
+  }) => {
   return (
     <Box sx={{
       display: 'flex',
@@ -20,7 +26,7 @@ export const Heading2: React.FC<Heading2Props> = ({ subText, mainText, position=
         variant="body2"
         component="span"
         sx={{
-          color: 'rgba(0, 41, 138, 0.4)',
+          color: backGroundWhite ? 'rgba(0, 41, 138, 0.4)' : 'rgba(255, 255, 255, 0.4)',
           fontWeight: 'bold',
           letterSpacing: '0.07em',
           fontSize: '18px'
@@ -29,13 +35,15 @@ export const Heading2: React.FC<Heading2Props> = ({ subText, mainText, position=
         {subText}
       </Typography>
       <Typography
-      variant="h2"
-      component="h2"
-      sx={{
-        fontWeight: 'bold',
-        letterSpacing: '0.05em',
-        fontSize: '36px'
-      }}>
+        variant="h2"
+        component="h2"
+        sx={{
+          fontWeight: 'bold',
+          letterSpacing: '0.05em',
+          fontSize: '36px',
+          color: backGroundWhite ? '#000' : '#fff',
+        }}
+      >
         {mainText}
       </Typography>
     </Box>
