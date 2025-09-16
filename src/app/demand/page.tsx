@@ -10,7 +10,7 @@ import Company from './Company';
 
 const Demand = () => {
   return (
-    <main>
+    <main style={{ color: '#000'}}>
       <KeyVisual />
       <Service />
       <Case />
