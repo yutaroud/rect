@@ -1,0 +1,84 @@
+import React from 'react';
+import { Button, Box, Typography } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+
+interface CustomButtonProps {
+  label: string;
+  variant?: 'primary' | 'secondary';
+  showFreeLabel?: boolean;
+  icon?: 'arrow-right' | 'new-tab';
+  href?: string;
+}
+
+
+const CustomButton: React.FC<CustomButtonProps> = ({
+  label,
+  variant = 'primary',
+  showFreeLabel = true,
+  icon,
+  href,
+}) => {
+  const getIcon = () => {
+    switch (icon) {
+      case 'arrow-right':
+        return <ArrowForwardIcon />;
+      case 'new-tab':
+        return <OpenInNewIcon />;
+      default:
+        return null;
+    }
+  };
+  
+  const hasIcon = !!icon; 
+
+  return (
+    <Button
+      variant="contained"
+      href={href}
+      sx={{
+        backgroundColor: variant === 'primary' ? '#00298A' : '#fff',
+        color: variant === 'primary' ? '#fff' : '#00298A',
+        textTransform: 'none',
+        padding: hasIcon ? '16px 40px 16px 46px' : '16px 46px 16px 46px',
+        borderRadius: '50px',
+        boxShadow: 'none',
+        fontSize: '18px',
+        fontWeight: 'bold',
+        '&:hover': {
+          boxShadow: 'none',
+        },
+      }}
+      endIcon={getIcon()}
+    >
+      <Box
+        component="span"
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: showFreeLabel ? '8px' : '0px',
+        }}
+      >
+        {showFreeLabel && (
+          <Typography
+            component="span"
+            sx={{
+              backgroundColor: variant === 'primary' ? '#fff' : '#00298A',
+              color: variant === 'primary' ? '#00298A' : '#fff',
+              borderRadius: '4px',
+              px: '6px',
+              py: '2px',
+              fontSize: '14px',
+              fontWeight: 'bold',
+            }}
+          >
+            無料
+          </Typography>
+        )}
+        {label}
+      </Box>
+    </Button>
+  );
+};
+
+export default CustomButton;
