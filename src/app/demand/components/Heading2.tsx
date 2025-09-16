@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 interface Heading2Props {
   subText: string;
   mainText: string;
-  position: 'center' | 'right', 
+  position?: 'center' | 'right';
 }
 
 export const Heading2: React.FC<Heading2Props> = ({ subText, mainText, position="center" }) => {

@@ -45,6 +45,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         boxShadow: 'none',
         fontSize: '18px',
         fontWeight: 'bold',
+        letterSpacing: '0.06em',
         '&:hover': {
           boxShadow: 'none',
         },
