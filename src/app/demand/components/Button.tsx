@@ -47,8 +47,10 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         fontWeight: 'bold',
         letterSpacing: '0.06em',
         minWidth: '300px',
+        transition: 'filter 0.3s',
         '&:hover': {
           boxShadow: 'none',
+          filter: 'brightness(0.8)'
         },
       }}
       endIcon={getIcon()}
