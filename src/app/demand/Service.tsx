@@ -21,7 +21,7 @@ const skillData = [
   },
   {
     id: '4',
-    category: '開発言語',
+    category: 'インフラ',
     item: ['AWS', 'Google Cloud', 'Terraform', 'Pulumi'],
   },
   {
@@ -40,6 +40,9 @@ const sxStyles = {
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
+    '@media screen and (max-width:450px)': {
+      mt: 4,
+    }
   },
   listItem: {
     minWidth: '280px',
@@ -50,12 +53,21 @@ const sxStyles = {
     py: 2.5,
     boxShadow: '0px 1px 5px rgba(34, 106, 170, 0.2)',
     textAlign: 'center',
+    '@media screen and (max-width:450px)': {
+      minWidth: '100%',
+      maxWidth: '100%',
+    }
   },
   title: {
     fontSize: '16px',
     letterSpacing: '0.08em',
     lineHeight: '1.5',
     fontWeight: 'bold',
+    '& > br': {
+      '@media screen and (max-width:450px)': {
+        display: 'none',
+      }
+    }
   },
   text: {
     fontSize: '12px',
@@ -70,13 +82,20 @@ const sxStyles = {
     gap: 6,
     mt: 10,
     justifyContent: 'center',
+    flexWrap: 'wrap',
+    '@media screen and (max-width:450px)': {
+      flexDirection: 'column',
+    }
   },
   skillTitle: {
     fontSize: '20px',
     fontWeight: 'bold',
     letterSpacing: '0.05em',
     lineHeight: '1.6',
-    color: '#00298A'
+    color: '#00298A',
+    '@media screen and (max-width:450px)': {
+      textAlign: 'center',
+    }
   },
 }
 
@@ -87,8 +106,8 @@ const Service = () => {
         display: 'flex',
         alignItems: 'center',
         pt: 7,
-        pb: 12,
-        backgroundColor: '#EFF7FF'
+        pb: 9,
+        backgroundColor: '#EFF7FF',
       }}
     >
       <Box
@@ -96,6 +115,9 @@ const Service = () => {
           maxWidth: '900px',
           width: '100%',
           mx: 'auto',
+          '@media screen and (max-width:450px)': {
+            px: 2.5,
+          }
         }}
       >
         <Heading2 subText="service" mainText="サービス内容"/>
@@ -114,7 +136,7 @@ const Service = () => {
           </Box>
           <Box component="li" sx={sxStyles.listItem}>
             <Typography component="h3" sx={sxStyles.title}>Webサイト・<br/>ホームページ制作</Typography>
-            <Typography sx={sxStyles.text}>ランディングページ・コーポレートサイトなどの制作をいたします。</Typography>
+            <Typography sx={sxStyles.text}>ランディングページ・コーポレートサイト<br/>などの制作をいたします。</Typography>
           </Box>
           <Box component="li" sx={sxStyles.listItem}>
             <Typography component="h3" sx={sxStyles.title}>AIを活用した<br/>業務課題の解決</Typography>
@@ -129,15 +151,24 @@ const Service = () => {
             height="280"
             style={{ maxWidth: '242px', height: 'auto', }}
           />
-          <Box>
+          <Box sx={{
+            '@media screen and (max-width:450px)': {
+              width: '100%',
+            }
+          }}>
             <Typography sx={sxStyles.skillTitle}>対応技術 一例</Typography>
             <Box component="dl" mt={2}>
               {skillData.map((data) => (
                 <Box key={data.id} sx={{
                   display: 'flex',
                   alignItems: 'center',
+                  flexWrap: 'wrap',
                   '& + &': {
                     mt: 1,
+                  },
+                  '@media screen and (max-width:450px)': {
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
                   }
                 }}>
                   <Typography
@@ -170,6 +201,37 @@ const Service = () => {
             </Box>
           </Box>
         </Box>
+        <Typography sx={{
+          fontSize: '14px',
+          letterSpacing: '0.05em',
+          lineHeight: '1.7',
+          mt: 8,
+          textAlign: 'center',
+          '& > br': {
+            display: 'none',
+            '@media screen and (max-width:450px)': {
+              display: 'block',
+            }
+          }
+        }}>
+          記載のないご依頼につきましても、<br/>柔軟に対応いたします。
+        </Typography>
+        <Typography sx={{
+          fontSize: '14px',
+          letterSpacing: '0.05em',
+          lineHeight: '1.7',
+          textAlign: 'center',
+          mt: 0.5,
+          '& > br': {
+            display: 'none',
+            '@media screen and (max-width:450px)': {
+              display: 'block',
+            }
+          }
+          }}>
+          ご要望やご相談がございましたら、<br/>ぜひ一度お問い合わせください。
+        </Typography>
+        
       </Box>
     </Box>
   )

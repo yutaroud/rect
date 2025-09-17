@@ -7,7 +7,17 @@ const sxStyles = {
     letterSpacing: '0.05em',
     lineHeight: '1.7',
     mt: 2,
-    width: '100%'
+    width: '100%',
+    '@media screen and (max-width:450px)': {
+      textAlign: 'center',
+    },
+    '& > br': {
+      '&:first-child': {
+        '@media screen and (max-width:450px)': {
+          display: 'none',
+        }
+      }
+    }
   },
   title: {
     fontSize: '20px',
@@ -22,7 +32,10 @@ const sxStyles = {
   },
   list: {
     listStyle: 'none',
-    width: '100%',
+    width: 'calc(100% - 22% - 48px)',
+    '@media screen and (max-width:835px)': {
+      width: '100%'
+    }
   },
   listItem: {
     background: '#fff',
@@ -72,16 +85,27 @@ const Case = () => {
       sx={{
         pt: 7,
         pb: 12,
+        '@media screen and (max-width:450px)': {
+          pb: 9,
+        }
       }}
     >
       <Box
         sx={{
-          maxWidth: '900px',
+          maxWidth: '940px',
           width: '100%',
           mx: 'auto',
           display: 'flex',
           alignItems: 'flex-start',
           gap : 6,
+          flexWrap: 'wrap',
+          px: 2.5,
+          '@media screen and (max-width:450px)': {
+            flexDirection: 'column',
+            alignItems: 'center',
+            px: 2.5,
+            gap: 3,
+          }
         }}
       >
         <Box sx={{minWidth: '22%'}}>

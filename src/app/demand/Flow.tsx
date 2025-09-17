@@ -51,6 +51,7 @@ const sxStyles = {
     justifyContent: 'space-between',
     listStyle: 'none',
     alignItems: 'center',
+    flexWrap: 'nowrap',
   },
   listItem: {
     px: '12px',
@@ -60,12 +61,21 @@ const sxStyles = {
     borderRadius: '8px',
     border: 'solid 1px #EFF7FF',
     boxShadow: '0px 1px 5px rgba(34, 106, 170, 0.19)',
-    width: '180px',
+    minWidth: '180px',
+    maxWidth: '180px',
+    '&:first-child': {
+      ml: 2.5,
+    },
+    '&:last-child': {
+      mr: 2.5,
+    },
   },
   icon: {
     background: `url(${arrow.src})`,
-    width: '9px',
-    height: '14px',
+    maxWidth: '9px',
+    minWidth: '9px',
+    maxHeight: '14px',
+    minHeight: '14px',
     content: '""',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
@@ -74,6 +84,10 @@ const sxStyles = {
   listItemWrap: {
     display: 'flex',
     flexDirection: 'column',
+  },
+  scroll: {
+    overflow: 'auto hidden',
+    scrollSnapType: 'x mandatory',
   }
 }
 
@@ -95,52 +109,54 @@ const Flow = () => {
     >
       <Box
         sx={{
-          maxWidth: '1000px',
+          maxWidth: '1040px',
           width: '100%',
           mx: 'auto',
         }}
       >
         <Heading2 subText="flow" mainText="ご利用の流れ"/>
-        <Box sx={sxStyles.list} component="ol">
-          {flow.map((item, index) => (
-            <React.Fragment key={item.id}>
-              <Box component="li" sx={sxStyles.listItem}>
-                <Box sx={sxStyles.listItemWrap}>
-                  <Typography sx={{
-                    fontSize: '20px',
-                    fontWeight: 'bold',
-                    letterSpacing: '0.05em',
-                    lineHeight: '1.7',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignContent: 'center',
-                    justifyContent: 'flex-start',
-                    textAlign: 'center',
-                    color: '#00298A'
-                  }}>
-                    <Typography component="span" sx={{
-                      fontSize: '14px',
+        <Box sx={sxStyles.scroll}>
+          <Box sx={sxStyles.list} component="ol">
+            {flow.map((item, index) => (
+              <React.Fragment key={item.id}>
+                <Box component="li" sx={sxStyles.listItem}>
+                  <Box sx={sxStyles.listItemWrap}>
+                    <Typography sx={{
+                      fontSize: '20px',
                       fontWeight: 'bold',
-                      color: 'rgba(0, 41, 138, 0.4)'
-                    }}>{item.step}</Typography>
-                    {item.title}
-                  </Typography>
-                  <Typography sx={{
-                    mt: 2,
-                    fontSize: '14px',
-                    letterSpacing: '0.05em',
-                    lineHeight: '1.7',
-                    textAlign: 'center'
-                  }}>
-                    {item.detail}
-                  </Typography>
+                      letterSpacing: '0.05em',
+                      lineHeight: '1.7',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignContent: 'center',
+                      justifyContent: 'flex-start',
+                      textAlign: 'center',
+                      color: '#00298A'
+                    }}>
+                      <Typography component="span" sx={{
+                        fontSize: '14px',
+                        fontWeight: 'bold',
+                        color: 'rgba(0, 41, 138, 0.4)'
+                      }}>{item.step}</Typography>
+                      {item.title}
+                    </Typography>
+                    <Typography sx={{
+                      mt: 2,
+                      fontSize: '14px',
+                      letterSpacing: '0.05em',
+                      lineHeight: '1.7',
+                      textAlign: 'center'
+                    }}>
+                      {item.detail}
+                    </Typography>
+                  </Box>
                 </Box>
-              </Box>
-              {index < flow.length - 1 && (
-                <Arrow/>
-              )}
-            </React.Fragment>
-          ))}
+                {index < flow.length - 1 && (
+                  <Arrow/>
+                )}
+              </React.Fragment>
+            ))}
+          </Box>
         </Box>
       </Box>
     </Box>

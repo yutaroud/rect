@@ -10,9 +10,18 @@ const sxStyles = {
     lineHeight: '1.7',
     color: '#fff',
     mt: 2,
+    '@media screen and (max-width:450px)': {
+      textAlign: 'center',
+    },
     '& + &': {
       mt: 1,
     },
+    '& > br': {
+      display: 'none',
+    '@media screen and (max-width:450px)': {
+        display: 'block',
+      }
+    }
   }
 }
 
@@ -21,6 +30,7 @@ const Contact = () => {
     <Box
       sx={{
         maxWidth: '1000px',
+        width: 'calc(100% - 40px)',
         mx: 'auto',
         backgroundColor: '#00298A',
         borderRadius: '20px',
@@ -29,10 +39,26 @@ const Contact = () => {
         pb: 8,
         my: 7,
         position: 'relative',
+        '@media screen and (max-width:450px)': {
+          mx: 2.5,
+          pt: 5,
+          pb: 6,
+          px: 2.5,
+        }
       }}>
         <Heading2 subText="contact" mainText="お問い合わせ" position="right" backGroundWhite={false}/>
-        <Typography sx={sxStyles.text}>相談は無料です。小さなことでも、お気軽にご連絡ください。</Typography>
-        <Box mt={4}>
+        <Typography sx={sxStyles.text}>相談は無料です。小さなことでも、<br/>お気軽にご連絡ください。</Typography>
+        <Box sx={{
+          mt: 4,
+          '@media screen and (max-width:450px)': {
+            mt: 3,
+          },
+          '& > a': {
+            '@media screen and (max-width:450px)': {
+              width: '100%',
+            }
+          }
+        }}>
           <CustomButton
             label="お問い合わせフォームへ"
             variant="secondary"
@@ -46,13 +72,19 @@ const Contact = () => {
           top: '50%',
           transform: 'translateY(-50%)',
           right: '60px',
+          '& > img': {
+            maxWidth: '284px',
+            height: 'auto',
+            '@media screen and (max-width:700px)': {
+              display: 'none',
+            }
+          }
         }}>
           <img
             src={img.src}
             alt=""
             width="570"
             height="434"
-            style={{ maxWidth: '284px', height: 'auto', }}
           />
         </Box>
     </Box>

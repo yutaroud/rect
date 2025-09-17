@@ -20,7 +20,11 @@ export const Heading2: React.FC<Heading2Props> = ({
       justifyContent: 'center',
       alignItems: position === 'right' ? 'flex-start' : 'center',
       textAlign: position === 'right' ? 'left' : 'center',
-      gap: '4px'
+      gap: '4px',
+      '@media screen and (max-width:450px)': {
+        alignItems: 'center',
+        textAlign: 'center',
+      }
     }}>
       <Typography
         variant="body2"
@@ -29,7 +33,10 @@ export const Heading2: React.FC<Heading2Props> = ({
           color: backGroundWhite ? 'rgba(0, 41, 138, 0.4)' : 'rgba(255, 255, 255, 0.4)',
           fontWeight: 'bold',
           letterSpacing: '0.07em',
-          fontSize: '18px'
+          fontSize: '18px',
+          '@media screen and (max-width:450px)': {
+            fontSize: '14px',
+          }
         }}
       >
         {subText}
@@ -42,6 +49,9 @@ export const Heading2: React.FC<Heading2Props> = ({
           letterSpacing: '0.05em',
           fontSize: '36px',
           color: backGroundWhite ? '#000' : '#fff',
+          '@media screen and (max-width:450px)': {
+            fontSize: '32px',
+          }
         }}
       >
         {mainText}

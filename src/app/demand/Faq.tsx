@@ -24,14 +24,18 @@ const Faq = () => {
         alignItems: 'center',
         pt: 7,
         pb: 12,
-        backgroundColor: '#EFF7FF'
+        backgroundColor: '#EFF7FF',
+        '@media screen and (max-width:450px)': {
+          pb: 8,
+        }
       }}
     >
       <Box
         sx={{
-          maxWidth: '900px',
+          maxWidth: '940px',
           width: '100%',
           mx: 'auto',
+          px: 2.5,
         }}
       >
         <Heading2 subText="faq" mainText="よくある質問"/>
@@ -49,6 +53,7 @@ const Faq = () => {
                 fontWeight: 'bold',
                 letterSpacing: '0.05em',
                 lineHeight: '1.7',
+                display: 'flex',
               }}>
                 <Typography component="span" sx={{
                   mr: 1,
@@ -63,6 +68,7 @@ const Faq = () => {
                 fontSize: '14px',
                 letterSpacing: '0.05em',
                 lineHeight: '1.7',
+                display: 'flex',
               }}>
                 <Typography component="span" sx={{
                   mr: 2,

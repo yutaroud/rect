@@ -28,6 +28,10 @@ const sxStyles = {
     gap: 4,
     listStyle: 'none',
     justifyContent: 'center',
+    flexWrap: 'wrap',
+    '@media screen and (max-width:450px)': {
+      flexDirection: 'column',
+    }
   },
   listItem: {
     background: '#fff',
@@ -39,9 +43,15 @@ const sxStyles = {
     flexDirection: 'column',
     alignItems: 'center',
     position: 'relative',
+    boxShadow: '0px 1px 6px rgba(34, 106, 170, 0.08)',
+    width: '414px',
+    maxWidth: '100%',
     '& > img': {
       maxWidth: '226px',
       height: 'auto',
+      '@media screen and (max-width:450px)': {
+        maxWidth: '190px'
+      }
     },
     '&:before' : {
       position: 'absolute',
@@ -56,6 +66,15 @@ const sxStyles = {
       fontSize: '48px',
       fontWeight: 'bold',
       content: '""',
+      '@media screen and (max-width:450px)': {
+        width: '39px',
+        height: '49px',
+        left: '32px',
+      },
+      '@media screen and (max-width:360px)': {
+        left: '12px',
+        top: '12px',
+      }
     },
     '&:first-child' : {
       '&:before' : {
@@ -83,9 +102,10 @@ const Point = () => {
     >
       <Box
         sx={{
-          maxWidth: '900px',
+          maxWidth: '940px',
           width: '100%',
           mx: 'auto',
+            px: 2.5,
         }}
       >
         <Heading2 subText="point" mainText="サービスの特徴"/>
