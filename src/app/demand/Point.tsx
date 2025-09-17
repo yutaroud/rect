@@ -1,9 +1,9 @@
 import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
-import point1 from '../../../public/image/demand/point_1.webp';
-import point2 from '../../../public/image/demand/point_2.webp';
-import style1 from '../../../public/image/demand/01.webp';
-import style2 from '../../../public/image/demand/02.webp';
+import point1 from '../../../public/image/demand/point_image_01.webp';
+import point2 from '../../../public/image/demand/point_image_02.webp';
+import style1 from '../../../public/image/demand/point_icon_01.webp';
+import style2 from '../../../public/image/demand/point_icon_02.webp';
 
 const sxStyles = {
   title: {

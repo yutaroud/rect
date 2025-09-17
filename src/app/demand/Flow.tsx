@@ -1,6 +1,6 @@
 import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
-import arrow from '../../../public/image/demand/arrow.svg';
+import arrow from '../../../public/image/demand/flow_arrow.svg';
 import React from 'react';
 
 const flow = [

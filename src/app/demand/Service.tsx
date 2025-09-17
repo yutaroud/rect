@@ -1,6 +1,6 @@
 import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
-import skill from '../../../public/image/demand/skill.webp';
+import skill from '../../../public/image/demand/service_skill.webp';
 import React from 'react';
 
 const skillData = [
