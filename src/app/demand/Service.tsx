@@ -118,7 +118,7 @@ const Service = () => {
               component="h3"
               sx={[sxStyles.title, commonSxStyles.typography.largeText]}
             >
-              Webサービス
+              Webサービスの
               <br />
               機能開発
             </Typography>

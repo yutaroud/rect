@@ -9,7 +9,8 @@ interface CustomButtonProps {
   variant?: 'primary' | 'secondary';
   showFreeLabel?: boolean;
   icon?: 'arrow-right' | 'new-tab';
-  href?: string;
+  href: string;
+  isExternal?: boolean;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -18,6 +19,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   showFreeLabel = true,
   icon,
   href,
+  isExternal = false,
 }) => {
   const getIcon = () => {
     switch (icon) {
@@ -36,6 +38,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     <Button
       variant="contained"
       href={href}
+      rel={isExternal ? "noopener noreferrer" : ""}
+      target={isExternal ? "_blank" : ""}
       sx={[
         {
           backgroundColor:

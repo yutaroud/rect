@@ -75,6 +75,7 @@ const Contact = () => {
           showFreeLabel={false}
           icon="arrow-right"
           href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
+          isExternal={true}
         />
       </Box>
       <Box
