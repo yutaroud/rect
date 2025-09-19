@@ -2,13 +2,10 @@ import Heading2 from './components/Heading2'
 import CustomButton from './components/Button'
 import { Box,Typography } from '@mui/material';
 import img from '../../../public/image/demand/contact_image.webp';
-import { sxStyles as commonSxStyles } from './components/Style';
+import { commonSxStyles } from './components/Style';
 
 const sxStyles = {
   text: {
-    fontSize: '14px',
-    letterSpacing: '0.05em',
-    lineHeight: '1.7',
     color: commonSxStyles.color.white,
     mt: 2,
     '@media screen and (max-width:450px)': {
@@ -48,7 +45,7 @@ const Contact = () => {
         }
       }}>
         <Heading2 subText="contact" mainText="お問い合わせ" position="right" backGroundWhite={false}/>
-        <Typography sx={sxStyles.text}>相談は無料です。小さなことでも、<br/>お気軽にご連絡ください。</Typography>
+        <Typography sx={[sxStyles.text,commonSxStyles.typography.normalText]}>相談は無料です。小さなことでも、<br/>お気軽にご連絡ください。</Typography>
         <Box sx={{
           mt: 4,
           '@media screen and (max-width:450px)': {

@@ -2,7 +2,7 @@ import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
 import skill from '../../../public/image/demand/service_skill.webp';
 import React from 'react';
-import { sxStyles as commonSxStyles } from './components/Style';
+import { commonSxStyles } from './components/Style';
 
 const skillData = [
   {
@@ -60,9 +60,6 @@ const sxStyles = {
     }
   },
   title: {
-    fontSize: '16px',
-    letterSpacing: '0.08em',
-    lineHeight: '1.5',
     fontWeight: 'bold',
     '& > br': {
       '@media screen and (max-width:450px)': {
@@ -71,9 +68,6 @@ const sxStyles = {
     }
   },
   text: {
-    fontSize: '12px',
-    letterSpacing: '0.05em',
-    lineHeight: '1.7',
     color: commonSxStyles.color.grayText,
     mt: 1,
   },
@@ -89,10 +83,6 @@ const sxStyles = {
     }
   },
   skillTitle: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    letterSpacing: '0.05em',
-    lineHeight: '1.6',
     color: commonSxStyles.color.primary,
     '@media screen and (max-width:450px)': {
       textAlign: 'center',
@@ -124,24 +114,24 @@ const Service = () => {
         <Heading2 subText="service" mainText="サービス内容"/>
         <Box component="ul" sx={sxStyles.list}>
           <Box component="li" sx={sxStyles.listItem}>
-            <Typography component="h3" sx={sxStyles.title}>Webサービス<br/>機能開発</Typography>
-            <Typography sx={sxStyles.text}>お客様の課題を解決できる<br/>Webサービスを開発します。</Typography>
+            <Typography component="h3" sx={[sxStyles.title,commonSxStyles.typography.largeText]}>Webサービス<br/>機能開発</Typography>
+            <Typography sx={[sxStyles.text,commonSxStyles.typography.smallText]}>お客様の課題を解決できる<br/>Webサービスを開発します。</Typography>
           </Box>
           <Box component="li" sx={sxStyles.listItem}>
-            <Typography component="h3" sx={sxStyles.title}>既存サイトの<br/>機能追加・改修</Typography>
-            <Typography sx={sxStyles.text}>機能改善・パフォーマンス向上など、<br/>部分的な改修にも対応いたします。</Typography>
+            <Typography component="h3" sx={[sxStyles.title,commonSxStyles.typography.largeText]}>既存サイトの<br/>機能追加・改修</Typography>
+            <Typography sx={[sxStyles.text,commonSxStyles.typography.smallText]}>機能改善・パフォーマンス向上など、<br/>部分的な改修にも対応いたします。</Typography>
           </Box>
           <Box component="li" sx={sxStyles.listItem}>
-            <Typography component="h3" sx={sxStyles.title}>CMSの<br/>構築・カスタマイズ</Typography>
-            <Typography sx={sxStyles.text}>お客様自身で簡単に更新・運用できる<br/>Webサイトを構築します。</Typography>
+            <Typography component="h3" sx={[sxStyles.title,commonSxStyles.typography.largeText]}>CMSの<br/>構築・カスタマイズ</Typography>
+            <Typography sx={[sxStyles.text,commonSxStyles.typography.smallText]}>お客様自身で簡単に更新・運用できる<br/>Webサイトを構築します。</Typography>
           </Box>
           <Box component="li" sx={sxStyles.listItem}>
-            <Typography component="h3" sx={sxStyles.title}>Webサイト・<br/>ホームページ制作</Typography>
-            <Typography sx={sxStyles.text}>ランディングページ・コーポレートサイト<br/>などの制作をいたします。</Typography>
+            <Typography component="h3" sx={[sxStyles.title,commonSxStyles.typography.largeText]}>Webサイト・<br/>ホームページ制作</Typography>
+            <Typography sx={[sxStyles.text,commonSxStyles.typography.smallText]}>ランディングページ・コーポレートサイト<br/>などの制作をいたします。</Typography>
           </Box>
           <Box component="li" sx={sxStyles.listItem}>
-            <Typography component="h3" sx={sxStyles.title}>AIを活用した<br/>業務課題の解決</Typography>
-            <Typography sx={sxStyles.text}>業務効率化など、生成AIを活用した<br/>課題解決方法をご提案いたします。</Typography>
+            <Typography component="h3" sx={[sxStyles.title,commonSxStyles.typography.largeText]}>AIを活用した<br/>業務課題の解決</Typography>
+            <Typography sx={[sxStyles.text,commonSxStyles.typography.smallText]}>業務効率化など、生成AIを活用した<br/>課題解決方法をご提案いたします。</Typography>
           </Box>
         </Box>
         <Box sx={sxStyles.skillWrap}>
@@ -157,7 +147,7 @@ const Service = () => {
               width: '100%',
             }
           }}>
-            <Typography sx={sxStyles.skillTitle}>対応技術 一例</Typography>
+            <Typography sx={[sxStyles.skillTitle,commonSxStyles.typography.heading3]}>対応技術 一例</Typography>
             <Box component="dl" mt={2}>
               {skillData.map((data) => (
                 <Box key={data.id} sx={{
@@ -174,22 +164,16 @@ const Service = () => {
                 }}>
                   <Typography
                     component="dt"
-                    sx={{
+                    sx={[{
                       fontWeight: 'bold',
                       minWidth: '240px',
                       maxWidth: '240px',
-                      fontSize: '14px',
-                      letterSpacing: '0.05em',
-                      lineHeight: '1.7',
-                    }}
+                    },
+                    commonSxStyles.typography.normalText]}
                   >
                     {data.category}
                   </Typography>
-                  <Typography component="dd" sx={{
-                      fontSize: '14px',
-                      letterSpacing: '0.05em',
-                      lineHeight: '1.7',
-                  }}>
+                  <Typography component="dd" sx={commonSxStyles.typography.normalText}>
                     {data.item.map((skill, index) => (
                       <React.Fragment key={index}>
                         {skill}
@@ -202,10 +186,7 @@ const Service = () => {
             </Box>
           </Box>
         </Box>
-        <Typography sx={{
-          fontSize: '14px',
-          letterSpacing: '0.05em',
-          lineHeight: '1.7',
+        <Typography sx={[{
           mt: 8,
           textAlign: 'center',
           '& > br': {
@@ -214,13 +195,11 @@ const Service = () => {
               display: 'block',
             }
           }
-        }}>
+        },
+        commonSxStyles.typography.normalText]}>
           記載のないご依頼につきましても、<br/>柔軟に対応いたします。
         </Typography>
-        <Typography sx={{
-          fontSize: '14px',
-          letterSpacing: '0.05em',
-          lineHeight: '1.7',
+        <Typography sx={[{
           textAlign: 'center',
           mt: 0.5,
           '& > br': {
@@ -229,7 +208,8 @@ const Service = () => {
               display: 'block',
             }
           }
-          }}>
+          },
+          commonSxStyles.typography.normalText]}>
           ご要望やご相談がございましたら、<br/>ぜひ一度お問い合わせください。
         </Typography>
         

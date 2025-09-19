@@ -2,6 +2,7 @@
 import { Box,Typography } from '@mui/material';
 import CustomButton from './components/Button'
 import img from '../../../public/image/demand/keyVisual_image.webp';
+import { commonSxStyles } from './components/Style';
 
 const KeyVisual = () => {
   return (
@@ -78,17 +79,10 @@ const KeyVisual = () => {
               mt: 1,
             }
             }}>
-            <Typography  sx={{
-              fontSize: '16px',
-              letterSpacing: '0.04em',
-              lineHeight: '1.7',
-              }}>
-                窓口からエンジニアが担当
+              <Typography  sx={commonSxStyles.typography.largeText}>
+                  窓口からエンジニアが担当
               </Typography>
-              <Typography  sx={{
-                fontSize: '16px',
-                letterSpacing: '0.04em',
-                lineHeight: '1.7',
+              <Typography  sx={[{
                 '&:before': {
                   content: '"/"',
                   mr: 1,
@@ -96,7 +90,8 @@ const KeyVisual = () => {
                     content: 'none',
                   }
                 }
-              }}>
+              },
+              commonSxStyles.typography.largeText]}>
                 小さなお困りごとでもOK
             </Typography>
           </Box>

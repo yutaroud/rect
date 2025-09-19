@@ -2,7 +2,7 @@ import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
 import arrow from '../../../public/image/demand/flow_arrow.svg';
 import React from 'react';
-import { sxStyles as commonSxStyles } from './components/Style';
+import { commonSxStyles } from './components/Style';
 import { alpha } from '@mui/system';
 
 const flow = [
@@ -44,9 +44,6 @@ const flow = [
 
 const sxStyles = {
   list: {
-    fontSize: '14px',
-    letterSpacing: '0.05em',
-    lineHeight: '1.7',
     mt: 5,
     display: 'flex',
     gap: '8px',
@@ -118,37 +115,33 @@ const Flow = () => {
       >
         <Heading2 subText="flow" mainText="ご利用の流れ"/>
         <Box sx={sxStyles.scroll}>
-          <Box sx={sxStyles.list} component="ol">
+          <Box sx={[sxStyles.list,commonSxStyles.typography.normalText]} component="ol">
             {flow.map((item, index) => (
               <React.Fragment key={item.id}>
                 <Box component="li" sx={sxStyles.listItem}>
                   <Box sx={sxStyles.listItemWrap}>
-                    <Typography sx={{
-                      fontSize: '20px',
-                      fontWeight: 'bold',
-                      letterSpacing: '0.05em',
-                      lineHeight: '1.7',
+                    <Typography sx={[{
                       display: 'flex',
                       flexDirection: 'column',
                       alignContent: 'center',
                       justifyContent: 'flex-start',
                       textAlign: 'center',
                       color: commonSxStyles.color.primary,
-                    }}>
-                      <Typography component="span" sx={{
-                        fontSize: '14px',
+                    },
+                    commonSxStyles.typography.heading3]}>
+                      <Typography component="span" sx={[{
                         fontWeight: 'bold',
                         color: alpha(commonSxStyles.color.primary, 0.4),
-                      }}>{item.step}</Typography>
+                      },
+                      commonSxStyles.typography.normalText]}>{item.step}</Typography>
                       {item.title}
                     </Typography>
-                    <Typography sx={{
+                    <Typography sx={[{
                       mt: 2,
-                      fontSize: '14px',
-                      letterSpacing: '0.05em',
-                      lineHeight: '1.7',
                       textAlign: 'center'
-                    }}>
+                    },
+                    commonSxStyles.typography.normalText
+                    ]}>
                       {item.detail}
                     </Typography>
                   </Box>

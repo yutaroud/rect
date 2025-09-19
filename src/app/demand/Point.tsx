@@ -4,21 +4,14 @@ import point1 from '../../../public/image/demand/point_image_01.webp';
 import point2 from '../../../public/image/demand/point_image_02.webp';
 import style1 from '../../../public/image/demand/point_icon_01.webp';
 import style2 from '../../../public/image/demand/point_icon_02.webp';
-import { sxStyles as commonSxStyles } from './components/Style';
+import { commonSxStyles } from './components/Style';
 
 const sxStyles = {
   title: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    letterSpacing: '0.05em',
-    lineHeight: '1.6',
     textAlign: 'center',
     mt: 2,
   },
   text: {
-    fontSize: '14px',
-    letterSpacing: '0.05em',
-    lineHeight: '1.7',
     '& + &' : {
       mt: 1,
     }
@@ -110,20 +103,20 @@ const Point = () => {
         <Box component="ul" sx={sxStyles.list}>
           <Box component="li" sx={sxStyles.listItem}>
             <img src={point1.src} alt="" width="462" height="374" />
-            <Typography component="h3" sx={sxStyles.title}>エンジニアが窓口で、<br/>スムーズなやりとりを実現</Typography>
+            <Typography component="h3" sx={[sxStyles.title,commonSxStyles.typography.heading3]}>エンジニアが窓口で、<br/>スムーズなやりとりを実現</Typography>
             <Box mt={2}>
-              <Typography sx={sxStyles.text}>営業担当者ではなく、開発を行うエンジニアが直接ヒアリングから担当します。</Typography>
-              <Typography sx={sxStyles.text}>これにより、お客様の要望を正確に把握し、技術的な要件をスムーズにすり合わせることが可能です。</Typography>
-              <Typography sx={sxStyles.text}>専門用語は使わず、わかりやすく丁寧にご説明しますので、IT知識がなくてもご安心ください。</Typography>
+              <Typography sx={[sxStyles.text,commonSxStyles.typography.normalText]}>営業担当者ではなく、開発を行うエンジニアが直接ヒアリングから担当します。</Typography>
+              <Typography sx={[sxStyles.text,commonSxStyles.typography.normalText]}>これにより、お客様の要望を正確に把握し、技術的な要件をスムーズにすり合わせることが可能です。</Typography>
+              <Typography sx={[sxStyles.text,commonSxStyles.typography.normalText]}>専門用語は使わず、わかりやすく丁寧にご説明しますので、IT知識がなくてもご安心ください。</Typography>
             </Box>
           </Box>
           <Box component="li" sx={sxStyles.listItem}>
             <img src={point2.src} alt="" width="462" height="374" />
-            <Typography component="h3" sx={sxStyles.title}>小さな案件・ご相談でも<br/>歓迎します</Typography>
+            <Typography component="h3" sx={[sxStyles.title,commonSxStyles.typography.heading3]}>小さな案件・ご相談でも<br/>歓迎します</Typography>
             <Box mt={2}>
-              <Typography sx={sxStyles.text}>「Webサイトの一部だけ修正したい」といったご相談でも大歓迎です。</Typography>
-              <Typography sx={sxStyles.text}>どんなに小さなご要望にも真摯に向き合い、お客様に寄り添った開発を心がけています。</Typography>
-              <Typography sx={sxStyles.text}>まずはお客様が抱えている「こんなことはできる？」という疑問を、ぜひお聞かせください。</Typography>
+              <Typography sx={[sxStyles.text,commonSxStyles.typography.normalText]}>「Webサイトの一部だけ修正したい」といったご相談でも大歓迎です。</Typography>
+              <Typography sx={[sxStyles.text,commonSxStyles.typography.normalText]}>どんなに小さなご要望にも真摯に向き合い、お客様に寄り添った開発を心がけています。</Typography>
+              <Typography sx={[sxStyles.text,commonSxStyles.typography.normalText]}>まずはお客様が抱えている「こんなことはできる？」という疑問を、ぜひお聞かせください。</Typography>
             </Box>
           </Box>
         </Box>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Box, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import { sxStyles } from './Style'
+import { commonSxStyles } from './Style'
 
 interface CustomButtonProps {
   label: string;
@@ -37,23 +37,21 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     <Button
       variant="contained"
       href={href}
-      sx={{
-        backgroundColor: variant === 'primary' ? sxStyles.color.primary : sxStyles.color.white,
-        color: variant === 'primary' ? sxStyles.color.white : sxStyles.color.primary,
+      sx={[{
+        backgroundColor: variant === 'primary' ? commonSxStyles.color.primary : commonSxStyles.color.white,
+        color: variant === 'primary' ? commonSxStyles.color.white : commonSxStyles.color.primary,
         textTransform: 'none',
         padding: hasIcon ? '16px 20px 16px 25px' : '16px 20px 16px 20px',
         borderRadius: '50px',
         boxShadow: 'none',
-        fontSize: '18px',
-        fontWeight: 'bold',
-        letterSpacing: '0.06em',
         minWidth: '300px',
         transition: 'filter 0.3s',
         '&:hover': {
           boxShadow: 'none',
           filter: 'brightness(0.8)'
         },
-      }}
+      },
+      commonSxStyles.typography.buttonNormalText]}
       endIcon={getIcon()}
     >
       <Box
@@ -68,8 +66,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
           <Typography
             component="span"
             sx={{
-              backgroundColor: variant === 'primary' ? sxStyles.color.white : sxStyles.color.primary,
-              color: variant === 'primary' ? sxStyles.color.primary : sxStyles.color.white,
+              backgroundColor: variant === 'primary' ? commonSxStyles.color.white : commonSxStyles.color.primary,
+              color: variant === 'primary' ? commonSxStyles.color.primary : commonSxStyles.color.white,
               borderRadius: '4px',
               px: '6px',
               py: '2px',

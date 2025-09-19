@@ -1,6 +1,6 @@
 import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
-import { sxStyles as commonSxStyles } from './components/Style';
+import { commonSxStyles } from './components/Style';
 
 const questionData = [
   {
@@ -49,34 +49,29 @@ const Faq = () => {
                 pt: 3,
               }
             }}>
-              <Typography component="dt" sx={{
-                fontSize: '20px',
-                fontWeight: 'bold',
-                letterSpacing: '0.05em',
-                lineHeight: '1.7',
+              <Typography component="dt" sx={[{
                 display: 'flex',
-              }}>
-                <Typography component="span" sx={{
+              },
+              commonSxStyles.typography.heading3
+              ]}>
+                <Typography component="span" sx={[{
                   mr: 1,
-                  fontSize: '20px',
-                  fontWeight: 'bold',
                   color: commonSxStyles.color.primary,
-                }}>Q.</Typography>
+                },
+                commonSxStyles.typography.heading3]}>Q.</Typography>
                 {item.question}
               </Typography>
-              <Typography component="dd" sx={{
+              <Typography component="dd" sx={[{
                 mt: 2,
-                fontSize: '14px',
-                letterSpacing: '0.05em',
-                lineHeight: '1.7',
                 display: 'flex',
-              }}>
-                <Typography component="span" sx={{
+              },
+              commonSxStyles.typography.normalText]}>
+                <Typography component="span" sx={[{
                   mr: 2,
-                  fontSize: '14px',
                   fontWeight: 'bold',
                   color: commonSxStyles.color.primary
-                }}>A.</Typography>
+                },
+                commonSxStyles.typography.normalText]}>A.</Typography>
                 {item.answer}
               </Typography>
             </Box>
