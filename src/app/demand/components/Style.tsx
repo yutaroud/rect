@@ -1,4 +1,3 @@
-
 export const commonSxStyles = {
   typography: {
     headingSubText: {
@@ -7,7 +6,7 @@ export const commonSxStyles = {
       fontSize: '18px',
       '@media screen and (max-width:450px)': {
         fontSize: '14px',
-      }
+      },
     },
     heading2: {
       fontWeight: 'bold',
@@ -15,7 +14,7 @@ export const commonSxStyles = {
       fontSize: '36px',
       '@media screen and (max-width:450px)': {
         fontSize: '32px',
-      }
+      },
     },
     heading3: {
       fontWeight: 'bold',
@@ -51,5 +50,5 @@ export const commonSxStyles = {
     background: '#EFF7FF',
     border: '#969696',
     grayText: '#545454',
-  }
-}
+  },
+};

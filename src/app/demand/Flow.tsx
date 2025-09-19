@@ -1,5 +1,5 @@
-import Heading2 from './components/Heading2'
-import { Box,Typography } from '@mui/material';
+import Heading2 from './components/Heading2';
+import { Box, Typography } from '@mui/material';
 import arrow from '../../../public/image/demand/flow_arrow.svg';
 import React from 'react';
 import { commonSxStyles } from './components/Style';
@@ -16,29 +16,25 @@ const flow = [
     id: '2',
     step: 'STEP 2',
     title: 'ヒアリング',
-    detail:
-      'ヒアリング内容から、最適な開発プランをご提案します。',
+    detail: 'ヒアリング内容から、最適な開発プランをご提案します。',
   },
   {
     id: '3',
     step: 'STEP 3',
     title: 'ご契約',
-    detail:
-      'ご提案内容にご納得いただけたらご契約となります。',
+    detail: 'ご提案内容にご納得いただけたらご契約となります。',
   },
   {
     id: '4',
     step: 'STEP 4',
     title: '開発',
-    detail:
-      '定期的に進捗報告を行い、お客様と密に連携しながら進めます。',
+    detail: '定期的に進捗報告を行い、お客様と密に連携しながら進めます。',
   },
   {
     id: '5',
     step: 'STEP 5',
     title: '納品・公開',
-    detail:
-      '開発完了後、最終確認を経て納品となります。',
+    detail: '開発完了後、最終確認を経て納品となります。',
   },
 ];
 
@@ -78,7 +74,7 @@ const sxStyles = {
     content: '""',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
-    display: 'inline-block'
+    display: 'inline-block',
   },
   listItemWrap: {
     display: 'flex',
@@ -87,14 +83,12 @@ const sxStyles = {
   scroll: {
     overflow: 'auto hidden',
     scrollSnapType: 'x mandatory',
-  }
-}
+  },
+};
 
 const Arrow = () => {
-  return (
-    <Box component="span" sx={sxStyles.icon}></Box>
-  );
-}
+  return <Box component="span" sx={sxStyles.icon}></Box>;
+};
 
 const Flow = () => {
   return (
@@ -113,48 +107,63 @@ const Flow = () => {
           mx: 'auto',
         }}
       >
-        <Heading2 subText="flow" mainText="ご利用の流れ"/>
+        <Heading2 subText="flow" mainText="ご利用の流れ" />
         <Box sx={sxStyles.scroll}>
-          <Box sx={[sxStyles.list,commonSxStyles.typography.normalText]} component="ol">
+          <Box
+            sx={[sxStyles.list, commonSxStyles.typography.normalText]}
+            component="ol"
+          >
             {flow.map((item, index) => (
               <React.Fragment key={item.id}>
                 <Box component="li" sx={sxStyles.listItem}>
                   <Box sx={sxStyles.listItemWrap}>
-                    <Typography sx={[{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignContent: 'center',
-                      justifyContent: 'flex-start',
-                      textAlign: 'center',
-                      color: commonSxStyles.color.primary,
-                    },
-                    commonSxStyles.typography.heading3]}>
-                      <Typography component="span" sx={[{
-                        fontWeight: 'bold',
-                        color: alpha(commonSxStyles.color.primary, 0.4),
-                      },
-                      commonSxStyles.typography.normalText]}>{item.step}</Typography>
+                    <Typography
+                      sx={[
+                        {
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignContent: 'center',
+                          justifyContent: 'flex-start',
+                          textAlign: 'center',
+                          color: commonSxStyles.color.primary,
+                        },
+                        commonSxStyles.typography.heading3,
+                      ]}
+                    >
+                      <Typography
+                        component="span"
+                        sx={[
+                          {
+                            fontWeight: 'bold',
+                            color: alpha(commonSxStyles.color.primary, 0.4),
+                          },
+                          commonSxStyles.typography.normalText,
+                        ]}
+                      >
+                        {item.step}
+                      </Typography>
                       {item.title}
                     </Typography>
-                    <Typography sx={[{
-                      mt: 2,
-                      textAlign: 'center'
-                    },
-                    commonSxStyles.typography.normalText
-                    ]}>
+                    <Typography
+                      sx={[
+                        {
+                          mt: 2,
+                          textAlign: 'center',
+                        },
+                        commonSxStyles.typography.normalText,
+                      ]}
+                    >
                       {item.detail}
                     </Typography>
                   </Box>
                 </Box>
-                {index < flow.length - 1 && (
-                  <Arrow/>
-                )}
+                {index < flow.length - 1 && <Arrow />}
               </React.Fragment>
             ))}
           </Box>
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 export default Flow;

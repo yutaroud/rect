@@ -16,7 +16,7 @@ export const metadata = {
 
 const Demand = () => {
   return (
-    <main style={{ color: '#000'}}>
+    <main style={{ color: '#000' }}>
       <KeyVisual />
       <Service />
       <Case />

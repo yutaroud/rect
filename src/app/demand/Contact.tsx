@@ -1,6 +1,6 @@
-import Heading2 from './components/Heading2'
-import CustomButton from './components/Button'
-import { Box,Typography } from '@mui/material';
+import Heading2 from './components/Heading2';
+import CustomButton from './components/Button';
+import { Box, Typography } from '@mui/material';
 import img from '../../../public/image/demand/contact_image.webp';
 import { commonSxStyles } from './components/Style';
 
@@ -16,12 +16,12 @@ const sxStyles = {
     },
     '& > br': {
       display: 'none',
-    '@media screen and (max-width:450px)': {
+      '@media screen and (max-width:450px)': {
         display: 'block',
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};
 
 const Contact = () => {
   return (
@@ -42,11 +42,22 @@ const Contact = () => {
           pt: 5,
           pb: 6,
           px: 2.5,
-        }
-      }}>
-        <Heading2 subText="contact" mainText="お問い合わせ" position="right" backGroundWhite={false}/>
-        <Typography sx={[sxStyles.text,commonSxStyles.typography.normalText]}>相談は無料です。小さなことでも、<br/>お気軽にご連絡ください。</Typography>
-        <Box sx={{
+        },
+      }}
+    >
+      <Heading2
+        subText="contact"
+        mainText="お問い合わせ"
+        position="right"
+        backGroundWhite={false}
+      />
+      <Typography sx={[sxStyles.text, commonSxStyles.typography.normalText]}>
+        相談は無料です。小さなことでも、
+        <br />
+        お気軽にご連絡ください。
+      </Typography>
+      <Box
+        sx={{
           mt: 4,
           '@media screen and (max-width:450px)': {
             mt: 3,
@@ -54,18 +65,20 @@ const Contact = () => {
           '& > a': {
             '@media screen and (max-width:450px)': {
               width: '100%',
-            }
-          }
-        }}>
-          <CustomButton
-            label="お問い合わせフォームへ"
-            variant="secondary"
-            showFreeLabel={false}
-            icon="arrow-right"
-            href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
-          />
-        </Box>
-        <Box sx={{
+            },
+          },
+        }}
+      >
+        <CustomButton
+          label="お問い合わせフォームへ"
+          variant="secondary"
+          showFreeLabel={false}
+          icon="arrow-right"
+          href="https://forms.gle/tWbY3pJaxRpEq7Nz8"
+        />
+      </Box>
+      <Box
+        sx={{
           position: 'absolute',
           top: '50%',
           transform: 'translateY(-50%)',
@@ -75,17 +88,13 @@ const Contact = () => {
             height: 'auto',
             '@media screen and (max-width:700px)': {
               display: 'none',
-            }
-          }
-        }}>
-          <img
-            src={img.src}
-            alt=""
-            width="570"
-            height="434"
-          />
-        </Box>
+            },
+          },
+        }}
+      >
+        <img src={img.src} alt="" width="570" height="434" />
+      </Box>
     </Box>
-  )
-}
+  );
+};
 export default Contact;

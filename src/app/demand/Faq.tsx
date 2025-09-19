@@ -1,5 +1,5 @@
-import Heading2 from './components/Heading2'
-import { Box,Typography } from '@mui/material';
+import Heading2 from './components/Heading2';
+import { Box, Typography } from '@mui/material';
 import { commonSxStyles } from './components/Style';
 
 const questionData = [
@@ -28,7 +28,7 @@ const Faq = () => {
         backgroundColor: commonSxStyles.color.background,
         '@media screen and (max-width:450px)': {
           pb: 8,
-        }
+        },
       }}
     >
       <Box
@@ -39,39 +39,66 @@ const Faq = () => {
           px: 2.5,
         }}
       >
-        <Heading2 subText="faq" mainText="よくある質問"/>
+        <Heading2 subText="faq" mainText="よくある質問" />
         <Box mt={5}>
           {questionData.map((item) => (
-            <Box component="dl" key={item.id} sx={{
-              borderBottom: `solid 1px ${commonSxStyles.color.border}`,
-              pb: 3,
-              '& + &': {
-                pt: 3,
-              }
-            }}>
-              <Typography component="dt" sx={[{
-                display: 'flex',
-              },
-              commonSxStyles.typography.heading3
-              ]}>
-                <Typography component="span" sx={[{
-                  mr: 1,
-                  color: commonSxStyles.color.primary,
+            <Box
+              component="dl"
+              key={item.id}
+              sx={{
+                borderBottom: `solid 1px ${commonSxStyles.color.border}`,
+                pb: 3,
+                '& + &': {
+                  pt: 3,
                 },
-                commonSxStyles.typography.heading3]}>Q.</Typography>
+              }}
+            >
+              <Typography
+                component="dt"
+                sx={[
+                  {
+                    display: 'flex',
+                  },
+                  commonSxStyles.typography.heading3,
+                ]}
+              >
+                <Typography
+                  component="span"
+                  sx={[
+                    {
+                      mr: 1,
+                      color: commonSxStyles.color.primary,
+                    },
+                    commonSxStyles.typography.heading3,
+                  ]}
+                >
+                  Q.
+                </Typography>
                 {item.question}
               </Typography>
-              <Typography component="dd" sx={[{
-                mt: 2,
-                display: 'flex',
-              },
-              commonSxStyles.typography.normalText]}>
-                <Typography component="span" sx={[{
-                  mr: 2,
-                  fontWeight: 'bold',
-                  color: commonSxStyles.color.primary
-                },
-                commonSxStyles.typography.normalText]}>A.</Typography>
+              <Typography
+                component="dd"
+                sx={[
+                  {
+                    mt: 2,
+                    display: 'flex',
+                  },
+                  commonSxStyles.typography.normalText,
+                ]}
+              >
+                <Typography
+                  component="span"
+                  sx={[
+                    {
+                      mr: 2,
+                      fontWeight: 'bold',
+                      color: commonSxStyles.color.primary,
+                    },
+                    commonSxStyles.typography.normalText,
+                  ]}
+                >
+                  A.
+                </Typography>
                 {item.answer}
               </Typography>
             </Box>
@@ -79,6 +106,6 @@ const Faq = () => {
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 export default Faq;

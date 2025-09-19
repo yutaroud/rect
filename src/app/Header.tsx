@@ -63,11 +63,11 @@ const sxStyles = {
       marginLeft: '8px',
       '& > :nth-of-type(1)': {
         fontSize: '16px',
-      }
+      },
     },
     '&:hover': {
       boxShadow: 'none',
-      filter: 'brightness(0.8)'
+      filter: 'brightness(0.8)',
     },
   },
 };
@@ -119,11 +119,13 @@ const Header: React.FC<HeaderProps> = () => {
           </Box>
         </Toolbar>
       ) : isDemandPage ? (
-        <Toolbar sx={{
-          backgroundColor: '#fff',
-          border: 'solid 1px #fff',
-          boxShadow: '0px 1px 2px rgba(0,0,0, 0.08)'
-          }}>
+        <Toolbar
+          sx={{
+            backgroundColor: '#fff',
+            border: 'solid 1px #fff',
+            boxShadow: '0px 1px 2px rgba(0,0,0, 0.08)',
+          }}
+        >
           <Box sx={sxStyles.demandHeader} component="h1">
             <Link href="/">
               <Image
