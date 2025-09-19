@@ -1,4 +1,6 @@
 import { Box, Typography } from '@mui/material';
+import { sxStyles } from './Style'
+import { alpha } from '@mui/system';
 
 interface Heading2Props {
   subText: string;
@@ -30,7 +32,7 @@ export const Heading2: React.FC<Heading2Props> = ({
         variant="body2"
         component="span"
         sx={{
-          color: backGroundWhite ? 'rgba(0, 41, 138, 0.4)' : 'rgba(255, 255, 255, 0.4)',
+          color: backGroundWhite ? alpha(sxStyles.color.primary, 0.4) : alpha(sxStyles.color.white, 0.4),
           fontWeight: 'bold',
           letterSpacing: '0.07em',
           fontSize: '18px',
@@ -48,7 +50,7 @@ export const Heading2: React.FC<Heading2Props> = ({
           fontWeight: 'bold',
           letterSpacing: '0.05em',
           fontSize: '36px',
-          color: backGroundWhite ? '#000' : '#fff',
+          color: backGroundWhite ? sxStyles.color.black : sxStyles.color.white,
           '@media screen and (max-width:450px)': {
             fontSize: '32px',
           }

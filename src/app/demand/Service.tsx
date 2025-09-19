@@ -2,6 +2,7 @@ import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
 import skill from '../../../public/image/demand/service_skill.webp';
 import React from 'react';
+import { sxStyles as commonSxStyles } from './components/Style';
 
 const skillData = [
   {
@@ -47,7 +48,7 @@ const sxStyles = {
   listItem: {
     minWidth: '280px',
     maxWidth: '280px',
-    background: '#fff',
+    background: commonSxStyles.color.white,
     borderRadius: '8px',
     px: 2.5,
     py: 2.5,
@@ -73,7 +74,7 @@ const sxStyles = {
     fontSize: '12px',
     letterSpacing: '0.05em',
     lineHeight: '1.7',
-    color: '#545454',
+    color: commonSxStyles.color.grayText,
     mt: 1,
   },
   skillWrap: {
@@ -92,7 +93,7 @@ const sxStyles = {
     fontWeight: 'bold',
     letterSpacing: '0.05em',
     lineHeight: '1.6',
-    color: '#00298A',
+    color: commonSxStyles.color.primary,
     '@media screen and (max-width:450px)': {
       textAlign: 'center',
     }
@@ -107,7 +108,7 @@ const Service = () => {
         alignItems: 'center',
         pt: 7,
         pb: 9,
-        backgroundColor: '#EFF7FF',
+        backgroundColor: commonSxStyles.color.background,
       }}
     >
       <Box

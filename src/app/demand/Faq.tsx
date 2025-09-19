@@ -1,5 +1,6 @@
 import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
+import { sxStyles as commonSxStyles } from './components/Style';
 
 const questionData = [
   {
@@ -24,7 +25,7 @@ const Faq = () => {
         alignItems: 'center',
         pt: 7,
         pb: 12,
-        backgroundColor: '#EFF7FF',
+        backgroundColor: commonSxStyles.color.background,
         '@media screen and (max-width:450px)': {
           pb: 8,
         }
@@ -42,7 +43,7 @@ const Faq = () => {
         <Box mt={5}>
           {questionData.map((item) => (
             <Box component="dl" key={item.id} sx={{
-              borderBottom: 'solid 1px #969696',
+              borderBottom: `solid 1px ${commonSxStyles.color.border}`,
               pb: 3,
               '& + &': {
                 pt: 3,
@@ -59,7 +60,7 @@ const Faq = () => {
                   mr: 1,
                   fontSize: '20px',
                   fontWeight: 'bold',
-                  color: '#00298A',
+                  color: commonSxStyles.color.primary,
                 }}>Q.</Typography>
                 {item.question}
               </Typography>
@@ -74,7 +75,7 @@ const Faq = () => {
                   mr: 2,
                   fontSize: '14px',
                   fontWeight: 'bold',
-                  color: '#00298A'
+                  color: commonSxStyles.color.primary
                 }}>A.</Typography>
                 {item.answer}
               </Typography>

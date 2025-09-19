@@ -4,6 +4,7 @@ import point1 from '../../../public/image/demand/point_image_01.webp';
 import point2 from '../../../public/image/demand/point_image_02.webp';
 import style1 from '../../../public/image/demand/point_icon_01.webp';
 import style2 from '../../../public/image/demand/point_icon_02.webp';
+import { sxStyles as commonSxStyles } from './components/Style';
 
 const sxStyles = {
   title: {
@@ -34,7 +35,7 @@ const sxStyles = {
     }
   },
   listItem: {
-    background: '#fff',
+    background: commonSxStyles.color.white,
     borderRadius: '20px',
     px: 4,
     pt: 5,
@@ -62,9 +63,6 @@ const sxStyles = {
       display: 'inline-block',
       top: '40px',
       left: '20px',
-      color: 'rgba(34, 106, 170, 0.1)',
-      fontSize: '48px',
-      fontWeight: 'bold',
       content: '""',
       '@media screen and (max-width:450px)': {
         width: '39px',
@@ -97,7 +95,7 @@ const Point = () => {
         alignItems: 'center',
         pt: 7,
         pb: 12,
-        backgroundColor: '#EFF7FF'
+        backgroundColor: commonSxStyles.color.background,
       }}
     >
       <Box

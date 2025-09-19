@@ -2,6 +2,8 @@ import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
 import arrow from '../../../public/image/demand/flow_arrow.svg';
 import React from 'react';
+import { sxStyles as commonSxStyles } from './components/Style';
+import { alpha } from '@mui/system';
 
 const flow = [
   {
@@ -57,9 +59,9 @@ const sxStyles = {
     px: '12px',
     pt: 4,
     pb: 5,
-    backgroundColor: '#EFF7FF',
+    backgroundColor: commonSxStyles.color.background,
     borderRadius: '8px',
-    border: 'solid 1px #EFF7FF',
+    border: `solid 1px ${commonSxStyles.color.background}`,
     boxShadow: '0px 1px 5px rgba(34, 106, 170, 0.19)',
     minWidth: '180px',
     maxWidth: '180px',
@@ -131,12 +133,12 @@ const Flow = () => {
                       alignContent: 'center',
                       justifyContent: 'flex-start',
                       textAlign: 'center',
-                      color: '#00298A'
+                      color: commonSxStyles.color.primary,
                     }}>
                       <Typography component="span" sx={{
                         fontSize: '14px',
                         fontWeight: 'bold',
-                        color: 'rgba(0, 41, 138, 0.4)'
+                        color: alpha(commonSxStyles.color.primary, 0.4),
                       }}>{item.step}</Typography>
                       {item.title}
                     </Typography>

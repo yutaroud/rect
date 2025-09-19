@@ -2,6 +2,7 @@
 import Heading2 from './components/Heading2'
 import CustomButton from './components/Button'
 import { Box,Typography } from '@mui/material';
+import { sxStyles as commonSxStyles } from './components/Style';
 
 
 const sxStyles = {
@@ -31,7 +32,7 @@ const Company = () => {
         alignItems: 'center',
         pt: 7,
         pb: 12,
-        backgroundColor: '#EFF7FF'
+        backgroundColor: commonSxStyles.color.background,
       }}
     >
       <Box

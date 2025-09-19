@@ -1,5 +1,6 @@
 import Heading2 from './components/Heading2'
 import { Box,Typography } from '@mui/material';
+import { sxStyles as commonSxStyles } from './components/Style';
 
 const sxStyles = {
   headingText: {
@@ -38,7 +39,7 @@ const sxStyles = {
     }
   },
   listItem: {
-    background: '#fff',
+    background: commonSxStyles.color.white,
     borderRadius: '8px',
     width: '100%',
     px: 3,
@@ -60,7 +61,7 @@ const sxStyles = {
     display: 'flex',
     gap: 2,
     '& > dt' : {
-      color: '#545454',
+      color: commonSxStyles.color.grayText,
       fontSize: '12px',
       letterSpacing: '0.05em',
       lineHeight: '1.7',
@@ -68,7 +69,7 @@ const sxStyles = {
       maxWidth: '66px',
     },
     '& > dd' : {
-      color: '#545454',
+      color: commonSxStyles.color.grayText,
       fontSize: '12px',
       letterSpacing: '0.05em',
       lineHeight: '1.7',

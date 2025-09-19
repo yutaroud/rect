@@ -2,13 +2,14 @@ import Heading2 from './components/Heading2'
 import CustomButton from './components/Button'
 import { Box,Typography } from '@mui/material';
 import img from '../../../public/image/demand/contact_image.webp';
+import { sxStyles as commonSxStyles } from './components/Style';
 
 const sxStyles = {
   text: {
     fontSize: '14px',
     letterSpacing: '0.05em',
     lineHeight: '1.7',
-    color: '#fff',
+    color: commonSxStyles.color.white,
     mt: 2,
     '@media screen and (max-width:450px)': {
       textAlign: 'center',
@@ -32,7 +33,7 @@ const Contact = () => {
         maxWidth: '1000px',
         width: 'calc(100% - 40px)',
         mx: 'auto',
-        backgroundColor: '#00298A',
+        backgroundColor: commonSxStyles.color.primary,
         borderRadius: '20px',
         px: 7,
         pt: 7,
